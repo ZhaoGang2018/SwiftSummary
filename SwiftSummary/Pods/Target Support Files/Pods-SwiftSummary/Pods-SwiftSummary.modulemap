@@ -1,0 +1,6 @@
+framework module Pods_SwiftSummary {
+  umbrella header "Pods-SwiftSummary-umbrella.h"
+
+  export *
+  module * { export * }
+}
