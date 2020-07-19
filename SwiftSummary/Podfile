@@ -12,7 +12,7 @@ target 'SwiftSummary' do
     pod 'Kingfisher', '4.7.0'
     pod 'SSZipArchive', '2.1.4'
     pod 'SVProgressHUD', '2.2.5'
-    pod 'RealmSwift','3.16.2'
+    pod 'RealmSwift', '5.3.1'
     pod 'MJRefresh', '3.1.15.7'
     pod 'Hero'
     pod 'SnapKit', '~> 4.2.0'

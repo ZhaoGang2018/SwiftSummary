@@ -14,11 +14,11 @@ PODS:
   - ReactiveCocoa (10.3.0):
     - ReactiveSwift (~> 6.2)
   - ReactiveSwift (6.3.0)
-  - Realm (3.16.2):
-    - Realm/Headers (= 3.16.2)
-  - Realm/Headers (3.16.2)
-  - RealmSwift (3.16.2):
-    - Realm (= 3.16.2)
+  - Realm (5.3.1):
+    - Realm/Headers (= 5.3.1)
+  - Realm/Headers (5.3.1)
+  - RealmSwift (5.3.1):
+    - Realm (= 5.3.1)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -40,7 +40,7 @@ DEPENDENCIES:
   - MJRefresh (= 3.1.15.7)
   - ReactiveCocoa (~> 10.1)
   - ReactiveSwift (~> 6.1)
-  - RealmSwift (= 3.16.2)
+  - RealmSwift (= 5.3.1)
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - SnapKit (~> 4.2.0)
@@ -79,8 +79,8 @@ SPEC CHECKSUMS:
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   ReactiveCocoa: 083ae559e6f588ce519cab412ea119b431c26a24
   ReactiveSwift: 7937f26ec18d555e2a99352bd0a8b2817d1f042d
-  Realm: 0e73b4edeb5b6a90da3d83206883b2e34e00eb38
-  RealmSwift: a81e650171ef0a5f999df1ed8d39ba8d6fce88a4
+  Realm: 8ec860dc0c3079f7cab1085d95661a06f162d487
+  RealmSwift: ca9d0df752157befb8c28034301f988a56ce91eb
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
@@ -88,6 +88,6 @@ SPEC CHECKSUMS:
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: e760999ea6cd2335bf958be1c8c8624d8a85111f
+PODFILE CHECKSUM: 1a2a98e56513a43ff993315fa4325cc37f413b5e
 
 COCOAPODS: 1.9.1

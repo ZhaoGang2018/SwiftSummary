@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -87,7 +87,6 @@
 				61061943BE5D7DF4A2DE593E /* Pods-SwiftSummary.debug.xcconfig */,
 				F806799795F0F2DBAFDD1A76 /* Pods-SwiftSummary.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -506,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N42VHKMHLG;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SwiftSummary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,6 +525,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N42VHKMHLG;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SwiftSummary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
