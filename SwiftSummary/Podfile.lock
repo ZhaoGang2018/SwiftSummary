@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.2.1)
+  - Bugly (2.5.5)
   - Charts (3.5.0):
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
@@ -7,9 +8,11 @@ PODS:
   - CocoaLumberjack/Swift (3.6.1):
     - CocoaLumberjack/Core
   - CryptoSwift (1.1.3)
+  - HandyJSON (5.0.1)
   - Hero (1.5.0)
   - IQKeyboardManagerSwift (6.5.5)
   - Kingfisher (4.7.0)
+  - MagazineLayout (1.6.1)
   - MJRefresh (3.1.15.7)
   - ReactiveCocoa (10.3.0):
     - ReactiveSwift (~> 6.2)
@@ -31,12 +34,15 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 5.2.1)
+  - Bugly (= 2.5.5)
   - Charts
   - CocoaLumberjack/Swift
   - CryptoSwift (~> 1.1.3)
+  - HandyJSON (= 5.0.1)
   - Hero
   - IQKeyboardManagerSwift
   - Kingfisher (= 4.7.0)
+  - MagazineLayout
   - MJRefresh (= 3.1.15.7)
   - ReactiveCocoa (~> 10.1)
   - ReactiveSwift (~> 6.1)
@@ -50,12 +56,15 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Bugly
     - Charts
     - CocoaLumberjack
     - CryptoSwift
+    - HandyJSON
     - Hero
     - IQKeyboardManagerSwift
     - Kingfisher
+    - MagazineLayout
     - MJRefresh
     - ReactiveCocoa
     - ReactiveSwift
@@ -70,12 +79,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  Bugly: eded937bbb1f731cacf689c2d934ddbd9ab34f83
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
   CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   CryptoSwift: 6b6e488df0598b3e9fa49254ed1a65e8c1b1e10b
+  HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  MagazineLayout: 163e04d3ee6b555728f2e79c66ae6aa3f6d661de
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   ReactiveCocoa: 083ae559e6f588ce519cab412ea119b431c26a24
   ReactiveSwift: 7937f26ec18d555e2a99352bd0a8b2817d1f042d
@@ -88,6 +100,6 @@ SPEC CHECKSUMS:
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 1a2a98e56513a43ff993315fa4325cc37f413b5e
+PODFILE CHECKSUM: 61317d9db044b0eeaf5e88822b6b8b3742edd40e
 
 COCOAPODS: 1.9.1
