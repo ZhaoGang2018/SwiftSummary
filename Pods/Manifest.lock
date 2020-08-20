@@ -37,6 +37,7 @@ PODS:
   - SnapKit (4.2.0)
   - SSZipArchive (2.2.3)
   - SVProgressHUD (2.2.5)
+  - SwiftyJSON (5.0.0)
   - YYText (1.0.7)
 
 DEPENDENCIES:
@@ -61,6 +62,7 @@ DEPENDENCIES:
   - SnapKit (= 4.2.0)
   - SSZipArchive (= 2.2.3)
   - SVProgressHUD (= 2.2.5)
+  - SwiftyJSON (= 5.0.0)
   - YYText (= 1.0.7)
 
 SPEC REPOS:
@@ -88,6 +90,7 @@ SPEC REPOS:
     - SnapKit
     - SSZipArchive
     - SVProgressHUD
+    - SwiftyJSON
     - YYText
 
 SPEC CHECKSUMS:
@@ -114,8 +117,9 @@ SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 6acd79aec18ae4780e4b0dc6a32e6db628b925ef
+PODFILE CHECKSUM: f618d17576676f346b7185ccd1c3321e6e86a8e1
 
 COCOAPODS: 1.9.1

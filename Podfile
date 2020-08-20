@@ -31,6 +31,7 @@ target 'SwiftSummary' do
     pod 'HandyJSON', '5.0.2'
     pod 'YYText', '1.0.7'
     pod 'KeychainAccess', '4.2.0'
+    pod 'SwiftyJSON', '5.0.0'
 
     post_install do |installer|
         installer.pods_project.targets.each do |target|
