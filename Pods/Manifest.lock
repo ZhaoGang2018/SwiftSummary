@@ -1,57 +1,67 @@
 PODS:
-  - Alamofire (5.2.1)
-  - Bugly (2.5.5)
+  - Alamofire (5.2.2)
+  - Bugly (2.5.71)
   - Charts (3.5.0):
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
-  - CocoaLumberjack/Core (3.6.1)
-  - CocoaLumberjack/Swift (3.6.1):
+  - CocoaLumberjack/Core (3.6.2)
+  - CocoaLumberjack/Swift (3.6.2):
     - CocoaLumberjack/Core
-  - CryptoSwift (1.1.3)
-  - HandyJSON (5.0.1)
+  - CryptoSwift (1.2.0)
+  - HandyJSON (5.0.2)
   - Hero (1.5.0)
-  - IQKeyboardManagerSwift (6.5.5)
-  - Kingfisher (4.7.0)
+  - IQKeyboardManagerSwift (6.5.6)
+  - KeychainAccess (4.2.0)
+  - Kingfisher (5.15.0):
+    - Kingfisher/Core (= 5.15.0)
+  - Kingfisher/Core (5.15.0)
   - MagazineLayout (1.6.1)
-  - MJRefresh (3.1.15.7)
-  - ReactiveCocoa (10.3.0):
+  - MJRefresh (3.4.3)
+  - ReactiveCocoa (11.0.0):
     - ReactiveSwift (~> 6.2)
   - ReactiveSwift (6.3.0)
-  - Realm (5.3.1):
-    - Realm/Headers (= 5.3.1)
-  - Realm/Headers (5.3.1)
-  - RealmSwift (5.3.1):
-    - Realm (= 5.3.1)
+  - Realm (5.3.3):
+    - Realm/Headers (= 5.3.3)
+  - Realm/Headers (5.3.3)
+  - RealmSwift (5.3.3):
+    - Realm (= 5.3.3)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
   - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
+  - SensorsAnalyticsSDK/core (2.1.2)
+  - SensorsAnalyticsSDK/DISABLE_UIWEBVIEW (2.1.2):
+    - SensorsAnalyticsSDK/core
   - SnapKit (4.2.0)
-  - SSZipArchive (2.1.4)
+  - SSZipArchive (2.2.3)
   - SVProgressHUD (2.2.5)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
-  - Alamofire (= 5.2.1)
-  - Bugly (= 2.5.5)
+  - Alamofire (= 5.2.2)
+  - Bugly (= 2.5.71)
   - Charts
-  - CocoaLumberjack/Swift
-  - CryptoSwift (~> 1.1.3)
-  - HandyJSON (= 5.0.1)
-  - Hero
-  - IQKeyboardManagerSwift
-  - Kingfisher (= 4.7.0)
-  - MagazineLayout
-  - MJRefresh (= 3.1.15.7)
-  - ReactiveCocoa (~> 10.1)
-  - ReactiveSwift (~> 6.1)
-  - RealmSwift (= 5.3.1)
-  - RxCocoa (~> 5)
-  - RxSwift (~> 5)
-  - SnapKit (~> 4.2.0)
-  - SSZipArchive (= 2.1.4)
+  - CocoaLumberjack/Swift (= 3.6.2)
+  - CryptoSwift (= 1.2.0)
+  - HandyJSON (= 5.0.2)
+  - Hero (= 1.5.0)
+  - IQKeyboardManagerSwift (= 6.5.6)
+  - KeychainAccess (= 4.2.0)
+  - Kingfisher (= 5.15.0)
+  - MagazineLayout (= 1.6.1)
+  - MJRefresh (= 3.4.3)
+  - ReactiveCocoa (= 11.0.0)
+  - ReactiveSwift (= 6.3.0)
+  - RealmSwift (= 5.3.3)
+  - RxCocoa (= 5.1.1)
+  - RxSwift (= 5.1.1)
+  - SensorsAnalyticsSDK/DISABLE_UIWEBVIEW (= 2.1.2)
+  - SnapKit (= 4.2.0)
+  - SSZipArchive (= 2.2.3)
   - SVProgressHUD (= 2.2.5)
+  - YYText (= 1.0.7)
 
 SPEC REPOS:
   trunk:
@@ -63,6 +73,7 @@ SPEC REPOS:
     - HandyJSON
     - Hero
     - IQKeyboardManagerSwift
+    - KeychainAccess
     - Kingfisher
     - MagazineLayout
     - MJRefresh
@@ -73,33 +84,38 @@ SPEC REPOS:
     - RxCocoa
     - RxRelay
     - RxSwift
+    - SensorsAnalyticsSDK
     - SnapKit
     - SSZipArchive
     - SVProgressHUD
+    - YYText
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-  Bugly: eded937bbb1f731cacf689c2d934ddbd9ab34f83
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
-  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
-  CryptoSwift: 6b6e488df0598b3e9fa49254ed1a65e8c1b1e10b
-  HandyJSON: d45b8415c501e3affc59ca9762c1197ff0feb646
+  CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
+  CryptoSwift: 40e374e45291d8dceedcb0d6184da94533eaabdf
+  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
-  IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
-  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
+  Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
   MagazineLayout: 163e04d3ee6b555728f2e79c66ae6aa3f6d661de
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  ReactiveCocoa: 083ae559e6f588ce519cab412ea119b431c26a24
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  ReactiveCocoa: 189fcea9c5af7e394dd8a4cfc1c6f77af9ff3598
   ReactiveSwift: 7937f26ec18d555e2a99352bd0a8b2817d1f042d
-  Realm: 8ec860dc0c3079f7cab1085d95661a06f162d487
-  RealmSwift: ca9d0df752157befb8c28034301f988a56ce91eb
+  Realm: 2d57ea355bf8ca2a0964d6bfb38d28d7ff2addf6
+  RealmSwift: 0a709536ecea30eea1d3c514f6ade2ed078dee3c
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SensorsAnalyticsSDK: dd96a4b07d9e0ad35b80a2120e583b1a0153282d
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
+  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 61317d9db044b0eeaf5e88822b6b8b3742edd40e
+PODFILE CHECKSUM: 6acd79aec18ae4780e4b0dc6a32e6db628b925ef
 
 COCOAPODS: 1.9.1

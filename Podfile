@@ -4,29 +4,34 @@ platform :ios, '10.0'
 
 target 'SwiftSummary' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    use_frameworks!
+     use_frameworks! :linkage => :static
 #    use_modular_headers!
     inhibit_all_warnings!
+
     # Pods for SwiftSummary
-    pod 'Alamofire', '5.2.1'
-    pod 'Kingfisher', '4.7.0'
-    pod 'SSZipArchive', '2.1.4'
-    pod 'SVProgressHUD', '2.2.5'
-    pod 'RealmSwift', '5.3.1'
-    pod 'MJRefresh', '3.1.15.7'
-    pod 'Hero'
-    pod 'SnapKit', '~> 4.2.0'
-    pod 'CryptoSwift', '~> 1.1.3'
-    pod 'CocoaLumberjack/Swift'
-    pod 'IQKeyboardManagerSwift'
+    pod 'SensorsAnalyticsSDK', '2.1.2', :subspecs => ['DISABLE_UIWEBVIEW']
+    pod 'IQKeyboardManagerSwift', '6.5.6'
     pod 'Charts'
-    pod 'RxSwift', '~> 5'
-    pod 'RxCocoa', '~> 5'
-    pod 'ReactiveCocoa', '~> 10.1'
-    pod 'ReactiveSwift', '~> 6.1'
-    pod 'MagazineLayout'
-    pod 'Bugly’, '2.5.5'
-    pod 'HandyJSON', '5.0.1'
+    pod 'RxSwift', '5.1.1'
+    pod 'RxCocoa', '5.1.1'
+    pod 'ReactiveCocoa', '11.0.0'
+    pod 'ReactiveSwift', '6.3.0'
+    pod 'Alamofire', '5.2.2'
+    pod 'Kingfisher', '5.15.0'
+    pod 'SSZipArchive', '2.2.3'
+    pod 'SVProgressHUD', '2.2.5'
+    pod 'RealmSwift', '5.3.3'
+    pod 'MJRefresh', '3.4.3'
+    pod 'Hero', '1.5.0'
+    pod 'SnapKit', '4.2.0'
+    pod 'CryptoSwift', '1.2.0'
+    pod 'CocoaLumberjack/Swift', '3.6.2'
+    pod 'MagazineLayout', '1.6.1'
+    pod 'Bugly', '2.5.71'
+    pod 'HandyJSON', '5.0.2'
+    pod 'YYText', '1.0.7'
+    pod 'KeychainAccess', '4.2.0'
+
     post_install do |installer|
         installer.pods_project.targets.each do |target|
             target.build_configurations.each do |config|
