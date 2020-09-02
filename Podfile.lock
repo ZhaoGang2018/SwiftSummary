@@ -4,6 +4,7 @@ PODS:
   - Charts (3.5.0):
     - Charts/Core (= 3.5.0)
   - Charts/Core (3.5.0)
+  - CocoaAsyncSocket (7.6.4)
   - CocoaLumberjack/Core (3.6.2)
   - CocoaLumberjack/Swift (3.6.2):
     - CocoaLumberjack/Core
@@ -15,6 +16,10 @@ PODS:
   - Kingfisher (5.15.0):
     - Kingfisher/Core (= 5.15.0)
   - Kingfisher/Core (5.15.0)
+  - KTVCocoaHTTPServer (1.0.0):
+    - CocoaAsyncSocket
+  - KTVHTTPCache (2.0.1):
+    - KTVCocoaHTTPServer
   - MagazineLayout (1.6.1)
   - MJRefresh (3.4.3)
   - ReactiveCocoa (11.0.0):
@@ -39,6 +44,9 @@ PODS:
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
   - YYText (1.0.7)
+  - ZFPlayer (3.3.3):
+    - ZFPlayer/Core (= 3.3.3)
+  - ZFPlayer/Core (3.3.3)
 
 DEPENDENCIES:
   - Alamofire (= 5.2.2)
@@ -51,6 +59,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (= 6.5.6)
   - KeychainAccess (= 4.2.0)
   - Kingfisher (= 5.15.0)
+  - KTVHTTPCache (~> 2.0.0)
   - MagazineLayout (= 1.6.1)
   - MJRefresh (= 3.4.3)
   - ReactiveCocoa (= 11.0.0)
@@ -64,12 +73,14 @@ DEPENDENCIES:
   - SVProgressHUD (= 2.2.5)
   - SwiftyJSON (= 5.0.0)
   - YYText (= 1.0.7)
+  - ZFPlayer (~> 3.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - Bugly
     - Charts
+    - CocoaAsyncSocket
     - CocoaLumberjack
     - CryptoSwift
     - HandyJSON
@@ -77,6 +88,8 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - KeychainAccess
     - Kingfisher
+    - KTVCocoaHTTPServer
+    - KTVHTTPCache
     - MagazineLayout
     - MJRefresh
     - ReactiveCocoa
@@ -92,11 +105,13 @@ SPEC REPOS:
     - SVProgressHUD
     - SwiftyJSON
     - YYText
+    - ZFPlayer
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
   Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
   CryptoSwift: 40e374e45291d8dceedcb0d6184da94533eaabdf
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
@@ -104,6 +119,8 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
+  KTVCocoaHTTPServer: df8d7b861e603ff8037e9b2138aca2563a6b768d
+  KTVHTTPCache: 588c3eb16f6bd1e6fde1e230dabfb7bd4e490a4d
   MagazineLayout: 163e04d3ee6b555728f2e79c66ae6aa3f6d661de
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
   ReactiveCocoa: 189fcea9c5af7e394dd8a4cfc1c6f77af9ff3598
@@ -119,7 +136,8 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  ZFPlayer: 1310252c253b9958e4fcd411e706b99c31834eaf
 
-PODFILE CHECKSUM: f618d17576676f346b7185ccd1c3321e6e86a8e1
+PODFILE CHECKSUM: b517ed4af3222f8f00dc1e99a3ff0f00ef0ac66f
 
 COCOAPODS: 1.9.1
