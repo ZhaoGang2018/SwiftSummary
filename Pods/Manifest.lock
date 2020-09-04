@@ -44,9 +44,9 @@ PODS:
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
   - YYText (1.0.7)
-  - ZFPlayer (3.3.3):
-    - ZFPlayer/Core (= 3.3.3)
-  - ZFPlayer/Core (3.3.3)
+  - ZFPlayer (4.0.1):
+    - ZFPlayer/Core (= 4.0.1)
+  - ZFPlayer/Core (4.0.1)
 
 DEPENDENCIES:
   - Alamofire (= 5.2.2)
@@ -59,7 +59,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (= 6.5.6)
   - KeychainAccess (= 4.2.0)
   - Kingfisher (= 5.15.0)
-  - KTVHTTPCache (~> 2.0.0)
+  - KTVHTTPCache (= 2.0.1)
   - MagazineLayout (= 1.6.1)
   - MJRefresh (= 3.4.3)
   - ReactiveCocoa (= 11.0.0)
@@ -73,7 +73,7 @@ DEPENDENCIES:
   - SVProgressHUD (= 2.2.5)
   - SwiftyJSON (= 5.0.0)
   - YYText (= 1.0.7)
-  - ZFPlayer (~> 3.0)
+  - ZFPlayer (= 4.0.1)
 
 SPEC REPOS:
   trunk:
@@ -136,8 +136,8 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
-  ZFPlayer: 1310252c253b9958e4fcd411e706b99c31834eaf
+  ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: b517ed4af3222f8f00dc1e99a3ff0f00ef0ac66f
+PODFILE CHECKSUM: 99969338412986c2607825fe6ed517774d0b8118
 
 COCOAPODS: 1.9.1

@@ -33,8 +33,8 @@ target 'SwiftSummary' do
     pod 'KeychainAccess', '4.2.0'
     pod 'SwiftyJSON', '5.0.0'
 
-    pod 'KTVHTTPCache', '~> 2.0.0'
-    pod 'ZFPlayer', '~> 3.0'
+    pod 'KTVHTTPCache', '2.0.1'
+    pod 'ZFPlayer', '4.0.1'
 
     post_install do |installer|
         installer.pods_project.targets.each do |target|
