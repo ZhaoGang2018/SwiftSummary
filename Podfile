@@ -9,7 +9,7 @@ target 'SwiftSummary' do
     inhibit_all_warnings!
 
     # Pods for SwiftSummary
-    pod 'SensorsAnalyticsSDK', '2.1.2', :subspecs => ['DISABLE_UIWEBVIEW']
+    pod 'SensorsAnalyticsSDK', '2.1.5', :subspecs => ['DISABLE_UIWEBVIEW']
     pod 'IQKeyboardManagerSwift', '6.5.6'
     pod 'Charts'
     pod 'RxSwift', '5.1.1'
@@ -23,12 +23,11 @@ target 'SwiftSummary' do
     pod 'RealmSwift', '5.3.3'
     pod 'MJRefresh', '3.4.3'
     pod 'Hero', '1.5.0'
-    pod 'SnapKit', '4.2.0'
+    pod 'SnapKit', '5.0.1'
     pod 'CryptoSwift', '1.2.0'
     pod 'CocoaLumberjack/Swift', '3.6.2'
     pod 'MagazineLayout', '1.6.1'
-    pod 'Bugly', '2.5.71'
-    pod 'HandyJSON', '5.0.2'
+    pod 'HandyJSON', '5.0.3-beta'
     pod 'YYText', '1.0.7'
     pod 'KeychainAccess', '4.2.0'
     pod 'SwiftyJSON', '5.0.0'
