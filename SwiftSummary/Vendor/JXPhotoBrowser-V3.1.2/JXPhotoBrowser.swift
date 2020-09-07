@@ -96,15 +96,6 @@ open class JXPhotoBrowser: UIViewController, UIViewControllerTransitioningDelega
     /// 页码指示
     open var pageIndicator: JXPhotoBrowserPageIndicator?
     
-    // 底部的view，用于添加按钮（自己添加）
-    open var bottomCustomView: UIView?
-    
-    // vip引导，用于添加按钮（自己添加）
-    open var vipGuideView: UIView?
-    
-    // 用户信息的view（自己添加）
-    open var userInfoView: UIView?
-    
     /// 背景蒙版
     open lazy var maskView: UIView = {
         let view = UIView()
@@ -278,9 +269,6 @@ open class JXPhotoBrowser: UIViewController, UIViewControllerTransitioningDelega
     open func dismiss() {
         setStatusBar(hidden: false)
         pageIndicator?.removeFromSuperview()
-        bottomCustomView?.removeFromSuperview()
-        vipGuideView?.removeFromSuperview()
-        userInfoView?.removeFromSuperview()
         if presentingViewController != nil {
             dismiss(animated: true, completion: nil)
         } else {

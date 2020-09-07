@@ -75,7 +75,7 @@ class XHEmptyTipView: UIView {
             make.centerY.equalToSuperview().offset(-56)
         })
         
-        retryButton = UIButton(title: "重试", titleColor: UIColor.white, titleFont: UIFont.Semibold(18), backgroundColor: UIColor.blue, cornerRadius: 6)
+        retryButton = UIButton(title: "重试", titleColor: UIColor.white, titleFont: UIFont.Semibold(18), backgroundColor: UIColor.blueColor_xh(), cornerRadius: 6)
         retryButton?.addTarget(self, action: #selector(reload), for: .touchUpInside)
         self.addSubview(retryButton!)
         retryButton?.snp.makeConstraints({ (make) in

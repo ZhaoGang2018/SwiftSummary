@@ -17,13 +17,14 @@ enum ZGFeatureItemType: String {
     case KVO = "KVO的实现原理"
     case timer = "定时器"
     case Breakpoint = "断点续传"
+    case BrowseImage = " 浏览图片"
 }
 
 
 class ZGHomePageViewController: XHBaseViewController {
     
     var listView: ZGHomePageView?
-    var items: [ZGFeatureItemType] = [.chart, .xibTest, .toast, .GCD, .dataStructure, .KVO, .timer, .Breakpoint]
+    var items: [ZGFeatureItemType] = [.chart, .xibTest, .toast, .GCD, .dataStructure, .KVO, .timer, .Breakpoint, .BrowseImage]
     
     var reachability: Reachability?
     let hostNames = [nil, "google.com", "invalidhost"]
@@ -72,9 +73,9 @@ class ZGHomePageViewController: XHBaseViewController {
             vc = UIStoryboard(name: "HomePage", bundle: Bundle.main).instantiateViewController(withIdentifier: "ZGTimerViewController")
         case .Breakpoint:
             vc = UIStoryboard.buildViewController(storyboardName: "HomePage", classType: ZGBreakpointViewController.self)
-            break
-        default:
-            break
+            
+        case .BrowseImage:
+            vc = ZGBrowseImageViewController()
         }
         
         if let vc = vc {

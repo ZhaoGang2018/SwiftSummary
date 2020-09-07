@@ -86,20 +86,22 @@ class XHPhotoBrowser: JXPhotoBrowser {
     // MARK: - 填充数据
     func configData(_ context: ReloadCellContext) {
         
-//        if self.dataSource.count == 0 {
-//            return
-//        }
-//
-//        let browserCell = context.cell as? JXPhotoBrowserImageCell
-//
-//        if let tempModels = self.dataSource as? [String] {
-//            // 数据数组里是String
-//            browserCell?.imageView.image = UIImage(named: tempModels[context.index])
-//
-//        } else if let tempModels = self.dataSource as? [UIImage] {
-//            // 数据数组里是UIImage
-//            browserCell?.imageView.image = tempModels[context.index]
-//        } else if let tempModels = self.dataSource as? [XHBrowseTeamPhotoItem] {
+        if self.dataSource.count == 0 {
+            return
+        }
+        
+        let browserCell = context.cell as? JXPhotoBrowserImageCell
+        
+        if let tempModels = self.dataSource as? [String] {
+            // 数据数组里是String
+            browserCell?.imageView.image = UIImage(named: tempModels[context.index])
+            
+        } else if let tempModels = self.dataSource as? [UIImage] {
+            // 数据数组里是UIImage
+            browserCell?.imageView.image = tempModels[context.index]
+        }
+        
+//        else if let tempModels = self.dataSource as? [XHBrowseTeamPhotoItem] {
 //            // 数据数组里是WorkGropPeoplePhotoDetailItem
 //            browserCell?.imageView.setImage(with: tempModels[context.index].largeUrl, defaultImage: self.placeholder, complete: { [weak browserCell] (image, url) in
 //                browserCell?.setNeedsLayout()

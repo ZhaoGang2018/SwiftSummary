@@ -64,11 +64,16 @@ open class JXPhotoBrowserImageCell: UIView, UIScrollViewDelegate, UIGestureRecog
         return cell
     }
     
-    open func setup() {
-        backgroundColor = .clear
+    /// 子类可重写，创建子视图。完全自定义时不必调super。
+    open func constructSubviews() {
         scrollView.delegate = self
         addSubview(scrollView)
         scrollView.addSubview(imageView)
+    }
+    
+    open func setup() {
+        backgroundColor = .clear
+        constructSubviews()
         
         /// 拖动手势
         addPanGesture()
@@ -239,9 +244,6 @@ open class JXPhotoBrowserImageCell: UIView, UIScrollViewDelegate, UIGestureRecog
             photoBrowser?.maskView.alpha = result.scale * result.scale
             photoBrowser?.setStatusBar(hidden: result.scale > 0.99)
             photoBrowser?.pageIndicator?.isHidden = result.scale < 0.99
-            photoBrowser?.bottomCustomView?.isHidden = result.scale < 0.99
-            photoBrowser?.vipGuideView?.isHidden = result.scale < 0.99
-             photoBrowser?.userInfoView?.isHidden = result.scale < 0.99
         case .ended, .cancelled:
             imageView.frame = panResult(pan).frame
             let isDown = pan.velocity(in: self).y > 0
@@ -251,9 +253,6 @@ open class JXPhotoBrowserImageCell: UIView, UIScrollViewDelegate, UIGestureRecog
                 photoBrowser?.maskView.alpha = 1.0
                 photoBrowser?.setStatusBar(hidden: true)
                 photoBrowser?.pageIndicator?.isHidden = false
-                photoBrowser?.bottomCustomView?.isHidden = false
-                photoBrowser?.vipGuideView?.isHidden = false
-                photoBrowser?.userInfoView?.isHidden = false
                 resetImageViewPosition()
             }
         default:

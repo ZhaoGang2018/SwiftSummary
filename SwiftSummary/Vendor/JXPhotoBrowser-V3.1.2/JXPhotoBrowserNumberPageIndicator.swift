@@ -34,14 +34,11 @@ open class JXPhotoBrowserNumberPageIndicator: UILabel, JXPhotoBrowserPageIndicat
     }
     
     private func config() {
-        font = UIFont.regular(20) //UIFont.systemFont(ofSize: 17)
-        textAlignment = .right
+        font = UIFont.systemFont(ofSize: 17)
+        textAlignment = .center
         textColor = UIColor.white
-//        backgroundColor = UIColor.black.withAlphaComponent(0.5) //UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
-//        layer.masksToBounds = true
-        
-        self.layerCornerRadius = 6
-        self.isUserInteractionEnabled = false
+        backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.4)
+        layer.masksToBounds = true
     }
     
     public func setup(with browser: JXPhotoBrowser) {
@@ -52,9 +49,7 @@ open class JXPhotoBrowserNumberPageIndicator: UILabel, JXPhotoBrowserPageIndicat
     
     public func reloadData(numberOfItems: Int, pageIndex: Int) {
         total = numberOfItems
-        text = "\(pageIndex + 1)/\(total)"
-        
-        /*
+        text = "\(pageIndex + 1) / \(total)"
         sizeToFit()
         frame.size.width += frame.height
         layer.cornerRadius = frame.height / 2
@@ -62,13 +57,11 @@ open class JXPhotoBrowserNumberPageIndicator: UILabel, JXPhotoBrowserPageIndicat
             center.x = view.bounds.width / 2
             frame.origin.y = topPadding
         }
-       isHidden = numberOfItems <= 1
- */
-        self.frame = CGRect(x: 20, y: SpeedyApp.statusBarHeight + 10, width: SpeedyApp.screenWidth - 40, height: 36)
+        isHidden = numberOfItems <= 1
     }
     
     public func didChanged(pageIndex: Int) {
-        text = "\(pageIndex + 1)/\(total)"
+        text = "\(pageIndex + 1) / \(total)"
     }
     
 }
