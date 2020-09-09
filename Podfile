@@ -33,8 +33,12 @@ target 'SwiftSummary' do
     pod 'SwiftyJSON', '5.0.0'
 
     pod 'KTVHTTPCache', '2.0.1'
-    pod 'ZFPlayer', '4.0.1'
     pod 'TZImagePickerController', '3.4.2'
+
+    pod 'ZFPlayer', '4.0.1'
+    pod 'ZFPlayer/ControlView', '4.0.1'
+    pod 'ZFPlayer/AVPlayer', '4.0.1'
+    pod 'ZFPlayer/ijkplayer', '4.0.1'
 
     post_install do |installer|
         installer.pods_project.targets.each do |target|

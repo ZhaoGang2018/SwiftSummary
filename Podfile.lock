@@ -10,6 +10,7 @@ PODS:
   - CryptoSwift (1.2.0)
   - HandyJSON (5.0.3-beta)
   - Hero (1.5.0)
+  - IJKMediaFramework (0.1.5)
   - IQKeyboardManagerSwift (6.5.6)
   - KeychainAccess (4.2.0)
   - Kingfisher (5.15.0):
@@ -46,7 +47,14 @@ PODS:
   - YYText (1.0.7)
   - ZFPlayer (4.0.1):
     - ZFPlayer/Core (= 4.0.1)
+  - ZFPlayer/AVPlayer (4.0.1):
+    - ZFPlayer/Core
+  - ZFPlayer/ControlView (4.0.1):
+    - ZFPlayer/Core
   - ZFPlayer/Core (4.0.1)
+  - ZFPlayer/ijkplayer (4.0.1):
+    - IJKMediaFramework
+    - ZFPlayer/Core
 
 DEPENDENCIES:
   - Alamofire (= 5.2.2)
@@ -74,6 +82,9 @@ DEPENDENCIES:
   - TZImagePickerController (= 3.4.2)
   - YYText (= 1.0.7)
   - ZFPlayer (= 4.0.1)
+  - ZFPlayer/AVPlayer (= 4.0.1)
+  - ZFPlayer/ControlView (= 4.0.1)
+  - ZFPlayer/ijkplayer (= 4.0.1)
 
 SPEC REPOS:
   trunk:
@@ -84,6 +95,7 @@ SPEC REPOS:
     - CryptoSwift
     - HandyJSON
     - Hero
+    - IJKMediaFramework
     - IQKeyboardManagerSwift
     - KeychainAccess
     - Kingfisher
@@ -115,6 +127,7 @@ SPEC CHECKSUMS:
   CryptoSwift: 40e374e45291d8dceedcb0d6184da94533eaabdf
   HandyJSON: 88e8ea5f66ab65c3b8768499a1935d0509c460d4
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  IJKMediaFramework: f1119f6324c96bc4654f3045a5beaa95ba0596c0
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   KeychainAccess: 3f760109aa99b05d0f231e28b22642da7153e38a
   Kingfisher: 1acb67597a520c2d0310677e66d6e0af455ef757
@@ -138,6 +151,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: 77476e7a156ff42b2cd59d8ae7a6e9b02cc7b09e
+PODFILE CHECKSUM: fdc5dff34b3047d203da6bea633e40ca51e4a6c5
 
 COCOAPODS: 1.9.1

@@ -11,3 +11,5 @@
 #import "TZImageCropManager.h"
 
 #import <CommonCrypto/CommonDigest.h>
+
+#import <ZFPlayer.h>
