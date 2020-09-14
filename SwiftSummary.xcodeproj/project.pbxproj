@@ -34,6 +34,15 @@
 		C6CCCBCE25064F8E0000C2C6 /* video_2.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = C6CCCBCB25064F8E0000C2C6 /* video_2.MP4 */; };
 		C6CCCBCF25064F8E0000C2C6 /* video_1.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = C6CCCBCC25064F8E0000C2C6 /* video_1.MP4 */; };
 		C6CCCBD025064F8E0000C2C6 /* video_0.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = C6CCCBCD25064F8E0000C2C6 /* video_0.MP4 */; };
+		C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */; };
+		C6DFB2B7250F8C7300671B12 /* XHNetworkRequestTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB29F250F8C7300671B12 /* XHNetworkRequestTask.swift */; };
+		C6DFB2B8250F8C7300671B12 /* XHIPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB2A0250F8C7300671B12 /* XHIPManager.swift */; };
+		C6DFB2B9250F8C7300671B12 /* XHNetworkRawResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB2A2250F8C7300671B12 /* XHNetworkRawResultModel.swift */; };
+		C6DFB2BC250F8C7300671B12 /* XHNetworkRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB2A5250F8C7300671B12 /* XHNetworkRequestManager.swift */; };
+		C6DFB2BD250F8C7300671B12 /* XHAlamofireDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB2A6250F8C7300671B12 /* XHAlamofireDownloader.swift */; };
+		C6DFB2C8250F8C7300671B12 /* XHNetworkStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB2B2250F8C7300671B12 /* XHNetworkStatusManager.swift */; };
+		C6DFB2C9250F8C7300671B12 /* MultipartDataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB2B4250F8C7300671B12 /* MultipartDataExtension.swift */; };
+		C6DFB2CA250F8C7300671B12 /* DENetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB2B5250F8C7300671B12 /* DENetManager.swift */; };
 		C6FB8683250602380038AF6F /* Pods_SwiftSummary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6FB8682250602380038AF6F /* Pods_SwiftSummary.framework */; };
 		C6FB8684250602380038AF6F /* Pods_SwiftSummary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C6FB8682250602380038AF6F /* Pods_SwiftSummary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED88359025033FDC003F163B /* 01.JPG in Resources */ = {isa = PBXBuildFile; fileRef = ED8834F425033FDC003F163B /* 01.JPG */; };
@@ -252,6 +261,15 @@
 		C6CCCBCB25064F8E0000C2C6 /* video_2.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_2.MP4; sourceTree = "<group>"; };
 		C6CCCBCC25064F8E0000C2C6 /* video_1.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_1.MP4; sourceTree = "<group>"; };
 		C6CCCBCD25064F8E0000C2C6 /* video_0.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_0.MP4; sourceTree = "<group>"; };
+		C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHBreakPointDownloader.swift; sourceTree = "<group>"; };
+		C6DFB29F250F8C7300671B12 /* XHNetworkRequestTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHNetworkRequestTask.swift; sourceTree = "<group>"; };
+		C6DFB2A0250F8C7300671B12 /* XHIPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHIPManager.swift; sourceTree = "<group>"; };
+		C6DFB2A2250F8C7300671B12 /* XHNetworkRawResultModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHNetworkRawResultModel.swift; sourceTree = "<group>"; };
+		C6DFB2A5250F8C7300671B12 /* XHNetworkRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHNetworkRequestManager.swift; sourceTree = "<group>"; };
+		C6DFB2A6250F8C7300671B12 /* XHAlamofireDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHAlamofireDownloader.swift; sourceTree = "<group>"; };
+		C6DFB2B2250F8C7300671B12 /* XHNetworkStatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHNetworkStatusManager.swift; sourceTree = "<group>"; };
+		C6DFB2B4250F8C7300671B12 /* MultipartDataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartDataExtension.swift; sourceTree = "<group>"; };
+		C6DFB2B5250F8C7300671B12 /* DENetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DENetManager.swift; sourceTree = "<group>"; };
 		C6FB8682250602380038AF6F /* Pods_SwiftSummary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SwiftSummary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8834F425033FDC003F163B /* 01.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 01.JPG; sourceTree = "<group>"; };
 		ED8834F525033FDC003F163B /* 03.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 03.JPG; sourceTree = "<group>"; };
@@ -552,6 +570,38 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
+		C6DFB29D250F8C7300671B12 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C6DFB2B5250F8C7300671B12 /* DENetManager.swift */,
+				C6DFB2A6250F8C7300671B12 /* XHAlamofireDownloader.swift */,
+				C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */,
+				C6DFB2A0250F8C7300671B12 /* XHIPManager.swift */,
+				C6DFB2A5250F8C7300671B12 /* XHNetworkRequestManager.swift */,
+				C6DFB29F250F8C7300671B12 /* XHNetworkRequestTask.swift */,
+				C6DFB2B2250F8C7300671B12 /* XHNetworkStatusManager.swift */,
+				C6DFB2A1250F8C7300671B12 /* Models */,
+				C6DFB2B3250F8C7300671B12 /* MultipartDataExtension */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C6DFB2A1250F8C7300671B12 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C6DFB2A2250F8C7300671B12 /* XHNetworkRawResultModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6DFB2B3250F8C7300671B12 /* MultipartDataExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C6DFB2B4250F8C7300671B12 /* MultipartDataExtension.swift */,
+			);
+			path = MultipartDataExtension;
+			sourceTree = "<group>";
+		};
 		DF9A97304D9BB6A7998B6455 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,6 +698,7 @@
 		ED88352E25033FDC003F163B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C6DFB29D250F8C7300671B12 /* Network */,
 				ED88352F25033FDC003F163B /* HomePage */,
 				ED88354425033FDC003F163B /* Message */,
 				ED88354625033FDC003F163B /* Rank */,
@@ -1260,6 +1311,7 @@
 				ED8836C72503471E003F163B /* XHBaseCustomAlert.swift in Sources */,
 				C6CCCBB725064B390000C2C6 /* JXPhotoBrowserPageIndicator.swift in Sources */,
 				ED8835D825033FDD003F163B /* XHLogManager.swift in Sources */,
+				C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */,
 				ED88367D25034440003F163B /* SpeedyQueue.swift in Sources */,
 				ED9256A825035416007A5E4F /* XHDataCacheManager.swift in Sources */,
 				C6CCCBBA25064B390000C2C6 /* JXPhotoBrowserSmoothZoomAnimator.swift in Sources */,
@@ -1272,6 +1324,7 @@
 				ED8836D825034AF5003F163B /* ZGMainTabBarController.swift in Sources */,
 				ED8835C125033FDC003F163B /* ZGRankViewController.swift in Sources */,
 				ED88367E25034440003F163B /* SpeedyJSON.swift in Sources */,
+				C6DFB2B9250F8C7300671B12 /* XHNetworkRawResultModel.swift in Sources */,
 				ED8835B725033FDC003F163B /* ZGTimerViewController.swift in Sources */,
 				ED88367F25034440003F163B /* SpeedyKeychain.swift in Sources */,
 				ED88367525034440003F163B /* SpeedyFileManager.swift in Sources */,
@@ -1316,8 +1369,10 @@
 				ED92569F25035174007A5E4F /* HintProtocols.swift in Sources */,
 				ED88365F25034440003F163B /* UIColor+SpeedyExtension.swift in Sources */,
 				ED8835BD25033FDC003F163B /* ZGXibTestView.swift in Sources */,
+				C6DFB2B8250F8C7300671B12 /* XHIPManager.swift in Sources */,
 				ED88366A25034440003F163B /* NSAttributedString+Extension.swift in Sources */,
 				ED8835E625033FDD003F163B /* XHTimeManager+Festival.swift in Sources */,
+				C6DFB2B7250F8C7300671B12 /* XHNetworkRequestTask.swift in Sources */,
 				ED88367825034440003F163B /* SpeedyJumpType.swift in Sources */,
 				C6CCCBC025064B390000C2C6 /* JXPhotoBrowserDefaultPageIndicator.swift in Sources */,
 				ED88366E25034440003F163B /* String+SpeedyExtension.swift in Sources */,
@@ -1356,6 +1411,7 @@
 				C6CCCBBD25064B390000C2C6 /* JXPhotoBrowserNumberPageIndicator.swift in Sources */,
 				ED8836D125034AF5003F163B /* XHBasePlainTableViewController.swift in Sources */,
 				ED8836A72503471E003F163B /* XHTitleArrowsLabel.swift in Sources */,
+				C6DFB2C9250F8C7300671B12 /* MultipartDataExtension.swift in Sources */,
 				ED88367925034440003F163B /* SpeedyMemoryCache.swift in Sources */,
 				ED88366C25034440003F163B /* Date+SpeedyExtension.swift in Sources */,
 				ED88367225034440003F163B /* SpeedyClassCopy.swift in Sources */,
@@ -1371,6 +1427,7 @@
 				C6CCCBBB25064B390000C2C6 /* JXPhotoBrowserAnimatedTransitioning.swift in Sources */,
 				ED88367725034440003F163B /* SpeedyJumpStatus.swift in Sources */,
 				ED8835AB25033FDC003F163B /* TKImageView.m in Sources */,
+				C6DFB2BD250F8C7300671B12 /* XHAlamofireDownloader.swift in Sources */,
 				ED88367025034440003F163B /* SpeedyCore.swift in Sources */,
 				ED88365925034440003F163B /* UIImage+SpeedyExtension.swift in Sources */,
 				ED8836A92503471E003F163B /* XHSegmentBar.swift in Sources */,
@@ -1381,6 +1438,7 @@
 				ED88365A25034440003F163B /* UIView+SpeedyExtension.swift in Sources */,
 				ED8836AC2503471E003F163B /* XHLinkagePageView.swift in Sources */,
 				ED88367C25034440003F163B /* SpeedyClass.swift in Sources */,
+				C6DFB2BC250F8C7300671B12 /* XHNetworkRequestManager.swift in Sources */,
 				ED88375B25034B59003F163B /* UIFont+Extension.swift in Sources */,
 				ED88365325034440003F163B /* UIImage+Downsampling.swift in Sources */,
 				ED88365425034440003F163B /* UIImageView+SpeedyExtension.swift in Sources */,
@@ -1394,8 +1452,10 @@
 				ED88365C25034440003F163B /* UITextField+SpeedyExtension.swift in Sources */,
 				ED8835AA25033FDC003F163B /* Toast.swift in Sources */,
 				ED88365825034440003F163B /* UITableView+SpeedyExtension.swift in Sources */,
+				C6DFB2CA250F8C7300671B12 /* DENetManager.swift in Sources */,
 				ED88367B25034440003F163B /* SpeedyTimeCalculateTool.swift in Sources */,
 				ED8836C62503471E003F163B /* XHNetworkErrorTipView.swift in Sources */,
+				C6DFB2C8250F8C7300671B12 /* XHNetworkStatusManager.swift in Sources */,
 				ED8835DD25033FDD003F163B /* XHCrashSignalManager.swift in Sources */,
 				ED8835B425033FDC003F163B /* ZGStoryboardSecondViewController.swift in Sources */,
 				ED88365225034440003F163B /* UIImage+Watermark.swift in Sources */,
