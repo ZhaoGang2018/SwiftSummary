@@ -76,6 +76,8 @@ extension UIImageView {
                     complete?(nil, nil)
                 }
             }
+        } else {
+            complete?(nil, nil)
         }
     }
     

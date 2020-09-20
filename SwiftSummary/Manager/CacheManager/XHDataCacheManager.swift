@@ -135,7 +135,7 @@ extension XHDataCacheManager {
     func clearCacheFolder(cacheType: XHDataCacheType) {
         
         let folderPath: String = self.cachePath + "/" + cacheType.rawValue
-        SpeedyFileManager.deleteFolder(at: folderPath)
+        SpeedyFileManager.removeFolder(folderPath)
         XHLogDebug("[数据缓存调试] - 清除缓存")
     }
     

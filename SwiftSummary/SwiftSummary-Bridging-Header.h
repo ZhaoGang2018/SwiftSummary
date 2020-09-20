@@ -12,4 +12,5 @@
 
 #import <CommonCrypto/CommonDigest.h>
 
-#import <ZFPlayer.h>
+#import <ZFPlayer/ZFPlayer.h>
+#import <KTVHTTPCache/KTVHTTPCache.h>

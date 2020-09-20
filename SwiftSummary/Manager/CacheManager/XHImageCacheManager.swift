@@ -25,19 +25,22 @@ enum XHImageCacheType: String {
     case continueShoot = "continueShoot"
 }
 
-class XHImageCacheManager {
+class XHImageCacheManager: NSObject {
     
-    static let cacheTypes: [XHImageCacheType] = [.UnprocessedImages, .UserPhotos, .UserVideos, .UserLogos, .imageStitching, .continueShoot]
+    static let shared = XHImageCacheManager()
     
-    // MARK: - 创建所有的缓存文件夹
-    class func createBaseDirectorys() {
+    let cacheTypes: [XHImageCacheType] = [.UnprocessedImages, .UserPhotos, .UserVideos, .UserLogos, .imageStitching, .continueShoot]
+    
+    // 禁止外部调用init初始化方法
+    private override init() {
+        super.init()
         for tempType in self.cacheTypes {
             let path = self.getFolderPath(tempType)
             SpeedyFileManager.checkDirectory(at: path)
         }
     }
     
-    class func saveImage(_ imageData: Data, fileName: String, cacheType: XHImageCacheType) -> Bool {
+    func saveImage(_ imageData: Data, fileName: String, cacheType: XHImageCacheType) -> Bool {
         
         let filePath = self.getFilePath(fileName, cacheType: cacheType)
         let isSuccess = FileManager.default.createFile(atPath: filePath, contents: imageData, attributes: nil)
@@ -45,23 +48,8 @@ class XHImageCacheManager {
         return isSuccess
     }
     
-    // 获取图片缓存文件路径
-    class func getPhotoCacheFilePath(userId: String?, fileName: String) -> String {
-        
-        let folderPath = self.getFolderPath(.UserPhotos)
-        
-        var newPath: String = folderPath
-        if let tempSubPath = userId, tempSubPath.count > 0 {
-            newPath = folderPath + "/" + tempSubPath.md5()
-        }
-        
-        SpeedyFileManager.checkDirectory(at: newPath)
-        newPath = newPath + "/" + fileName
-        return newPath
-    }
-    
     // 获取文件夹缓存路径
-    class func getFolderPath(_ cacheType: XHImageCacheType) -> String {
+    func getFolderPath(_ cacheType: XHImageCacheType) -> String {
         
         let folderPath = SpeedySandbox.shared.documentDirectory + "/" + cacheType.rawValue
         SpeedyFileManager.checkDirectory(at: folderPath)
@@ -69,7 +57,7 @@ class XHImageCacheManager {
     }
     
     // 获取文件的缓存路径
-    class func getFilePath(_ fileName: String, cacheType: XHImageCacheType) -> String {
+    func getFilePath(_ fileName: String, cacheType: XHImageCacheType) -> String {
         
         let folderPath = self.getFolderPath(cacheType)
         let fullPath = folderPath + "/" + fileName
@@ -77,19 +65,44 @@ class XHImageCacheManager {
     }
     
     // 删除文件件
-    class func deleteFolder(cacheType: XHImageCacheType) {
+    func deleteFolder(cacheType: XHImageCacheType) {
         
         let folderPath = self.getFolderPath(cacheType)
         
-        _ = SpeedyFileManager.deleteFile(at: folderPath)
+        _ = SpeedyFileManager.removeFile(at: folderPath)
         SpeedyFileManager.createDirectory(at: folderPath)
     }
     
     // MARK: - 删除文件
-    class func deleteFile(_ fileName: String, cacheType: XHImageCacheType) -> Bool {
+    func deleteFile(_ fileName: String, cacheType: XHImageCacheType) -> Bool {
         
         let filePath = self.getFilePath(fileName, cacheType: cacheType)
-        return SpeedyFileManager.deleteFile(at: filePath)
+        return SpeedyFileManager.removeFile(at: filePath)
+    }
+    
+    // 把UserPhotos文件夹下的子文件夹移到UserPhotos
+    func moveSubfilesToUserPhotos() {
+        let folderPath = self.getFolderPath(.UserPhotos)
+        if let subpaths = FileManager.default.subpaths(atPath: folderPath), subpaths.count > 0 {
+            for singlePath in subpaths {
+                let subfilePath = folderPath + "/" + singlePath
+                var isDir = ObjCBool(false) //isDir判断是否为文件夹
+                if FileManager.default.fileExists(atPath: subfilePath, isDirectory: &isDir), isDir.boolValue == true {
+                    if let subpaths2 = FileManager.default.subpaths(atPath: subfilePath), subpaths2.count > 0 {
+                        for singlePath2 in subpaths2 {
+                            let sourcePath = subfilePath + "/" + singlePath2
+                            let targetPath = folderPath + "/" + singlePath2
+                            do{
+                                try FileManager.default.moveItem(atPath: sourcePath, toPath: targetPath)
+                                XHLogDebug("[文件操作调试] - 移动文件到目标位置成功")
+                            }catch{
+                                XHLogDebug("[文件操作调试] - 移动文件到目标位置失败 - error:[\(error)]")
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

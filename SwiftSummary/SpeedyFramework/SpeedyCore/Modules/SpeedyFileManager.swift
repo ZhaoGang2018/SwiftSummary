@@ -10,8 +10,74 @@ import UIKit
 
 class SpeedyFileManager: NSObject {
     
+    // 移动文件到目标位置
+    @discardableResult
+    open class func moveFile(sourcePath: String, targetPath: String) -> Bool {
+        
+        if FileManager.default.fileExists(atPath: sourcePath) == false {
+            XHLogDebug("[文件操作调试] - 移动文件到目标位置，源文件不存在 - sourcePath:[\(sourcePath)]")
+            return false
+        }
+        
+        do{
+            try FileManager.default.moveItem(atPath: sourcePath, toPath: targetPath)
+            XHLogDebug("[文件操作调试] - 移动文件到目标位置成功")
+            return true
+        }catch{
+            XHLogDebug("[文件操作调试] - 移动文件到目标位置失败 - error:[\(error)]")
+            return false
+        }
+    }
+    
+    // 移动文件到目标位置
+    @discardableResult
+    open class func moveFile(sourceUrl: URL, targetUrl: URL) -> Bool {
+        do{
+            try FileManager.default.moveItem(at: sourceUrl, to: targetUrl)
+            XHLogDebug("[文件操作调试] - 移动文件到目标位置成功")
+            return true
+        }catch{
+            XHLogDebug("[文件操作调试] - 移动文件到目标位置失败 - error:[\(error)]")
+            return false
+        }
+    }
+    
+    // 复制一个文件，到目标位置
+    @discardableResult
+    open class func copyFile(sourcePath: String, targetPath: String) -> Bool {
+        
+        if FileManager.default.fileExists(atPath: sourcePath) == false {
+            XHLogDebug("[文件操作调试] - 复制一个文件，到目标位置失败，源文件不存在 - sourcePath:[\(sourcePath)]")
+            return false
+        }
+        
+        do{
+            try FileManager.default.copyItem(atPath: sourcePath, toPath: targetPath)
+            XHLogDebug("[文件操作调试] - 复制一个文件，到目标位置成功")
+            return true
+        }catch{
+            XHLogDebug("[文件操作调试] - 复制一个文件，到目标位置失败 - error:[\(error)]")
+            return false
+        }
+    }
+    
+    // 复制一个文件，到目标位置
+    @discardableResult
+    open class func copyFile(sourceUrl: URL, targetUrl: URL) -> Bool {
+        
+        do{
+            try FileManager.default.copyItem(at: sourceUrl, to: targetUrl)
+            XHLogDebug("[文件操作调试] - 复制一个文件，到目标位置成功")
+            return true
+        }catch{
+            XHLogDebug("[文件操作调试] - 复制一个文件，到目标位置失败 - error:[\(error)]")
+            return false
+        }
+    }
+    
     // MARK: - 删除单个文件
-    @discardableResult open class func deleteFile(at path: String) -> Bool {
+    @discardableResult
+    open class func removeFile(at path: String) -> Bool {
         
         if FileManager.default.fileExists(atPath: path) == false {
             XHLogDebug("[文件操作调试] - 删除文件失败，文件不存在 - path:[\(path)]")
@@ -28,60 +94,56 @@ class SpeedyFileManager: NSObject {
         }
     }
     
-    // MARK: - 删除文件夹
-    open class func deleteFolder(at path: String) {
+    // MARK: - 删除单个文件
+    @discardableResult
+    open class func removeFile(url: URL) -> Bool {
         
-        let manager = FileManager.default
-        if manager.fileExists(atPath: path) {
-            let childFilePath = manager.subpaths(atPath: path)
-            for singlePath in childFilePath! {
-                let fileAbsoluePath = path + "/" + singlePath
-                _ = SpeedyFileManager.deleteFile(at: fileAbsoluePath)
+        do {
+            try FileManager.default.removeItem(at: url)
+            XHLogDebug("[文件操作调试] - 删除文件成功 - path:[\(url)]")
+            return true
+        } catch {
+            XHLogDebug("[文件操作调试] - 删除文件失败 - path:[\(url)] - error - [\(error)]")
+            return false
+        }
+    }
+    
+    // MARK: - 删除文件夹
+    open class func removeFolder(_ folderPath: String) {
+        
+        if FileManager.default.fileExists(atPath: folderPath) == false {
+            XHLogDebug("[文件操作调试] - 删除文件夹失败，文件不存在 - folderPath:[\(folderPath)]")
+            return
+        }
+        
+        if let subpaths = FileManager.default.subpaths(atPath: folderPath), subpaths.count > 0 {
+            for singlePath in subpaths {
+                let fileAbsoluePath = folderPath + "/" + singlePath
+                do {
+                    try FileManager.default.removeItem(atPath: fileAbsoluePath)
+                    XHLogDebug("[文件操作调试] - 删除文件夹中的子文件成功 - path:[\(fileAbsoluePath)]")
+                } catch {
+                    XHLogDebug("[文件操作调试] - 删除文件夹中的子文件失败 - path:[\(fileAbsoluePath)] - error - [\(error)]")
+                }
             }
         }
     }
     
-    // MARK: - 计算单个文件的大小(KB)
-    open class func getFileSize(at path: String) -> Double {
-        let manager = FileManager.default
-        var fileSize: Double = 0
-        do {
-            let attr = try manager.attributesOfItem(atPath: path)
-            fileSize = Double(attr[FileAttributeKey.size] as! UInt64)
-            let dict = attr as NSDictionary
-            fileSize = Double(dict.fileSize())
-        } catch {
-            dump(error)
+    // 遍历目标文件夹(获得文档目录下所有的内容，以及子文件夹下的内容)
+    open class func listFolder(_ folderPath: String) -> [Any]? {
+        
+        if FileManager.default.fileExists(atPath: folderPath) == false {
+            XHLogDebug("[文件操作调试] - 遍历目标文件夹，文件不存在 - folderPath:[\(folderPath)]")
+            return nil
         }
-        return fileSize/1024
-    }
-    
-    // MARK: - 遍历所有子目录， 并计算文件大小(KB)
-    open class func getFolderSize(at folderPath: String) -> Double {
-        let manage = FileManager.default
-        if !manage.fileExists(atPath: folderPath) {
-            return 0
+        
+        if let contents = FileManager.default.enumerator(atPath: folderPath) {
+            let result = contents.allObjects
+            XHLogDebug("遍历目标文件夹:[\(result)]")
+            return result
         }
-        let childFilePath = manage.subpaths(atPath: folderPath)
-        var fileSize:Double = 0
-        for path in childFilePath! {
-            let fileAbsoluePath = folderPath + "/" + path
-            fileSize += getFileSize(at: fileAbsoluePath)
-        }
-        return fileSize
-    }
-    
-    // 单位换算(KB)
-    class func getSizeString(KBSize: Int) -> String {
-        var resultStr = "\(KBSize)KB"
-        if KBSize >= 1024 && KBSize < 1024*1024 {
-            let MBSize = Double(KBSize) / Double(1024)
-            resultStr = String(format: "%.1fMB", MBSize)
-        } else if KBSize >= 1024*1024 {
-            let GBSize = Double(KBSize) / Double(1024) / Double(1024)
-            resultStr = String(format: "%.2fGB", GBSize)
-        }
-        return resultStr
+        XHLogDebug("遍历目标文件夹失败")
+        return nil
     }
     
     //MARK: -  检查目录，如果文件夹不存在，就创建文件夹
@@ -135,6 +197,53 @@ class SpeedyFileManager: NSObject {
             XHLogDebug("[文件操作调试] - 设置不备份属性失败 - error[\(error)] - path:[\(path)]")
         }
     }
+}
+
+extension SpeedyFileManager {
+    
+    // MARK: - 计算单个文件的大小(KB)
+       open class func getFileSize(at path: String) -> Double {
+           let manager = FileManager.default
+           var fileSize: Double = 0
+           do {
+               let attr = try manager.attributesOfItem(atPath: path)
+               fileSize = Double(attr[FileAttributeKey.size] as! UInt64)
+               let dict = attr as NSDictionary
+               fileSize = Double(dict.fileSize())
+           } catch {
+               dump(error)
+           }
+           return fileSize/1024
+       }
+       
+       // MARK: - 遍历所有子目录， 并计算文件大小(KB)
+       open class func getFolderSize(at folderPath: String) -> Double {
+           let manage = FileManager.default
+           if !manage.fileExists(atPath: folderPath) {
+               return 0
+           }
+           let childFilePath = manage.subpaths(atPath: folderPath)
+           var fileSize:Double = 0
+           for path in childFilePath! {
+               let fileAbsoluePath = folderPath + "/" + path
+               fileSize += getFileSize(at: fileAbsoluePath)
+           }
+           return fileSize
+       }
+       
+       // 单位换算(KB)
+       class func getSizeString(KBSize: Int) -> String {
+           var resultStr = "\(KBSize)KB"
+           if KBSize >= 1024 && KBSize < 1024*1024 {
+               let MBSize = Double(KBSize) / Double(1024)
+               resultStr = String(format: "%.1fMB", MBSize)
+           } else if KBSize >= 1024*1024 {
+               let GBSize = Double(KBSize) / Double(1024) / Double(1024)
+               resultStr = String(format: "%.2fGB", GBSize)
+           }
+           return resultStr
+       }
+       
 }
 
 

@@ -14,6 +14,7 @@ import CryptoSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var allowOrentitaionRotation: Bool?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,6 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         XHLogManager.shared.configDDLog()
         return true
+    }
+    
+    // 设置屏幕方向
+    /// 在这里写支持的旋转方向，为了防止横屏方向，应用启动时候界面变为横屏模式
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        
+        if let temp = self.allowOrentitaionRotation, temp == true {
+            return .allButUpsideDown
+        }
+        return .portrait
     }
     
     // MARK: UISceneSession Lifecycle

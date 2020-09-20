@@ -143,7 +143,7 @@ extension UIViewController {
         } else {
 //            viewController.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left) , dismissing: .uncover(direction: .right))
 //            viewController.hero.isEnabled = true
-            self.present(viewController, animated: animated, completion: nil)
+//            self.present(viewController, animated: animated, completion: nil)
         }
     }
     

@@ -102,6 +102,26 @@ class ZGBrowseImageViewController: XHBaseViewController {
         guard let currentView = sender.view else {
             return
         }
+        let currentIndex = currentView.tag
+        
+        let image = UIImage(named: self.imageNames[currentIndex])
+        let videoURL = "https://www.apple.com/105/media/cn/mac/family/2018/46c4b917_abfd_45a3_9b51_4e3054191797/films/bruce/mac-bruce-tpl-cn-2018_1280x720h.mp4"
+        
+        let model = XHPreviewImageOrVideoModel(type: .video, image: image , imageUrlStr: nil, videoPath: videoURL, videoUrlStr: "", placeholderUrlStr: "", placeholderImage: image)
+        
+        let browserVC = XHPreviewImageOrVideoViewController(dataSource: [model], currentIndex: 0) { (index) -> (UIView?, UIImage?, CGRect) in
+            
+            return (currentView, image, currentView.bounds)
+        }
+        
+        browserVC.show(method: .present(fromVC: self, embed: nil))
+    }
+    
+    /*
+    @objc private func imageViewTapAction(sender: UIGestureRecognizer) {
+        guard let currentView = sender.view else {
+            return
+        }
         
         let currentIndex = currentView.tag
         
@@ -149,6 +169,7 @@ class ZGBrowseImageViewController: XHBaseViewController {
         browser.pageIndex = currentIndex
         browser.show()
     }
+ */
     
 }
 

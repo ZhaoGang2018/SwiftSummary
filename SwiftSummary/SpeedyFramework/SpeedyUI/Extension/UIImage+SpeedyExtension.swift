@@ -13,12 +13,12 @@ import UIKit
 extension UIImage {
     
     // 图片所占的字节数
-//    var bytesCount: Int {
-//        if let data = self.jpegData(compressionQuality: 1.0) {
-//            return data.bytes.count
-//        }
-//        return 0
-//    }
+    var bytesCount: Int {
+        if let data = self.jpegData(compressionQuality: 1.0) {
+            return data.bytes.count
+        }
+        return 0
+    }
     
     public convenience init?(color: UIColor, size: CGSize = CGSize(width: 1.0, height: 1.0)) {
         UIGraphicsBeginImageContextWithOptions(size, true, UIScreen.main.scale)

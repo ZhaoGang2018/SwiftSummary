@@ -10,6 +10,12 @@ import Foundation
 
 extension String {
     
+    // url的百分号编码
+    var urlPercentEncoding: String? {
+        let result = self.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        return result
+    }
+    
     // MARK: - 手机号校验
     func phoneVerify() -> Bool {
         let chars = NSCharacterSet.init(charactersIn: "0123456789").inverted
@@ -130,17 +136,17 @@ extension String {
         return String(self[start...end])
     }
     
-//    // 字符串的字节数
-//    var bytes: Array<UInt8> {
-//        if let data = data(using: String.Encoding.utf8, allowLossyConversion: true) {
-//            return data.bytes
-//        }
-//        return Array(utf8)
-//    }
-//    
-//    var bytesCount: Int {
-//        return self.bytes.count
-//    }
+    // 字符串的字节数
+    var bytes: Array<UInt8> {
+        if let data = data(using: String.Encoding.utf8, allowLossyConversion: true) {
+            return data.bytes
+        }
+        return Array(utf8)
+    }
+    
+    var bytesCount: Int {
+        return self.bytes.count
+    }
     
     var bytes2: Array<UInt8> {
         var bytes: [UInt8] = []

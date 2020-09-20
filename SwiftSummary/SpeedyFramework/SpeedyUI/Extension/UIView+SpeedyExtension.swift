@@ -41,7 +41,23 @@ extension UIView {
         layer.shadowOpacity = opacity
         layer.masksToBounds = false
     }
-    
+    /// 添加颜色渐变
+    ///
+    /// - Parameters:
+    ///   - colors: 颜色数组
+    ///   - layerframe: 坐标
+    ///   - startPoint: 开始值
+    ///   - endPoint: 结束值
+    func addGradualLayerWith(colors:Array<CGColor>,layerframe:CGRect,startPoint:CGPoint,endPoint:CGPoint) -> Void
+    {
+        let _gradientLayer = CAGradientLayer()
+        _gradientLayer.startPoint = startPoint
+        _gradientLayer.endPoint = endPoint
+        _gradientLayer.frame = layerframe
+        _gradientLayer.colors = colors
+        self.layer.insertSublayer(_gradientLayer, at: 0)
+
+    }
     // MARK: - 添加细线 ply线高
     func addLine(position : LinePosition, color : UIColor, ply : CGFloat, leftPadding : CGFloat, rightPadding : CGFloat) -> UIView {
         
