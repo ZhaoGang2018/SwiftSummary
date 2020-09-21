@@ -76,6 +76,9 @@ class XHVideoCustomControlView: UIView {
     // 中心播放按钮的点击
     var centerPlayHandler: SpeedyCommonHandler?
     
+    // 是否正在loading
+    var isLoading: Bool = false
+    
     deinit {
         XHLogDebug("deinit - [图片或视频预览调试] - XHVideoCustomControlView")
     }
@@ -429,7 +432,9 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
     
     /// 双击手势事件
     func gestureDoubleTapped(_ gestureControl: ZFPlayerGestureControl) {
-        self.playOrPause()
+        
+         // 双击手势不作处理，为了防止播放失败后，点击后无法显示重试按钮
+//        self.playOrPause()
     }
     
     /// 捏合手势事件，这里改变了视频的填充模式
@@ -455,20 +460,23 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
             smallPlayOrPauseBtn.isSelected = true
             /// 开始播放时候判断是否显示loading
             if (videoPlayer.currentPlayerManager.loadState == .stalled) {
-                self.activity.startAnimating()
+                self.startLoading()
             } else if ((videoPlayer.currentPlayerManager.loadState == .stalled || videoPlayer.currentPlayerManager.loadState == .prepare)) {
-                self.activity.startAnimating()
+                self.startLoading()
             }
         } else if (state == .playStatePaused) {
             self.hideNetworkErrorTip()
             pauseBtn.isHidden = false
             smallPlayOrPauseBtn.isSelected = false
-            self.canAutoHide = false
-            self.showControlView(true)
+            self.canAutoHide = true
+            self.autoHideControlView()
             /// 暂停的时候隐藏loading
-            self.activity.stopAnimating()
+            self.stopLoading()
         } else if (state == .playStatePlayFailed) {
-            self.activity.stopAnimating()
+            
+            pauseBtn.isHidden = true
+            smallPlayOrPauseBtn.isSelected = true
+            self.stopLoading()
             self.showErrorView()
         }
     }
@@ -483,12 +491,11 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
             self.player?.currentPlayerManager.view.backgroundColor = UIColor.black
         }
         if (state == .stalled && videoPlayer.currentPlayerManager.isPlaying) {
-            
-            self.activity.startAnimating()
+            self.startLoading()
         } else if ((state == .stalled || state == .prepare) && videoPlayer.currentPlayerManager.isPlaying) {
-            self.activity.startAnimating()
+            self.startLoading()
         } else {
-            self.activity.stopAnimating()
+            self.stopLoading()
         }
     }
     
@@ -500,8 +507,8 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
             
             let totalTimeString = ZFUtilities.convertTimeSecond(Int(round(totalTime)))
             self.totalTimeLabel.text = totalTimeString
-            slider.value = videoPlayer.progress;
-            XHLogDebug("ZFPlayer进度 - progress[\(videoPlayer.progress)]")
+            slider.value = videoPlayer.progress
+            XHLogDebug("ZFPlayer进度 - totalTime:[\(totalTime)] - currentTime:[\(currentTime)] - progress[\(videoPlayer.progress)]")
         }
     }
     
@@ -653,12 +660,14 @@ extension XHVideoCustomControlView: ZFSliderViewDelegate {
         
         if currentPlayer.totalTime > 0 {
             slider.isdragging = true
-            let seekValue = currentPlayer.totalTime*Double(value)
-            XHLogDebug("[视频播放调试] - seek:[\(seekValue)] - value:[\(value)]")
+            
+            let totalTime = Float(round(currentPlayer.totalTime))
+            let seekValue = TimeInterval(totalTime*value) + 0.35 // 为了进度对齐，没有找到原因
+            XHLogDebug("[视频播放调试] - totalTime:[\(totalTime)] - seek:[\(seekValue)] - value:[\(value)]")
             currentPlayer.seek(toTime: seekValue) { [weak self] (finished) in
                 if finished {
-                    self?.slider.isdragging = false
                     self?.player?.currentPlayerManager.play()
+                    self?.slider.isdragging = false
                 }
             }
         } else {
@@ -668,5 +677,34 @@ extension XHVideoCustomControlView: ZFSliderViewDelegate {
         
         self.canAutoHide = true
         self.autoHideControlView()
+    }
+}
+
+// MARK: - 处理Loading
+extension XHVideoCustomControlView {
+    
+    private func startLoading() {
+        
+        if self.isLoading {
+            return
+        }
+        self.activity.startAnimating()
+        self.isLoading = true
+        XHLogDebug("[视频播放调试] - startLoading")
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 30) { [weak self] in
+            
+            if let weakSelf = self, weakSelf.isLoading {
+                XHLogDebug("[视频播放调试] - 30s后，手动关闭loading")
+                weakSelf.stopLoading()
+                weakSelf.showErrorView()
+            }
+        }
+    }
+    
+    private func stopLoading() {
+        self.activity.stopAnimating()
+        self.isLoading = false
+        XHLogDebug("[视频播放调试] - stopLoading")
     }
 }

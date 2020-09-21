@@ -214,6 +214,11 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         
     }
     
+    // 重试按钮的点击
+    func retryButtonAction() {
+        self.player?.currentPlayerManager.reloadPlayer()
+    }
+    
     // 添加播放器
     func addPlayer(_ containerView: UIView, videoUrl: URL, coverURLStr: String, coverImage: UIImage?, playIndex: Int) {
         
@@ -225,8 +230,9 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
             self?.closeVideoAction()
         }
 
+        // 重试按钮的点击
         controlView?.retryHandler = { [weak self] in
-            self?.addPlayer(containerView, videoUrl: videoUrl, coverURLStr: coverURLStr, coverImage: coverImage, playIndex: playIndex)
+            self?.retryButtonAction()
         }
 
         controlView?.centerPlayHandler = { [weak self] in
@@ -257,6 +263,7 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         // 不允许屏幕旋转
         self.player?.allowOrentitaionRotation = true
         
+        // 横屏模式
         self.player?.orientationObserver.fullScreenMode = .landscape
         
         self.player?.orientationWillChange = { (player, isFullScreen) in
