@@ -48,7 +48,7 @@ extension UIImageView {
         if let urlString = urlStr, let url = URL(string: urlString) {
             
             KingfisherManager.shared.retrieveImage(with: url, options: nil, progressBlock: { (receivedSize, totalSize) in
-                XHLogDebug("[下载图片调试] - 已经下载的size:[\(receivedSize)] - 总大小:[\(totalSize)]")
+//                XHLogDebug("[下载图片调试] - 已经下载的size:[\(receivedSize)] - 总大小:[\(totalSize)]")
             }) { (result) in
                 
                 switch result {

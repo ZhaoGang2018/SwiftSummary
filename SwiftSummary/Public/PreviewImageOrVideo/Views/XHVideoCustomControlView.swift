@@ -50,8 +50,6 @@ class XHVideoCustomControlView: UIView {
     var controlViewAppeared: Bool = false // 是否正在显示
     /// 加载loading
     var activity = ZFSpeedLoadingView()
-    /// 封面图
-    var coverImageView = UIImageView()
     
     // 是否正在播放
     var isPlaying: Bool {
@@ -78,6 +76,8 @@ class XHVideoCustomControlView: UIView {
     
     // 是否正在loading
     var isLoading: Bool = false
+    
+    var failedView: UIView?
     
     deinit {
         XHLogDebug("deinit - [图片或视频预览调试] - XHVideoCustomControlView")
@@ -169,20 +169,14 @@ extension XHVideoCustomControlView {
             make.centerX.centerY.equalToSuperview()
         }
         
-        coverImageView = UIImageView()
-        coverImageView.isUserInteractionEnabled = true
-        coverImageView.contentMode = .scaleAspectFit
-        self.addSubview(coverImageView)
-        coverImageView.snp.makeConstraints { (make) in
-            make.left.right.width.height.equalToSuperview()
-        }
-        
         activity = ZFSpeedLoadingView()
         self.addSubview(activity)
         activity.snp.makeConstraints { (make) in
             make.width.height.equalTo(80.0)
             make.centerX.centerY.equalToSuperview()
         }
+        
+        buildFailedView()
     }
     
     // 顶部的工具栏
@@ -439,11 +433,11 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
     
     /// 捏合手势事件，这里改变了视频的填充模式
     func gesturePinched(_ gestureControl: ZFPlayerGestureControl, scale: Float) {
-        if (scale > 1) {
-            self.player?.currentPlayerManager.scalingMode = .aspectFill
-        } else {
-            self.player?.currentPlayerManager.scalingMode = .aspectFit
-        }
+//        if (scale > 1) {
+//            self.player?.currentPlayerManager.scalingMode = .aspectFill
+//        } else {
+//            self.player?.currentPlayerManager.scalingMode = .aspectFit
+//        }
     }
     
     /// 准备播放
@@ -454,8 +448,11 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
     /// 播放状态改变
     func videoPlayer(_ videoPlayer: ZFPlayerController, playStateChanged state: ZFPlayerPlaybackState) {
         
-        if (state == .playStatePlaying) {
-            self.hideNetworkErrorTip()
+        switch state {
+        case .playStateUnknown:
+            break
+        case .playStatePlaying:
+            self.hideFailedView()
             pauseBtn.isHidden = true
             smallPlayOrPauseBtn.isSelected = true
             /// 开始播放时候判断是否显示loading
@@ -464,38 +461,50 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
             } else if ((videoPlayer.currentPlayerManager.loadState == .stalled || videoPlayer.currentPlayerManager.loadState == .prepare)) {
                 self.startLoading()
             }
-        } else if (state == .playStatePaused) {
-            self.hideNetworkErrorTip()
+        case .playStatePaused:
+            self.hideFailedView()
             pauseBtn.isHidden = false
             smallPlayOrPauseBtn.isSelected = false
             self.canAutoHide = true
             self.autoHideControlView()
             /// 暂停的时候隐藏loading
             self.stopLoading()
-        } else if (state == .playStatePlayFailed) {
-            
+        case .playStatePlayFailed:
             pauseBtn.isHidden = true
             smallPlayOrPauseBtn.isSelected = true
             self.stopLoading()
-            self.showErrorView()
+            self.showFailedView()
+        case .playStatePlayStopped:
+            pauseBtn.isHidden = true
+            smallPlayOrPauseBtn.isSelected = true
+            self.stopLoading()
+            self.showFailedView()
+            
+        default:
+            break
         }
     }
     
     /// 加载状态改变
     func videoPlayer(_ videoPlayer: ZFPlayerController, loadStateChanged state: ZFPlayerLoadState) {
         
-        if (state == .prepare) {
-            self.coverImageView.isHidden = false
-        } else if (state == .playthroughOK || state == .playable) {
-            self.coverImageView.isHidden = true;
+        switch state {
+        case .prepare:
+            if videoPlayer.currentPlayerManager.isPlaying {
+                self.startLoading()
+            }
+        case .playable:
             self.player?.currentPlayerManager.view.backgroundColor = UIColor.black
-        }
-        if (state == .stalled && videoPlayer.currentPlayerManager.isPlaying) {
-            self.startLoading()
-        } else if ((state == .stalled || state == .prepare) && videoPlayer.currentPlayerManager.isPlaying) {
-            self.startLoading()
-        } else {
             self.stopLoading()
+        case .playthroughOK:
+            self.player?.currentPlayerManager.view.backgroundColor = UIColor.black
+            self.stopLoading()
+        case .stalled:
+            if videoPlayer.currentPlayerManager.isPlaying {
+                self.startLoading()
+            }
+        default:
+            break
         }
     }
     
@@ -508,7 +517,7 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
             let totalTimeString = ZFUtilities.convertTimeSecond(Int(round(totalTime)))
             self.totalTimeLabel.text = totalTimeString
             slider.value = videoPlayer.progress
-            XHLogDebug("ZFPlayer进度 - totalTime:[\(totalTime)] - currentTime:[\(currentTime)] - progress[\(videoPlayer.progress)]")
+//            XHLogDebug("ZFPlayer进度 - totalTime:[\(totalTime)] - currentTime:[\(currentTime)] - progress[\(videoPlayer.progress)]")
         }
     }
     
@@ -605,16 +614,6 @@ extension XHVideoCustomControlView: ZFPlayerMediaControl {
     func lockedVideoPlayer(_ videoPlayer: ZFPlayerController, lockedScreen locked: Bool) {
         showControlView(true)
     }
-    
-    private func showErrorView() {
-        self.hideNetworkErrorTip()
-        let errorView = self.showNetworkErrorTip { [weak self] in
-            self?.hideNetworkErrorTip()
-            self?.retryHandler?()
-        }
-        errorView.tipLabel?.textColor = UIColor.white
-        errorView.tipLabel?.text = "视频加载失败"
-    }
 }
 
 // MARK: - 处理进度条 ZFSliderViewDelegate
@@ -697,7 +696,7 @@ extension XHVideoCustomControlView {
             if let weakSelf = self, weakSelf.isLoading {
                 XHLogDebug("[视频播放调试] - 30s后，手动关闭loading")
                 weakSelf.stopLoading()
-                weakSelf.showErrorView()
+                weakSelf.showFailedView()
             }
         }
     }
@@ -706,5 +705,60 @@ extension XHVideoCustomControlView {
         self.activity.stopAnimating()
         self.isLoading = false
         XHLogDebug("[视频播放调试] - stopLoading")
+    }
+}
+
+
+// MARK: - 处理重试的框
+extension XHVideoCustomControlView {
+    
+    // 重试按钮的点击方法
+    @objc private func retryButtonAction() {
+        self.hideFailedView()
+        self.retryHandler?()
+    }
+    
+    private func showFailedView() {
+        if let tempView = self.failedView {
+            self.bringSubviewToFront(tempView)
+            tempView.isHidden = false
+            
+            self.canAutoHide = false
+            self.showControlView(true)
+        }
+    }
+    
+    private func hideFailedView() {
+        self.failedView?.isHidden = true
+    }
+    
+    private func buildFailedView() {
+        failedView = UIView(cornerRadius: 10)
+        failedView?.backgroundColor = UIColor.black.withAlphaComponent(0.39)
+        self.addSubview(failedView!)
+        failedView?.snp.makeConstraints({ (make) in
+            make.width.equalTo(286)
+            make.height.equalTo(146)
+            make.centerX.centerY.equalToSuperview()
+        })
+        
+        let tipLabel = UILabel(text: "视频加载失败", textColor: UIColor.white, textFont: UIFont.regular(20), textAlignment: .center)
+        failedView?.addSubview(tipLabel)
+        tipLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(13)
+            make.height.equalTo(26)
+            make.left.equalTo(20)
+            make.right.equalTo(-20)
+        }
+        
+        let retryBtn = UIButton(title: "重试", titleColor: UIColor.white, titleFont: UIFont.Semibold(18), backgroundColor: UIColor.blueColor_xh(), cornerRadius: 6)
+        retryBtn.addTarget(self, action: #selector(retryButtonAction), for: .touchUpInside)
+        failedView?.addSubview(retryBtn)
+        retryBtn.snp.makeConstraints { (make) in
+            make.left.equalTo(29)
+            make.right.equalTo(-29)
+            make.bottom.equalTo(-15)
+            make.height.equalTo(52.0)
+        }
     }
 }

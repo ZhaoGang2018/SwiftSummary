@@ -111,6 +111,7 @@ class XHPreviewVideoCell: UIView, UIScrollViewDelegate, UIGestureRecognizerDeleg
         scrollView.setZoomScale(1.0, animated: false)
     }
     
+    /*
     open func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
@@ -118,7 +119,7 @@ class XHPreviewVideoCell: UIView, UIScrollViewDelegate, UIGestureRecognizerDeleg
     open func scrollViewDidZoom(_ scrollView: UIScrollView) {
         imageView.center = computeImageLayoutCenter(in: scrollView)
     }
-    
+    */
     
     open func computeImageLayoutCenter(in scrollView: UIScrollView) -> CGPoint {
         var x = scrollView.contentSize.width * 0.5

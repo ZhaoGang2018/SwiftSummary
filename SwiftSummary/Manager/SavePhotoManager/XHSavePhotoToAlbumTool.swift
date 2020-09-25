@@ -26,7 +26,7 @@ class XHSavePhotoToAlbumTool: NSObject {
             let filePath = XHImageCacheManager.shared.getFilePath(fileName, cacheType: .UserPhotos)
             if isSuccess {
                 // 通过路径保存
-                self.saveByPath(filePath, albumName: albumName, isVideo: false, isDeleteFromSanbox: true, complete: complete)
+                self.saveByPath(filePath, albumName: albumName, isVideo: false, complete: complete)
             } else {
                 // 如果保存到沙盒失败，则保存到系统相册
                 self.saveByData(imageData, complete: complete)
@@ -40,17 +40,17 @@ class XHSavePhotoToAlbumTool: NSObject {
     // MARK: - 通过文件路径保存图片到手机相册
     class func savePhoto(filePath: String, albumName: String? = "今日水印相机", complete: SpeedyCompleteHandler?) {
         XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 调用[savePhoto(filePath:]")
-        self.saveByPath(filePath, albumName: albumName, isVideo: false, isDeleteFromSanbox: false, complete: complete)
+        self.saveByPath(filePath, albumName: albumName, isVideo: false, complete: complete)
     }
     
     // MARK: - 通过文件路径保存视频到手机相册
     class func saveVideo(filePath: String, albumName: String? = "今日水印相机", complete: SpeedyCompleteHandler?) {
         XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 调用[saveVideo(filePath:]")
-        self.saveByPath(filePath, albumName: albumName, isVideo: true, isDeleteFromSanbox: false, complete: complete)
+        self.saveByPath(filePath, albumName: albumName, isVideo: true, complete: complete)
     }
     
     // MARK: - 通过路径保存
-    private class func saveByPath(_ filePath: String, albumName: String?, isVideo: Bool, isDeleteFromSanbox: Bool, complete: SpeedyCompleteHandler?) {
+    private class func saveByPath(_ filePath: String, albumName: String?, isVideo: Bool, complete: SpeedyCompleteHandler?) {
         
         if filePath.count == 0 || FileManager.default.fileExists(atPath: filePath) == false {
             XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByPath] - \(isVideo ? "视频": "图片") - 文件不存在，保存失败")
@@ -66,33 +66,33 @@ class XHSavePhotoToAlbumTool: NSObject {
             var newAssets: PHFetchResult<PHAsset>?
             if let currentAlbumName = albumName, currentAlbumName.count > 0 {
                 newCollect = self.createdCollection(albumName: currentAlbumName)
-                newAssets = self.createdAssets(filePath: filePath, isVideo: isVideo)
+                if let _ = newCollect {
+                    newAssets = self.createdAssets(filePath: filePath, isVideo: isVideo)
+                }
             }
             
             PHPhotoLibrary.shared().performChanges({
                 
-                if let createdAssets = newAssets {
-                    if let collect = newCollect {
-                        // 保存到自定义相册
-                        XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByPath] - \(isVideo ? "视频": "图片") - 保存到自定义相册")
-                        let request = PHAssetCollectionChangeRequest(for: collect)
-                        // 这个方法让图片显示在相簿中的第一个位置
-                        // request?.insertAssets(createdAssets, at: NSIndexSet(index: 0) as IndexSet)
-                        // 这个方法让图片显示在相簿中的最后的位置
-                        request?.addAssets(createdAssets)
-                    } else {
-                        XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByPath] - \(isVideo ? "视频": "图片") - 使用PHFetchResult保存到自定义相册")
-                        let request = PHAssetCollectionChangeRequest()
-                        request.addAssets(createdAssets)
-                    }
+                if let currentCollect = newCollect, let currentAssets = newAssets {
+                    // 保存到自定义相册
+                    XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByPath] - \(isVideo ? "视频": "图片") - 保存到自定义相册")
+                    let request = PHAssetCollectionChangeRequest(for: currentCollect)
+                    // 这个方法让图片显示在相簿中的第一个位置
+                    // request?.insertAssets(createdAssets, at: NSIndexSet(index: 0) as IndexSet)
+                    // 这个方法让图片显示在相簿中的最后的位置
+                    request?.addAssets(currentAssets)
                 } else {
                     // 保存到系统相册
                     XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByPath] - \(isVideo ? "视频": "图片") - 使用filePath保存到系统相册")
+                    
+                    let options = PHAssetResourceCreationOptions()
+                    options.originalFilename = "" // 不会修改保存到手机相册图片的名称
+                    
                     let fileUrl = URL(fileURLWithPath: filePath)
                     if isVideo {
-                        PHAssetCreationRequest.forAsset().addResource(with: .video, fileURL: fileUrl, options: nil)
+                        PHAssetCreationRequest.forAsset().addResource(with: .video, fileURL: fileUrl, options: options)
                     } else {
-                        PHAssetCreationRequest.forAsset().addResource(with: .photo, fileURL: fileUrl, options: nil)
+                        PHAssetCreationRequest.forAsset().addResource(with: .photo, fileURL: fileUrl, options: options)
                     }
                 }
                 
@@ -101,13 +101,6 @@ class XHSavePhotoToAlbumTool: NSObject {
                 DispatchQueue.main.async {
                     if success {
                         XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByPath] - \(isVideo ? "视频": "图片") - 保存成功")
-                        if isDeleteFromSanbox {
-                            do {
-                                try FileManager.default.removeItem(atPath: filePath)
-                            } catch  {
-                                XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByPath] - 删除保存成功的图片失败error:[\(error)]")
-                            }
-                        }
                         complete?(true, nil, nil)
                     } else {
                         if retryCount > 2 {
@@ -144,25 +137,20 @@ class XHSavePhotoToAlbumTool: NSObject {
             var newAssets: PHFetchResult<PHAsset>?
             if let currentAlbumName = albumName, currentAlbumName.count > 0 {
                 newCollect = self.createdCollection(albumName: currentAlbumName)
-                newAssets = self.createdAssets(image: image)
+                if let _ = newCollect {
+                    newAssets = self.createdAssets(image: image)
+                }
             }
             
             PHPhotoLibrary.shared().performChanges({
-                
-                if let currentAssets = newAssets {
-                    if let currentCollect = newCollect {
-                        // 保存到自定义相册
-                        XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByImage] - 图片 - 保存到自定义相册")
-                        let request = PHAssetCollectionChangeRequest(for: currentCollect)
-                        // 这个方法让图片显示在相簿中的第一个位置
-                        request?.insertAssets(currentAssets, at: NSIndexSet(index: 0) as IndexSet)
-                        // 这个方法让图片显示在相簿中的最后的位置
-                        request?.addAssets(currentAssets)
-                    } else {
-                        XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByImage] - 图片 - 使用PHFetchResult保存到自定义相册")
-                        let request = PHAssetCollectionChangeRequest()
-                        request.addAssets(currentAssets)
-                    }
+                if let currentCollect = newCollect, let currentAssets = newAssets {
+                    // 保存到自定义相册
+                    XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByImage] - 图片 - 保存到自定义相册")
+                    let request = PHAssetCollectionChangeRequest(for: currentCollect)
+                    // 这个方法让图片显示在相簿中的第一个位置
+                    // request?.insertAssets(currentAssets, at: NSIndexSet(index: 0) as IndexSet)
+                    // 这个方法让图片显示在相簿中的最后的位置
+                    request?.addAssets(currentAssets)
                 } else {
                     // 保存到系统相册
                     PHAssetChangeRequest.creationRequestForAsset(from: image)
@@ -204,7 +192,6 @@ class XHSavePhotoToAlbumTool: NSObject {
         var retryCount: Int = 0
         
         func beginSave() {
-            
             PHPhotoLibrary.shared().performChanges({
                 // 保存到系统相册
                 XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool[saveByData] - 图片 - 保存成功")
@@ -269,10 +256,12 @@ extension XHSavePhotoToAlbumTool {
         // 当前App对应的自定义相册没有被创建过
         // 创建一个`自定义相册`
         var createdCollectionID: String = ""
-        guard let _ = try? PHPhotoLibrary.shared().performChangesAndWait({
-            createdCollectionID = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: albumName).placeholderForCreatedAssetCollection.localIdentifier
-        }) else {
-            XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 创建相册名字失败")
+        do {
+            try PHPhotoLibrary.shared().performChangesAndWait({
+                createdCollectionID = PHAssetCollectionChangeRequest.creationRequestForAssetCollection(withTitle: albumName).placeholderForCreatedAssetCollection.localIdentifier
+            })
+        } catch {
+            XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 创建相册名字失败, error:[\(error)]")
             return nil
         }
         
@@ -298,20 +287,34 @@ extension XHSavePhotoToAlbumTool {
         
         let fileUrl = URL(fileURLWithPath: filePath)
         var assetID: String = ""
-        if isVideo {
-            guard let _ = try? PHPhotoLibrary.shared().performChangesAndWait({
-                assetID = PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: fileUrl)?.placeholderForCreatedAsset?.localIdentifier ?? ""
-            }) else {
-                XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 创建视频PHFetchResult<PHAsset>失败")
-                return nil
-            }
-        } else {
-            guard let _ = try? PHPhotoLibrary.shared().performChangesAndWait({
-                assetID = PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: fileUrl)?.placeholderForCreatedAsset?.localIdentifier ?? ""
-            }) else {
-                XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 创建图片PHFetchResult<PHAsset>失败")
-                return nil
-            }
+        
+        do {
+            try PHPhotoLibrary.shared().performChangesAndWait({
+                
+                /*
+                 // 会修改保存到手机相册图片的名称
+                 if isVideo {
+                 assetID = PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: fileUrl)?.placeholderForCreatedAsset?.localIdentifier ?? ""
+                 } else {
+                 assetID = PHAssetChangeRequest.creationRequestForAssetFromImage(atFileURL: fileUrl)?.placeholderForCreatedAsset?.localIdentifier ?? ""
+                 }
+                 */
+                
+                let options = PHAssetResourceCreationOptions()
+                options.originalFilename = "" // 不会修改保存到手机相册图片的名称
+                
+                let assetRequest = PHAssetCreationRequest.forAsset()
+                if isVideo {
+                    assetRequest.addResource(with: .video, fileURL: fileUrl, options: options)
+                } else {
+                    assetRequest.addResource(with: .photo, fileURL: fileUrl, options: options)
+                }
+                assetID = assetRequest.placeholderForCreatedAsset?.localIdentifier ?? ""
+                XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - isVideo:[\(isVideo)] - 创建assetID:[\(assetID)]")
+            })
+        } catch {
+            XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - isVideo:[\(isVideo)] - 创建图片PHFetchResult<PHAsset>失败, error:[\(error)]")
+            return nil
         }
         
         XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 创建PHFetchResult<PHAsset>成功")
@@ -323,10 +326,13 @@ extension XHSavePhotoToAlbumTool {
     private class func createdAssets(image: UIImage) -> PHFetchResult<PHAsset>? {
         
         var assetID: String = ""
-        guard let _ = try? PHPhotoLibrary.shared().performChangesAndWait({
-            assetID = PHAssetChangeRequest.creationRequestForAsset(from: image).placeholderForCreatedAsset?.localIdentifier ?? ""
-        }) else {
-            XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 创建图片PHFetchResult<PHAsset>失败")
+        
+        do {
+            try PHPhotoLibrary.shared().performChangesAndWait({
+                assetID = PHAssetChangeRequest.creationRequestForAsset(from: image).placeholderForCreatedAsset?.localIdentifier ?? ""
+            })
+        } catch {
+            XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTool - 创建图片PHFetchResult<PHAsset>失败, error:[\(error)]")
             return nil
         }
         

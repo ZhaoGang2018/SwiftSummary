@@ -141,9 +141,9 @@ extension UIViewController {
         if let nav = self.navigationController {
             nav.pushViewController(viewController, animated: animated)
         } else {
-//            viewController.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left) , dismissing: .uncover(direction: .right))
-//            viewController.hero.isEnabled = true
-//            self.present(viewController, animated: animated, completion: nil)
+            viewController.hero.modalAnimationType = .selectBy(presenting: .cover(direction: .left) , dismissing: .uncover(direction: .right))
+            viewController.hero.isEnabled = true
+            self.present(viewController, animated: animated, completion: nil)
         }
     }
     

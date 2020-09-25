@@ -241,6 +241,9 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         
         let playerManager = ZFAVPlayerManager()
         
+        // 可以播放任意格式的视频
+//        let playerManager = ZFIJKPlayerManager()
+        
         /// 播放器相关
         self.player = ZFPlayerController(playerManager: playerManager, containerView: containerView)
         /// AudioSession由外面控制
@@ -287,8 +290,6 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         XHLogDebug("[图片或视频预览调试] - 停止播放视频 - currentPlayIndex:[\(currentPlayIndex ?? -1)]")
         self.player?.stopCurrentPlayingView()
         self.currentPlayIndex = nil
-        
-        self.controlView?.removeFromSuperview()
     }
 }
 

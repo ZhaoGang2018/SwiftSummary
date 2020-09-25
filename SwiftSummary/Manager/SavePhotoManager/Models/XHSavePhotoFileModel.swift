@@ -51,14 +51,14 @@ class XHSavePhotoFileModel: NSObject {
     
 //    // 构造视频的model
 //    static func buildModel(info: VideoInfo, delegate: XHSavePhotoToAlbumManagerDelegate?) -> XHSavePhotoFileModel {
-//
+//        
 //        let fileName = info.video_name
 //        let filePath = XHImageCacheManager.shared.getFilePath(fileName, cacheType: .UserVideos)
 //        
 //        let videoModel = XHSavePhotoFileModel(isVideo: true, fileName: fileName, filePath: filePath, fileData: nil, delegate: delegate)
 //        return videoModel
 //    }
-//
+    
     static func buildModel(realmModel: RealmSavePhotoFileModel) -> XHSavePhotoFileModel {
         let memoryModel = XHSavePhotoFileModel(isVideo: realmModel.isVideo, fileName: realmModel.fileName, filePath: realmModel.filePath, fileData: nil, delegate: nil)
         return memoryModel

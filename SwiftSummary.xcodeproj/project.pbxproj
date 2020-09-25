@@ -14,17 +14,6 @@
 		C608CF1024BC066F00C55709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C608CF0E24BC066F00C55709 /* LaunchScreen.storyboard */; };
 		C608CF1B24BC066F00C55709 /* SwiftSummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608CF1A24BC066F00C55709 /* SwiftSummaryTests.swift */; };
 		C608CF2624BC066F00C55709 /* SwiftSummaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608CF2524BC066F00C55709 /* SwiftSummaryUITests.swift */; };
-		C623D2E42518E763002A0A4E /* XHPreviewImageOrVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623D2DD2518E763002A0A4E /* XHPreviewImageOrVideoModel.swift */; };
-		C623D2E52518E763002A0A4E /* XHPreviewImageOrVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623D2DF2518E763002A0A4E /* XHPreviewImageOrVideoViewController.swift */; };
-		C623D2E62518E763002A0A4E /* XHPreviewVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623D2E12518E763002A0A4E /* XHPreviewVideoCell.swift */; };
-		C623D2E72518E763002A0A4E /* XHPreviewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623D2E22518E763002A0A4E /* XHPreviewImageCell.swift */; };
-		C623D2E82518E763002A0A4E /* XHVideoCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C623D2E32518E763002A0A4E /* XHVideoCustomControlView.swift */; };
-		C654000425177F4800B48975 /* XHSavePhotoToAlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFFD25177F4800B48975 /* XHSavePhotoToAlbumManager.swift */; };
-		C654000525177F4800B48975 /* XHSavePhotoToAlbumManager+RetrySave.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFFE25177F4800B48975 /* XHSavePhotoToAlbumManager+RetrySave.swift */; };
-		C654000625177F4800B48975 /* XHSavePhotoFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654000025177F4800B48975 /* XHSavePhotoFileModel.swift */; };
-		C654000725177F4800B48975 /* XHSavePhotoToAlbumTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654000125177F4800B48975 /* XHSavePhotoToAlbumTool.swift */; };
-		C654000825177F4800B48975 /* XHSavePhotoToAlbumTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654000225177F4800B48975 /* XHSavePhotoToAlbumTask.swift */; };
-		C654000925177F4800B48975 /* XHSavePhotoToAlbumManager+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654000325177F4800B48975 /* XHSavePhotoToAlbumManager+Realm.swift */; };
 		C65400102517802600B48975 /* XHCheckAuthorizationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654000F2517802600B48975 /* XHCheckAuthorizationTool.swift */; };
 		C654FF6625177DE500B48975 /* JXPhotoBrowserPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF5525177DE500B48975 /* JXPhotoBrowserPageIndicator.swift */; };
 		C654FF6725177DE500B48975 /* JXPhotoBrowserNoneAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF5625177DE500B48975 /* JXPhotoBrowserNoneAnimator.swift */; };
@@ -44,62 +33,75 @@
 		C654FF7C25177E5C00B48975 /* XHKTVHTTPCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF7925177E5C00B48975 /* XHKTVHTTPCacheManager.swift */; };
 		C654FF7D25177E5C00B48975 /* XHImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF7A25177E5C00B48975 /* XHImageCacheManager.swift */; };
 		C654FF7E25177E5C00B48975 /* XHDataCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF7B25177E5C00B48975 /* XHDataCacheManager.swift */; };
-		C654FFC525177EF600B48975 /* SpeedyDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF8525177EF500B48975 /* SpeedyDefine.swift */; };
-		C654FFC625177EF600B48975 /* SpeedyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF8625177EF500B48975 /* SpeedyApp.swift */; };
-		C654FFC725177EF600B48975 /* SpeedyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF8825177EF500B48975 /* SpeedyUI.swift */; };
-		C654FFC825177EF600B48975 /* UIImage+Exif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF8B25177EF500B48975 /* UIImage+Exif.swift */; };
-		C654FFC925177EF600B48975 /* UIImage+Blend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF8C25177EF500B48975 /* UIImage+Blend.swift */; };
-		C654FFCA25177EF600B48975 /* UIImage+Watermark.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF8D25177EF500B48975 /* UIImage+Watermark.swift */; };
-		C654FFCB25177EF600B48975 /* UIImage+Downsampling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF8E25177EF500B48975 /* UIImage+Downsampling.swift */; };
-		C654FFCC25177EF600B48975 /* UIImageView+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF8F25177EF500B48975 /* UIImageView+SpeedyExtension.swift */; };
-		C654FFCD25177EF600B48975 /* UIStoryboard+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9025177EF500B48975 /* UIStoryboard+UIViewController.swift */; };
-		C654FFCE25177EF600B48975 /* UIButton+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9125177EF500B48975 /* UIButton+SpeedyExtension.swift */; };
-		C654FFCF25177EF600B48975 /* UILabel+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9225177EF500B48975 /* UILabel+SpeedyExtension.swift */; };
-		C654FFD025177EF600B48975 /* UITableView+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9325177EF500B48975 /* UITableView+SpeedyExtension.swift */; };
-		C654FFD125177EF600B48975 /* UIImage+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9425177EF500B48975 /* UIImage+SpeedyExtension.swift */; };
-		C654FFD225177EF600B48975 /* UIView+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9525177EF600B48975 /* UIView+SpeedyExtension.swift */; };
-		C654FFD325177EF600B48975 /* UIViewController+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9625177EF600B48975 /* UIViewController+SpeedyExtension.swift */; };
-		C654FFD425177EF600B48975 /* UITextField+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9725177EF600B48975 /* UITextField+SpeedyExtension.swift */; };
-		C654FFD525177EF600B48975 /* UICollectionView+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9825177EF600B48975 /* UICollectionView+SpeedyExtension.swift */; };
-		C654FFD625177EF600B48975 /* UINib+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9925177EF600B48975 /* UINib+UIView.swift */; };
-		C654FFD725177EF600B48975 /* UIColor+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9A25177EF600B48975 /* UIColor+SpeedyExtension.swift */; };
-		C654FFD825177EF600B48975 /* UIAlertController+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9B25177EF600B48975 /* UIAlertController+SpeedyExtension.swift */; };
-		C654FFD925177EF600B48975 /* SpeedyUIPullLoaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9E25177EF600B48975 /* SpeedyUIPullLoaderFooter.swift */; };
-		C654FFDA25177EF600B48975 /* SpeedyUIPullLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF9F25177EF600B48975 /* SpeedyUIPullLoader.swift */; };
-		C654FFDB25177EF600B48975 /* SpeedyCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFA025177EF600B48975 /* SpeedyCustomButton.swift */; };
-		C654FFDC25177EF600B48975 /* SpeedyDisableMultipleClickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFA125177EF600B48975 /* SpeedyDisableMultipleClickButton.swift */; };
-		C654FFDD25177EF600B48975 /* SpeedyUIPullLoaderHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFA225177EF600B48975 /* SpeedyUIPullLoaderHeader.swift */; };
-		C654FFDE25177EF600B48975 /* SpeedyAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFA425177EF600B48975 /* SpeedyAlertViewController.swift */; };
-		C654FFDF25177EF600B48975 /* SpeedyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFA625177EF600B48975 /* SpeedyEvent.swift */; };
-		C654FFE025177EF600B48975 /* SpeedySignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFA825177EF600B48975 /* SpeedySignal.swift */; };
-		C654FFE125177EF600B48975 /* SpeedyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFAA25177EF600B48975 /* SpeedyModel.swift */; };
-		C654FFE225177EF600B48975 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFAD25177EF600B48975 /* NSAttributedString+Extension.swift */; };
-		C654FFE325177EF600B48975 /* Sugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFAE25177EF600B48975 /* Sugger.swift */; };
-		C654FFE425177EF600B48975 /* Date+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFAF25177EF600B48975 /* Date+SpeedyExtension.swift */; };
-		C654FFE525177EF600B48975 /* Array+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB025177EF600B48975 /* Array+SpeedyExtension.swift */; };
-		C654FFE625177EF600B48975 /* String+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB125177EF600B48975 /* String+SpeedyExtension.swift */; };
-		C654FFE725177EF600B48975 /* NSObject+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB225177EF600B48975 /* NSObject+SpeedyExtension.swift */; };
-		C654FFE825177EF600B48975 /* SpeedyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB325177EF600B48975 /* SpeedyCore.swift */; };
-		C654FFE925177EF600B48975 /* SpeedySandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB525177EF600B48975 /* SpeedySandbox.swift */; };
-		C654FFEA25177EF600B48975 /* SpeedyClassCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB625177EF600B48975 /* SpeedyClassCopy.swift */; };
-		C654FFEB25177EF600B48975 /* SpeedyDictionaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB725177EF600B48975 /* SpeedyDictionaryCodable.swift */; };
-		C654FFEC25177EF600B48975 /* SpeedyRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB825177EF600B48975 /* SpeedyRuntime.swift */; };
-		C654FFED25177EF600B48975 /* SpeedyFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFB925177EF600B48975 /* SpeedyFileManager.swift */; };
-		C654FFEE25177EF600B48975 /* SpeedyJump.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFBB25177EF600B48975 /* SpeedyJump.swift */; };
-		C654FFEF25177EF600B48975 /* SpeedyJumpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFBC25177EF600B48975 /* SpeedyJumpStatus.swift */; };
-		C654FFF025177EF600B48975 /* SpeedyJumpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFBD25177EF600B48975 /* SpeedyJumpType.swift */; };
-		C654FFF125177EF600B48975 /* SpeedyMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFBE25177EF600B48975 /* SpeedyMemoryCache.swift */; };
-		C654FFF225177EF600B48975 /* SpeedyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFBF25177EF600B48975 /* SpeedyDevice.swift */; };
-		C654FFF325177EF600B48975 /* SpeedyTimeCalculateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFC025177EF600B48975 /* SpeedyTimeCalculateTool.swift */; };
-		C654FFF425177EF600B48975 /* SpeedyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFC125177EF600B48975 /* SpeedyClass.swift */; };
-		C654FFF525177EF600B48975 /* SpeedyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFC225177EF600B48975 /* SpeedyQueue.swift */; };
-		C654FFF625177EF600B48975 /* SpeedyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFC325177EF600B48975 /* SpeedyJSON.swift */; };
-		C654FFF725177EF600B48975 /* SpeedyKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FFC425177EF600B48975 /* SpeedyKeychain.swift */; };
+		C6933465251DC73800253044 /* XHSavePhotoToAlbumManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693345E251DC73800253044 /* XHSavePhotoToAlbumManager.swift */; };
+		C6933466251DC73800253044 /* XHSavePhotoToAlbumManager+RetrySave.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693345F251DC73800253044 /* XHSavePhotoToAlbumManager+RetrySave.swift */; };
+		C6933467251DC73800253044 /* XHSavePhotoFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933461251DC73800253044 /* XHSavePhotoFileModel.swift */; };
+		C6933468251DC73800253044 /* XHSavePhotoToAlbumTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933462251DC73800253044 /* XHSavePhotoToAlbumTool.swift */; };
+		C6933469251DC73800253044 /* XHSavePhotoToAlbumTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933463251DC73800253044 /* XHSavePhotoToAlbumTask.swift */; };
+		C693346A251DC73800253044 /* XHSavePhotoToAlbumManager+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933464251DC73800253044 /* XHSavePhotoToAlbumManager+Realm.swift */; };
+		C6933476251DC74000253044 /* XHPreviewImageOrVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693346F251DC74000253044 /* XHPreviewImageOrVideoModel.swift */; };
+		C6933477251DC74000253044 /* XHPreviewImageOrVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933471251DC74000253044 /* XHPreviewImageOrVideoViewController.swift */; };
+		C6933478251DC74000253044 /* XHPreviewVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933473251DC74000253044 /* XHPreviewVideoCell.swift */; };
+		C6933479251DC74000253044 /* XHPreviewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933474251DC74000253044 /* XHPreviewImageCell.swift */; };
+		C693347A251DC74000253044 /* XHVideoCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933475251DC74000253044 /* XHVideoCustomControlView.swift */; };
+		C6933484251DC7E700253044 /* XHRealmDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693347E251DC7E700253044 /* XHRealmDatabaseManager.swift */; };
+		C6933485251DC7E700253044 /* XHRealmDatabaseManager+RealmDataMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693347F251DC7E700253044 /* XHRealmDatabaseManager+RealmDataMigration.swift */; };
+		C6933486251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933480251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift */; };
+		C6933487251DC7E700253044 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933482251DC7E700253044 /* RealmModel.swift */; };
+		C6933488251DC7E700253044 /* RealmSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933483251DC7E700253044 /* RealmSwift+Extension.swift */; };
+		C69334EE251DC90900253044 /* SpeedyDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334AE251DC90900253044 /* SpeedyDefine.swift */; };
+		C69334EF251DC90900253044 /* SpeedyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334AF251DC90900253044 /* SpeedyApp.swift */; };
+		C69334F0251DC90900253044 /* SpeedyUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334B1251DC90900253044 /* SpeedyUI.swift */; };
+		C69334F1251DC90900253044 /* UIImage+Exif.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334B4251DC90900253044 /* UIImage+Exif.swift */; };
+		C69334F2251DC90900253044 /* UIImage+Blend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334B5251DC90900253044 /* UIImage+Blend.swift */; };
+		C69334F3251DC90900253044 /* UIImage+Watermark.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334B6251DC90900253044 /* UIImage+Watermark.swift */; };
+		C69334F4251DC90900253044 /* UIImage+Downsampling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334B7251DC90900253044 /* UIImage+Downsampling.swift */; };
+		C69334F5251DC90900253044 /* UIImageView+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334B8251DC90900253044 /* UIImageView+SpeedyExtension.swift */; };
+		C69334F6251DC90900253044 /* UIStoryboard+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334B9251DC90900253044 /* UIStoryboard+UIViewController.swift */; };
+		C69334F7251DC90900253044 /* UIButton+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334BA251DC90900253044 /* UIButton+SpeedyExtension.swift */; };
+		C69334F8251DC90900253044 /* UILabel+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334BB251DC90900253044 /* UILabel+SpeedyExtension.swift */; };
+		C69334F9251DC90900253044 /* UITableView+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334BC251DC90900253044 /* UITableView+SpeedyExtension.swift */; };
+		C69334FA251DC90900253044 /* UIImage+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334BD251DC90900253044 /* UIImage+SpeedyExtension.swift */; };
+		C69334FB251DC90900253044 /* UIView+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334BE251DC90900253044 /* UIView+SpeedyExtension.swift */; };
+		C69334FC251DC90900253044 /* UIViewController+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334BF251DC90900253044 /* UIViewController+SpeedyExtension.swift */; };
+		C69334FD251DC90900253044 /* UITextField+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334C0251DC90900253044 /* UITextField+SpeedyExtension.swift */; };
+		C69334FE251DC90900253044 /* UICollectionView+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334C1251DC90900253044 /* UICollectionView+SpeedyExtension.swift */; };
+		C69334FF251DC90900253044 /* UINib+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334C2251DC90900253044 /* UINib+UIView.swift */; };
+		C6933500251DC90900253044 /* UIColor+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334C3251DC90900253044 /* UIColor+SpeedyExtension.swift */; };
+		C6933501251DC90900253044 /* UIAlertController+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334C4251DC90900253044 /* UIAlertController+SpeedyExtension.swift */; };
+		C6933502251DC90900253044 /* SpeedyUIPullLoaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334C7251DC90900253044 /* SpeedyUIPullLoaderFooter.swift */; };
+		C6933503251DC90900253044 /* SpeedyUIPullLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334C8251DC90900253044 /* SpeedyUIPullLoader.swift */; };
+		C6933504251DC90900253044 /* SpeedyCustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334C9251DC90900253044 /* SpeedyCustomButton.swift */; };
+		C6933505251DC90900253044 /* SpeedyDisableMultipleClickButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334CA251DC90900253044 /* SpeedyDisableMultipleClickButton.swift */; };
+		C6933506251DC90900253044 /* SpeedyUIPullLoaderHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334CB251DC90900253044 /* SpeedyUIPullLoaderHeader.swift */; };
+		C6933507251DC90900253044 /* SpeedyAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334CD251DC90900253044 /* SpeedyAlertViewController.swift */; };
+		C6933508251DC90900253044 /* SpeedyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334CF251DC90900253044 /* SpeedyEvent.swift */; };
+		C6933509251DC90900253044 /* SpeedySignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334D1251DC90900253044 /* SpeedySignal.swift */; };
+		C693350A251DC90900253044 /* SpeedyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334D3251DC90900253044 /* SpeedyModel.swift */; };
+		C693350B251DC90900253044 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334D6251DC90900253044 /* NSAttributedString+Extension.swift */; };
+		C693350C251DC90900253044 /* Sugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334D7251DC90900253044 /* Sugger.swift */; };
+		C693350D251DC90900253044 /* Date+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334D8251DC90900253044 /* Date+SpeedyExtension.swift */; };
+		C693350E251DC90900253044 /* Array+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334D9251DC90900253044 /* Array+SpeedyExtension.swift */; };
+		C693350F251DC90900253044 /* String+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334DA251DC90900253044 /* String+SpeedyExtension.swift */; };
+		C6933510251DC90900253044 /* NSObject+SpeedyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334DB251DC90900253044 /* NSObject+SpeedyExtension.swift */; };
+		C6933511251DC90900253044 /* SpeedyCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334DC251DC90900253044 /* SpeedyCore.swift */; };
+		C6933512251DC90900253044 /* SpeedySandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334DE251DC90900253044 /* SpeedySandbox.swift */; };
+		C6933513251DC90900253044 /* SpeedyClassCopy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334DF251DC90900253044 /* SpeedyClassCopy.swift */; };
+		C6933514251DC90900253044 /* SpeedyDictionaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E0251DC90900253044 /* SpeedyDictionaryCodable.swift */; };
+		C6933515251DC90900253044 /* SpeedyRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E1251DC90900253044 /* SpeedyRuntime.swift */; };
+		C6933516251DC90900253044 /* SpeedyFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E2251DC90900253044 /* SpeedyFileManager.swift */; };
+		C6933517251DC90900253044 /* SpeedyJump.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E4251DC90900253044 /* SpeedyJump.swift */; };
+		C6933518251DC90900253044 /* SpeedyJumpStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E5251DC90900253044 /* SpeedyJumpStatus.swift */; };
+		C6933519251DC90900253044 /* SpeedyJumpType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E6251DC90900253044 /* SpeedyJumpType.swift */; };
+		C693351A251DC90900253044 /* SpeedyMemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E7251DC90900253044 /* SpeedyMemoryCache.swift */; };
+		C693351B251DC90900253044 /* SpeedyDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E8251DC90900253044 /* SpeedyDevice.swift */; };
+		C693351C251DC90900253044 /* SpeedyTimeCalculateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334E9251DC90900253044 /* SpeedyTimeCalculateTool.swift */; };
+		C693351D251DC90900253044 /* SpeedyClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334EA251DC90900253044 /* SpeedyClass.swift */; };
+		C693351E251DC90900253044 /* SpeedyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334EB251DC90900253044 /* SpeedyQueue.swift */; };
+		C693351F251DC90900253044 /* SpeedyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334EC251DC90900253044 /* SpeedyJSON.swift */; };
+		C6933520251DC90900253044 /* SpeedyKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334ED251DC90900253044 /* SpeedyKeychain.swift */; };
 		C6C7465D25050F2F00661E3A /* ZGBreakpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */; };
 		C6CCCBC625064CBA0000C2C6 /* ZGBrowseImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */; };
-		C6CCCBCE25064F8E0000C2C6 /* video_2.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = C6CCCBCB25064F8E0000C2C6 /* video_2.MP4 */; };
-		C6CCCBCF25064F8E0000C2C6 /* video_1.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = C6CCCBCC25064F8E0000C2C6 /* video_1.MP4 */; };
-		C6CCCBD025064F8E0000C2C6 /* video_0.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = C6CCCBCD25064F8E0000C2C6 /* video_0.MP4 */; };
 		C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */; };
 		C6DFB2B7250F8C7300671B12 /* XHNetworkRequestTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB29F250F8C7300671B12 /* XHNetworkRequestTask.swift */; };
 		C6DFB2B8250F8C7300671B12 /* XHIPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB2A0250F8C7300671B12 /* XHIPManager.swift */; };
@@ -251,15 +253,6 @@
 		C608CF2124BC066F00C55709 /* SwiftSummaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSummaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C608CF2524BC066F00C55709 /* SwiftSummaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSummaryUITests.swift; sourceTree = "<group>"; };
 		C608CF2724BC066F00C55709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C623D2DD2518E763002A0A4E /* XHPreviewImageOrVideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageOrVideoModel.swift; sourceTree = "<group>"; };
-		C623D2DF2518E763002A0A4E /* XHPreviewImageOrVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageOrVideoViewController.swift; sourceTree = "<group>"; };
-		C623D2E12518E763002A0A4E /* XHPreviewVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewVideoCell.swift; sourceTree = "<group>"; };
-		C623D2E22518E763002A0A4E /* XHPreviewImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageCell.swift; sourceTree = "<group>"; };
-		C623D2E32518E763002A0A4E /* XHVideoCustomControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHVideoCustomControlView.swift; sourceTree = "<group>"; };
-		C654000025177F4800B48975 /* XHSavePhotoFileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoFileModel.swift; sourceTree = "<group>"; };
-		C654000125177F4800B48975 /* XHSavePhotoToAlbumTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoToAlbumTool.swift; sourceTree = "<group>"; };
-		C654000225177F4800B48975 /* XHSavePhotoToAlbumTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoToAlbumTask.swift; sourceTree = "<group>"; };
-		C654000325177F4800B48975 /* XHSavePhotoToAlbumManager+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHSavePhotoToAlbumManager+Realm.swift"; sourceTree = "<group>"; };
 		C654000F2517802600B48975 /* XHCheckAuthorizationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHCheckAuthorizationTool.swift; sourceTree = "<group>"; };
 		C654FF5525177DE500B48975 /* JXPhotoBrowserPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPhotoBrowserPageIndicator.swift; sourceTree = "<group>"; };
 		C654FF5625177DE500B48975 /* JXPhotoBrowserNoneAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPhotoBrowserNoneAnimator.swift; sourceTree = "<group>"; };
@@ -280,64 +273,75 @@
 		C654FF7925177E5C00B48975 /* XHKTVHTTPCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHKTVHTTPCacheManager.swift; sourceTree = "<group>"; };
 		C654FF7A25177E5C00B48975 /* XHImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHImageCacheManager.swift; sourceTree = "<group>"; };
 		C654FF7B25177E5C00B48975 /* XHDataCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHDataCacheManager.swift; sourceTree = "<group>"; };
-		C654FF8525177EF500B48975 /* SpeedyDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyDefine.swift; sourceTree = "<group>"; };
-		C654FF8625177EF500B48975 /* SpeedyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyApp.swift; sourceTree = "<group>"; };
-		C654FF8825177EF500B48975 /* SpeedyUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyUI.swift; sourceTree = "<group>"; };
-		C654FF8B25177EF500B48975 /* UIImage+Exif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Exif.swift"; sourceTree = "<group>"; };
-		C654FF8C25177EF500B48975 /* UIImage+Blend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Blend.swift"; sourceTree = "<group>"; };
-		C654FF8D25177EF500B48975 /* UIImage+Watermark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Watermark.swift"; sourceTree = "<group>"; };
-		C654FF8E25177EF500B48975 /* UIImage+Downsampling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Downsampling.swift"; sourceTree = "<group>"; };
-		C654FF8F25177EF500B48975 /* UIImageView+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9025177EF500B48975 /* UIStoryboard+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+UIViewController.swift"; sourceTree = "<group>"; };
-		C654FF9125177EF500B48975 /* UIButton+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9225177EF500B48975 /* UILabel+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9325177EF500B48975 /* UITableView+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9425177EF500B48975 /* UIImage+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9525177EF600B48975 /* UIView+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9625177EF600B48975 /* UIViewController+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9725177EF600B48975 /* UITextField+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9825177EF600B48975 /* UICollectionView+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9925177EF600B48975 /* UINib+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+UIView.swift"; sourceTree = "<group>"; };
-		C654FF9A25177EF600B48975 /* UIColor+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9B25177EF600B48975 /* UIAlertController+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FF9E25177EF600B48975 /* SpeedyUIPullLoaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyUIPullLoaderFooter.swift; sourceTree = "<group>"; };
-		C654FF9F25177EF600B48975 /* SpeedyUIPullLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyUIPullLoader.swift; sourceTree = "<group>"; };
-		C654FFA025177EF600B48975 /* SpeedyCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyCustomButton.swift; sourceTree = "<group>"; };
-		C654FFA125177EF600B48975 /* SpeedyDisableMultipleClickButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyDisableMultipleClickButton.swift; sourceTree = "<group>"; };
-		C654FFA225177EF600B48975 /* SpeedyUIPullLoaderHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyUIPullLoaderHeader.swift; sourceTree = "<group>"; };
-		C654FFA425177EF600B48975 /* SpeedyAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyAlertViewController.swift; sourceTree = "<group>"; };
-		C654FFA625177EF600B48975 /* SpeedyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyEvent.swift; sourceTree = "<group>"; };
-		C654FFA825177EF600B48975 /* SpeedySignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedySignal.swift; sourceTree = "<group>"; };
-		C654FFAA25177EF600B48975 /* SpeedyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyModel.swift; sourceTree = "<group>"; };
-		C654FFAD25177EF600B48975 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
-		C654FFAE25177EF600B48975 /* Sugger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sugger.swift; sourceTree = "<group>"; };
-		C654FFAF25177EF600B48975 /* Date+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FFB025177EF600B48975 /* Array+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FFB125177EF600B48975 /* String+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FFB225177EF600B48975 /* NSObject+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+SpeedyExtension.swift"; sourceTree = "<group>"; };
-		C654FFB325177EF600B48975 /* SpeedyCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyCore.swift; sourceTree = "<group>"; };
-		C654FFB525177EF600B48975 /* SpeedySandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedySandbox.swift; sourceTree = "<group>"; };
-		C654FFB625177EF600B48975 /* SpeedyClassCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyClassCopy.swift; sourceTree = "<group>"; };
-		C654FFB725177EF600B48975 /* SpeedyDictionaryCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyDictionaryCodable.swift; sourceTree = "<group>"; };
-		C654FFB825177EF600B48975 /* SpeedyRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyRuntime.swift; sourceTree = "<group>"; };
-		C654FFB925177EF600B48975 /* SpeedyFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyFileManager.swift; sourceTree = "<group>"; };
-		C654FFBB25177EF600B48975 /* SpeedyJump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJump.swift; sourceTree = "<group>"; };
-		C654FFBC25177EF600B48975 /* SpeedyJumpStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJumpStatus.swift; sourceTree = "<group>"; };
-		C654FFBD25177EF600B48975 /* SpeedyJumpType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJumpType.swift; sourceTree = "<group>"; };
-		C654FFBE25177EF600B48975 /* SpeedyMemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyMemoryCache.swift; sourceTree = "<group>"; };
-		C654FFBF25177EF600B48975 /* SpeedyDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyDevice.swift; sourceTree = "<group>"; };
-		C654FFC025177EF600B48975 /* SpeedyTimeCalculateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyTimeCalculateTool.swift; sourceTree = "<group>"; };
-		C654FFC125177EF600B48975 /* SpeedyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyClass.swift; sourceTree = "<group>"; };
-		C654FFC225177EF600B48975 /* SpeedyQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyQueue.swift; sourceTree = "<group>"; };
-		C654FFC325177EF600B48975 /* SpeedyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJSON.swift; sourceTree = "<group>"; };
-		C654FFC425177EF600B48975 /* SpeedyKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyKeychain.swift; sourceTree = "<group>"; };
-		C654FFFD25177F4800B48975 /* XHSavePhotoToAlbumManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoToAlbumManager.swift; sourceTree = "<group>"; };
-		C654FFFE25177F4800B48975 /* XHSavePhotoToAlbumManager+RetrySave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHSavePhotoToAlbumManager+RetrySave.swift"; sourceTree = "<group>"; };
+		C693345E251DC73800253044 /* XHSavePhotoToAlbumManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoToAlbumManager.swift; sourceTree = "<group>"; };
+		C693345F251DC73800253044 /* XHSavePhotoToAlbumManager+RetrySave.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHSavePhotoToAlbumManager+RetrySave.swift"; sourceTree = "<group>"; };
+		C6933461251DC73800253044 /* XHSavePhotoFileModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoFileModel.swift; sourceTree = "<group>"; };
+		C6933462251DC73800253044 /* XHSavePhotoToAlbumTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoToAlbumTool.swift; sourceTree = "<group>"; };
+		C6933463251DC73800253044 /* XHSavePhotoToAlbumTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoToAlbumTask.swift; sourceTree = "<group>"; };
+		C6933464251DC73800253044 /* XHSavePhotoToAlbumManager+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHSavePhotoToAlbumManager+Realm.swift"; sourceTree = "<group>"; };
+		C693346F251DC74000253044 /* XHPreviewImageOrVideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageOrVideoModel.swift; sourceTree = "<group>"; };
+		C6933471251DC74000253044 /* XHPreviewImageOrVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageOrVideoViewController.swift; sourceTree = "<group>"; };
+		C6933473251DC74000253044 /* XHPreviewVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewVideoCell.swift; sourceTree = "<group>"; };
+		C6933474251DC74000253044 /* XHPreviewImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageCell.swift; sourceTree = "<group>"; };
+		C6933475251DC74000253044 /* XHVideoCustomControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHVideoCustomControlView.swift; sourceTree = "<group>"; };
+		C693347E251DC7E700253044 /* XHRealmDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHRealmDatabaseManager.swift; sourceTree = "<group>"; };
+		C693347F251DC7E700253044 /* XHRealmDatabaseManager+RealmDataMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHRealmDatabaseManager+RealmDataMigration.swift"; sourceTree = "<group>"; };
+		C6933480251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHRealmDatabaseManager+ManualDataMigration.swift"; sourceTree = "<group>"; };
+		C6933482251DC7E700253044 /* RealmModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		C6933483251DC7E700253044 /* RealmSwift+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RealmSwift+Extension.swift"; sourceTree = "<group>"; };
+		C69334AE251DC90900253044 /* SpeedyDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyDefine.swift; sourceTree = "<group>"; };
+		C69334AF251DC90900253044 /* SpeedyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyApp.swift; sourceTree = "<group>"; };
+		C69334B1251DC90900253044 /* SpeedyUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyUI.swift; sourceTree = "<group>"; };
+		C69334B4251DC90900253044 /* UIImage+Exif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Exif.swift"; sourceTree = "<group>"; };
+		C69334B5251DC90900253044 /* UIImage+Blend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Blend.swift"; sourceTree = "<group>"; };
+		C69334B6251DC90900253044 /* UIImage+Watermark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Watermark.swift"; sourceTree = "<group>"; };
+		C69334B7251DC90900253044 /* UIImage+Downsampling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Downsampling.swift"; sourceTree = "<group>"; };
+		C69334B8251DC90900253044 /* UIImageView+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334B9251DC90900253044 /* UIStoryboard+UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+UIViewController.swift"; sourceTree = "<group>"; };
+		C69334BA251DC90900253044 /* UIButton+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334BB251DC90900253044 /* UILabel+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334BC251DC90900253044 /* UITableView+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334BD251DC90900253044 /* UIImage+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334BE251DC90900253044 /* UIView+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334BF251DC90900253044 /* UIViewController+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334C0251DC90900253044 /* UITextField+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334C1251DC90900253044 /* UICollectionView+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334C2251DC90900253044 /* UINib+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINib+UIView.swift"; sourceTree = "<group>"; };
+		C69334C3251DC90900253044 /* UIColor+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334C4251DC90900253044 /* UIAlertController+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334C7251DC90900253044 /* SpeedyUIPullLoaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyUIPullLoaderFooter.swift; sourceTree = "<group>"; };
+		C69334C8251DC90900253044 /* SpeedyUIPullLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyUIPullLoader.swift; sourceTree = "<group>"; };
+		C69334C9251DC90900253044 /* SpeedyCustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyCustomButton.swift; sourceTree = "<group>"; };
+		C69334CA251DC90900253044 /* SpeedyDisableMultipleClickButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyDisableMultipleClickButton.swift; sourceTree = "<group>"; };
+		C69334CB251DC90900253044 /* SpeedyUIPullLoaderHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyUIPullLoaderHeader.swift; sourceTree = "<group>"; };
+		C69334CD251DC90900253044 /* SpeedyAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyAlertViewController.swift; sourceTree = "<group>"; };
+		C69334CF251DC90900253044 /* SpeedyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyEvent.swift; sourceTree = "<group>"; };
+		C69334D1251DC90900253044 /* SpeedySignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedySignal.swift; sourceTree = "<group>"; };
+		C69334D3251DC90900253044 /* SpeedyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyModel.swift; sourceTree = "<group>"; };
+		C69334D6251DC90900253044 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		C69334D7251DC90900253044 /* Sugger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sugger.swift; sourceTree = "<group>"; };
+		C69334D8251DC90900253044 /* Date+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334D9251DC90900253044 /* Array+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334DA251DC90900253044 /* String+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334DB251DC90900253044 /* NSObject+SpeedyExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+SpeedyExtension.swift"; sourceTree = "<group>"; };
+		C69334DC251DC90900253044 /* SpeedyCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyCore.swift; sourceTree = "<group>"; };
+		C69334DE251DC90900253044 /* SpeedySandbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedySandbox.swift; sourceTree = "<group>"; };
+		C69334DF251DC90900253044 /* SpeedyClassCopy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyClassCopy.swift; sourceTree = "<group>"; };
+		C69334E0251DC90900253044 /* SpeedyDictionaryCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyDictionaryCodable.swift; sourceTree = "<group>"; };
+		C69334E1251DC90900253044 /* SpeedyRuntime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyRuntime.swift; sourceTree = "<group>"; };
+		C69334E2251DC90900253044 /* SpeedyFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyFileManager.swift; sourceTree = "<group>"; };
+		C69334E4251DC90900253044 /* SpeedyJump.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJump.swift; sourceTree = "<group>"; };
+		C69334E5251DC90900253044 /* SpeedyJumpStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJumpStatus.swift; sourceTree = "<group>"; };
+		C69334E6251DC90900253044 /* SpeedyJumpType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJumpType.swift; sourceTree = "<group>"; };
+		C69334E7251DC90900253044 /* SpeedyMemoryCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyMemoryCache.swift; sourceTree = "<group>"; };
+		C69334E8251DC90900253044 /* SpeedyDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyDevice.swift; sourceTree = "<group>"; };
+		C69334E9251DC90900253044 /* SpeedyTimeCalculateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyTimeCalculateTool.swift; sourceTree = "<group>"; };
+		C69334EA251DC90900253044 /* SpeedyClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyClass.swift; sourceTree = "<group>"; };
+		C69334EB251DC90900253044 /* SpeedyQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyQueue.swift; sourceTree = "<group>"; };
+		C69334EC251DC90900253044 /* SpeedyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJSON.swift; sourceTree = "<group>"; };
+		C69334ED251DC90900253044 /* SpeedyKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyKeychain.swift; sourceTree = "<group>"; };
 		C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGBreakpointViewController.swift; sourceTree = "<group>"; };
 		C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGBrowseImageViewController.swift; sourceTree = "<group>"; };
-		C6CCCBCB25064F8E0000C2C6 /* video_2.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_2.MP4; sourceTree = "<group>"; };
-		C6CCCBCC25064F8E0000C2C6 /* video_1.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_1.MP4; sourceTree = "<group>"; };
-		C6CCCBCD25064F8E0000C2C6 /* video_0.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video_0.MP4; sourceTree = "<group>"; };
 		C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHBreakPointDownloader.swift; sourceTree = "<group>"; };
 		C6DFB29F250F8C7300671B12 /* XHNetworkRequestTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHNetworkRequestTask.swift; sourceTree = "<group>"; };
 		C6DFB2A0250F8C7300671B12 /* XHIPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHIPManager.swift; sourceTree = "<group>"; };
@@ -526,10 +530,10 @@
 				ED88355C25033FDC003F163B /* Manager */,
 				ED88352E25033FDC003F163B /* Modules */,
 				ED8836802503471E003F163B /* Public */,
-				ED8834F225033FDC003F163B /* Resource */,
 				ED88358225033FDC003F163B /* Tools */,
 				ED8834FB25033FDC003F163B /* Vendor */,
-				C654FF8325177EF500B48975 /* SpeedyFramework */,
+				C69334AC251DC90900253044 /* SpeedyFramework */,
+				ED8834F225033FDC003F163B /* Resource */,
 			);
 			path = SwiftSummary;
 			sourceTree = "<group>";
@@ -550,42 +554,6 @@
 				C608CF2724BC066F00C55709 /* Info.plist */,
 			);
 			path = SwiftSummaryUITests;
-			sourceTree = "<group>";
-		};
-		C623D2DB2518E763002A0A4E /* PreviewImageOrVideo */ = {
-			isa = PBXGroup;
-			children = (
-				C623D2DC2518E763002A0A4E /* Models */,
-				C623D2DE2518E763002A0A4E /* Controllers */,
-				C623D2E02518E763002A0A4E /* Views */,
-			);
-			path = PreviewImageOrVideo;
-			sourceTree = "<group>";
-		};
-		C623D2DC2518E763002A0A4E /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C623D2DD2518E763002A0A4E /* XHPreviewImageOrVideoModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		C623D2DE2518E763002A0A4E /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				C623D2DF2518E763002A0A4E /* XHPreviewImageOrVideoViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		C623D2E02518E763002A0A4E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C623D2E12518E763002A0A4E /* XHPreviewVideoCell.swift */,
-				C623D2E22518E763002A0A4E /* XHPreviewImageCell.swift */,
-				C623D2E32518E763002A0A4E /* XHVideoCustomControlView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C654000E2517802600B48975 /* CheckAuthorizationTool */ = {
@@ -626,205 +594,251 @@
 			path = JZLocationConverter;
 			sourceTree = "<group>";
 		};
-		C654FF8325177EF500B48975 /* SpeedyFramework */ = {
+		C693345D251DC73800253044 /* SavePhotoManager */ = {
 			isa = PBXGroup;
 			children = (
-				C654FF8625177EF500B48975 /* SpeedyApp.swift */,
-				C654FFAB25177EF600B48975 /* SpeedyCore */,
-				C654FF8425177EF500B48975 /* SpeedyDefine */,
-				C654FFA525177EF600B48975 /* SpeedyEvent */,
-				C654FFA925177EF600B48975 /* SpeedyModel */,
-				C654FF8725177EF500B48975 /* SpeedyUI */,
-			);
-			path = SpeedyFramework;
-			sourceTree = "<group>";
-		};
-		C654FF8425177EF500B48975 /* SpeedyDefine */ = {
-			isa = PBXGroup;
-			children = (
-				C654FF8525177EF500B48975 /* SpeedyDefine.swift */,
-			);
-			path = SpeedyDefine;
-			sourceTree = "<group>";
-		};
-		C654FF8725177EF500B48975 /* SpeedyUI */ = {
-			isa = PBXGroup;
-			children = (
-				C654FF8825177EF500B48975 /* SpeedyUI.swift */,
-				C654FF8925177EF500B48975 /* Extension */,
-				C654FF9C25177EF600B48975 /* Modules */,
-			);
-			path = SpeedyUI;
-			sourceTree = "<group>";
-		};
-		C654FF8925177EF500B48975 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				C654FF8A25177EF500B48975 /* UIImage */,
-				C654FF8F25177EF500B48975 /* UIImageView+SpeedyExtension.swift */,
-				C654FF9025177EF500B48975 /* UIStoryboard+UIViewController.swift */,
-				C654FF9125177EF500B48975 /* UIButton+SpeedyExtension.swift */,
-				C654FF9225177EF500B48975 /* UILabel+SpeedyExtension.swift */,
-				C654FF9325177EF500B48975 /* UITableView+SpeedyExtension.swift */,
-				C654FF9425177EF500B48975 /* UIImage+SpeedyExtension.swift */,
-				C654FF9525177EF600B48975 /* UIView+SpeedyExtension.swift */,
-				C654FF9625177EF600B48975 /* UIViewController+SpeedyExtension.swift */,
-				C654FF9725177EF600B48975 /* UITextField+SpeedyExtension.swift */,
-				C654FF9825177EF600B48975 /* UICollectionView+SpeedyExtension.swift */,
-				C654FF9925177EF600B48975 /* UINib+UIView.swift */,
-				C654FF9A25177EF600B48975 /* UIColor+SpeedyExtension.swift */,
-				C654FF9B25177EF600B48975 /* UIAlertController+SpeedyExtension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		C654FF8A25177EF500B48975 /* UIImage */ = {
-			isa = PBXGroup;
-			children = (
-				C654FF8B25177EF500B48975 /* UIImage+Exif.swift */,
-				C654FF8C25177EF500B48975 /* UIImage+Blend.swift */,
-				C654FF8D25177EF500B48975 /* UIImage+Watermark.swift */,
-				C654FF8E25177EF500B48975 /* UIImage+Downsampling.swift */,
-			);
-			path = UIImage;
-			sourceTree = "<group>";
-		};
-		C654FF9C25177EF600B48975 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				C654FF9D25177EF600B48975 /* viewComponent */,
-				C654FFA325177EF600B48975 /* viewController */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		C654FF9D25177EF600B48975 /* viewComponent */ = {
-			isa = PBXGroup;
-			children = (
-				C654FF9E25177EF600B48975 /* SpeedyUIPullLoaderFooter.swift */,
-				C654FF9F25177EF600B48975 /* SpeedyUIPullLoader.swift */,
-				C654FFA025177EF600B48975 /* SpeedyCustomButton.swift */,
-				C654FFA125177EF600B48975 /* SpeedyDisableMultipleClickButton.swift */,
-				C654FFA225177EF600B48975 /* SpeedyUIPullLoaderHeader.swift */,
-			);
-			path = viewComponent;
-			sourceTree = "<group>";
-		};
-		C654FFA325177EF600B48975 /* viewController */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFA425177EF600B48975 /* SpeedyAlertViewController.swift */,
-			);
-			path = viewController;
-			sourceTree = "<group>";
-		};
-		C654FFA525177EF600B48975 /* SpeedyEvent */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFA625177EF600B48975 /* SpeedyEvent.swift */,
-				C654FFA725177EF600B48975 /* modules */,
-			);
-			path = SpeedyEvent;
-			sourceTree = "<group>";
-		};
-		C654FFA725177EF600B48975 /* modules */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFA825177EF600B48975 /* SpeedySignal.swift */,
-			);
-			path = modules;
-			sourceTree = "<group>";
-		};
-		C654FFA925177EF600B48975 /* SpeedyModel */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFAA25177EF600B48975 /* SpeedyModel.swift */,
-			);
-			path = SpeedyModel;
-			sourceTree = "<group>";
-		};
-		C654FFAB25177EF600B48975 /* SpeedyCore */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFAC25177EF600B48975 /* Extension */,
-				C654FFB325177EF600B48975 /* SpeedyCore.swift */,
-				C654FFB425177EF600B48975 /* Modules */,
-			);
-			path = SpeedyCore;
-			sourceTree = "<group>";
-		};
-		C654FFAC25177EF600B48975 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFAD25177EF600B48975 /* NSAttributedString+Extension.swift */,
-				C654FFAE25177EF600B48975 /* Sugger.swift */,
-				C654FFAF25177EF600B48975 /* Date+SpeedyExtension.swift */,
-				C654FFB025177EF600B48975 /* Array+SpeedyExtension.swift */,
-				C654FFB125177EF600B48975 /* String+SpeedyExtension.swift */,
-				C654FFB225177EF600B48975 /* NSObject+SpeedyExtension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		C654FFB425177EF600B48975 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFB525177EF600B48975 /* SpeedySandbox.swift */,
-				C654FFB625177EF600B48975 /* SpeedyClassCopy.swift */,
-				C654FFB725177EF600B48975 /* SpeedyDictionaryCodable.swift */,
-				C654FFB825177EF600B48975 /* SpeedyRuntime.swift */,
-				C654FFB925177EF600B48975 /* SpeedyFileManager.swift */,
-				C654FFBA25177EF600B48975 /* SpeedyJump */,
-				C654FFBE25177EF600B48975 /* SpeedyMemoryCache.swift */,
-				C654FFBF25177EF600B48975 /* SpeedyDevice.swift */,
-				C654FFC025177EF600B48975 /* SpeedyTimeCalculateTool.swift */,
-				C654FFC125177EF600B48975 /* SpeedyClass.swift */,
-				C654FFC225177EF600B48975 /* SpeedyQueue.swift */,
-				C654FFC325177EF600B48975 /* SpeedyJSON.swift */,
-				C654FFC425177EF600B48975 /* SpeedyKeychain.swift */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		C654FFBA25177EF600B48975 /* SpeedyJump */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFBB25177EF600B48975 /* SpeedyJump.swift */,
-				C654FFBC25177EF600B48975 /* SpeedyJumpStatus.swift */,
-				C654FFBD25177EF600B48975 /* SpeedyJumpType.swift */,
-			);
-			path = SpeedyJump;
-			sourceTree = "<group>";
-		};
-		C654FFFC25177F4800B48975 /* SavePhotoManager */ = {
-			isa = PBXGroup;
-			children = (
-				C654FFFF25177F4800B48975 /* Models */,
-				C654FFFD25177F4800B48975 /* XHSavePhotoToAlbumManager.swift */,
-				C654000325177F4800B48975 /* XHSavePhotoToAlbumManager+Realm.swift */,
-				C654FFFE25177F4800B48975 /* XHSavePhotoToAlbumManager+RetrySave.swift */,
-				C654000225177F4800B48975 /* XHSavePhotoToAlbumTask.swift */,
-				C654000125177F4800B48975 /* XHSavePhotoToAlbumTool.swift */,
+				C693345E251DC73800253044 /* XHSavePhotoToAlbumManager.swift */,
+				C693345F251DC73800253044 /* XHSavePhotoToAlbumManager+RetrySave.swift */,
+				C6933460251DC73800253044 /* Models */,
+				C6933462251DC73800253044 /* XHSavePhotoToAlbumTool.swift */,
+				C6933463251DC73800253044 /* XHSavePhotoToAlbumTask.swift */,
+				C6933464251DC73800253044 /* XHSavePhotoToAlbumManager+Realm.swift */,
 			);
 			path = SavePhotoManager;
 			sourceTree = "<group>";
 		};
-		C654FFFF25177F4800B48975 /* Models */ = {
+		C6933460251DC73800253044 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C654000025177F4800B48975 /* XHSavePhotoFileModel.swift */,
+				C6933461251DC73800253044 /* XHSavePhotoFileModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C6CCCBCA25064F8E0000C2C6 /* Videos */ = {
+		C693346D251DC74000253044 /* PreviewImageOrVideo */ = {
 			isa = PBXGroup;
 			children = (
-				C6CCCBCB25064F8E0000C2C6 /* video_2.MP4 */,
-				C6CCCBCC25064F8E0000C2C6 /* video_1.MP4 */,
-				C6CCCBCD25064F8E0000C2C6 /* video_0.MP4 */,
+				C693346E251DC74000253044 /* Models */,
+				C6933470251DC74000253044 /* Controllers */,
+				C6933472251DC74000253044 /* Views */,
 			);
-			path = Videos;
+			path = PreviewImageOrVideo;
+			sourceTree = "<group>";
+		};
+		C693346E251DC74000253044 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C693346F251DC74000253044 /* XHPreviewImageOrVideoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6933470251DC74000253044 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6933471251DC74000253044 /* XHPreviewImageOrVideoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C6933472251DC74000253044 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6933473251DC74000253044 /* XHPreviewVideoCell.swift */,
+				C6933474251DC74000253044 /* XHPreviewImageCell.swift */,
+				C6933475251DC74000253044 /* XHVideoCustomControlView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C693347D251DC7E700253044 /* RealmDatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				C693347E251DC7E700253044 /* XHRealmDatabaseManager.swift */,
+				C693347F251DC7E700253044 /* XHRealmDatabaseManager+RealmDataMigration.swift */,
+				C6933480251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift */,
+				C6933481251DC7E700253044 /* Model */,
+				C6933483251DC7E700253044 /* RealmSwift+Extension.swift */,
+			);
+			path = RealmDatabaseManager;
+			sourceTree = "<group>";
+		};
+		C6933481251DC7E700253044 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C6933482251DC7E700253044 /* RealmModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C69334AC251DC90900253044 /* SpeedyFramework */ = {
+			isa = PBXGroup;
+			children = (
+				C69334AD251DC90900253044 /* SpeedyDefine */,
+				C69334AF251DC90900253044 /* SpeedyApp.swift */,
+				C69334B0251DC90900253044 /* SpeedyUI */,
+				C69334CE251DC90900253044 /* SpeedyEvent */,
+				C69334D2251DC90900253044 /* SpeedyModel */,
+				C69334D4251DC90900253044 /* SpeedyCore */,
+			);
+			path = SpeedyFramework;
+			sourceTree = "<group>";
+		};
+		C69334AD251DC90900253044 /* SpeedyDefine */ = {
+			isa = PBXGroup;
+			children = (
+				C69334AE251DC90900253044 /* SpeedyDefine.swift */,
+			);
+			path = SpeedyDefine;
+			sourceTree = "<group>";
+		};
+		C69334B0251DC90900253044 /* SpeedyUI */ = {
+			isa = PBXGroup;
+			children = (
+				C69334B1251DC90900253044 /* SpeedyUI.swift */,
+				C69334B2251DC90900253044 /* Extension */,
+				C69334C5251DC90900253044 /* Modules */,
+			);
+			path = SpeedyUI;
+			sourceTree = "<group>";
+		};
+		C69334B2251DC90900253044 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C69334B3251DC90900253044 /* UIImage */,
+				C69334B8251DC90900253044 /* UIImageView+SpeedyExtension.swift */,
+				C69334B9251DC90900253044 /* UIStoryboard+UIViewController.swift */,
+				C69334BA251DC90900253044 /* UIButton+SpeedyExtension.swift */,
+				C69334BB251DC90900253044 /* UILabel+SpeedyExtension.swift */,
+				C69334BC251DC90900253044 /* UITableView+SpeedyExtension.swift */,
+				C69334BD251DC90900253044 /* UIImage+SpeedyExtension.swift */,
+				C69334BE251DC90900253044 /* UIView+SpeedyExtension.swift */,
+				C69334BF251DC90900253044 /* UIViewController+SpeedyExtension.swift */,
+				C69334C0251DC90900253044 /* UITextField+SpeedyExtension.swift */,
+				C69334C1251DC90900253044 /* UICollectionView+SpeedyExtension.swift */,
+				C69334C2251DC90900253044 /* UINib+UIView.swift */,
+				C69334C3251DC90900253044 /* UIColor+SpeedyExtension.swift */,
+				C69334C4251DC90900253044 /* UIAlertController+SpeedyExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C69334B3251DC90900253044 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				C69334B4251DC90900253044 /* UIImage+Exif.swift */,
+				C69334B5251DC90900253044 /* UIImage+Blend.swift */,
+				C69334B6251DC90900253044 /* UIImage+Watermark.swift */,
+				C69334B7251DC90900253044 /* UIImage+Downsampling.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		C69334C5251DC90900253044 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C69334C6251DC90900253044 /* viewComponent */,
+				C69334CC251DC90900253044 /* viewController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C69334C6251DC90900253044 /* viewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				C69334C7251DC90900253044 /* SpeedyUIPullLoaderFooter.swift */,
+				C69334C8251DC90900253044 /* SpeedyUIPullLoader.swift */,
+				C69334C9251DC90900253044 /* SpeedyCustomButton.swift */,
+				C69334CA251DC90900253044 /* SpeedyDisableMultipleClickButton.swift */,
+				C69334CB251DC90900253044 /* SpeedyUIPullLoaderHeader.swift */,
+			);
+			path = viewComponent;
+			sourceTree = "<group>";
+		};
+		C69334CC251DC90900253044 /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				C69334CD251DC90900253044 /* SpeedyAlertViewController.swift */,
+			);
+			path = viewController;
+			sourceTree = "<group>";
+		};
+		C69334CE251DC90900253044 /* SpeedyEvent */ = {
+			isa = PBXGroup;
+			children = (
+				C69334CF251DC90900253044 /* SpeedyEvent.swift */,
+				C69334D0251DC90900253044 /* modules */,
+			);
+			path = SpeedyEvent;
+			sourceTree = "<group>";
+		};
+		C69334D0251DC90900253044 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				C69334D1251DC90900253044 /* SpeedySignal.swift */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		C69334D2251DC90900253044 /* SpeedyModel */ = {
+			isa = PBXGroup;
+			children = (
+				C69334D3251DC90900253044 /* SpeedyModel.swift */,
+			);
+			path = SpeedyModel;
+			sourceTree = "<group>";
+		};
+		C69334D4251DC90900253044 /* SpeedyCore */ = {
+			isa = PBXGroup;
+			children = (
+				C69334D5251DC90900253044 /* Extension */,
+				C69334DC251DC90900253044 /* SpeedyCore.swift */,
+				C69334DD251DC90900253044 /* Modules */,
+			);
+			path = SpeedyCore;
+			sourceTree = "<group>";
+		};
+		C69334D5251DC90900253044 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C69334D6251DC90900253044 /* NSAttributedString+Extension.swift */,
+				C69334D7251DC90900253044 /* Sugger.swift */,
+				C69334D8251DC90900253044 /* Date+SpeedyExtension.swift */,
+				C69334D9251DC90900253044 /* Array+SpeedyExtension.swift */,
+				C69334DA251DC90900253044 /* String+SpeedyExtension.swift */,
+				C69334DB251DC90900253044 /* NSObject+SpeedyExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C69334DD251DC90900253044 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C69334DE251DC90900253044 /* SpeedySandbox.swift */,
+				C69334DF251DC90900253044 /* SpeedyClassCopy.swift */,
+				C69334E0251DC90900253044 /* SpeedyDictionaryCodable.swift */,
+				C69334E1251DC90900253044 /* SpeedyRuntime.swift */,
+				C69334E2251DC90900253044 /* SpeedyFileManager.swift */,
+				C69334E3251DC90900253044 /* SpeedyJump */,
+				C69334E7251DC90900253044 /* SpeedyMemoryCache.swift */,
+				C69334E8251DC90900253044 /* SpeedyDevice.swift */,
+				C69334E9251DC90900253044 /* SpeedyTimeCalculateTool.swift */,
+				C69334EA251DC90900253044 /* SpeedyClass.swift */,
+				C69334EB251DC90900253044 /* SpeedyQueue.swift */,
+				C69334EC251DC90900253044 /* SpeedyJSON.swift */,
+				C69334ED251DC90900253044 /* SpeedyKeychain.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C69334E3251DC90900253044 /* SpeedyJump */ = {
+			isa = PBXGroup;
+			children = (
+				C69334E4251DC90900253044 /* SpeedyJump.swift */,
+				C69334E5251DC90900253044 /* SpeedyJumpStatus.swift */,
+				C69334E6251DC90900253044 /* SpeedyJumpType.swift */,
+			);
+			path = SpeedyJump;
 			sourceTree = "<group>";
 		};
 		C6DFB29D250F8C7300671B12 /* Network */ = {
@@ -878,7 +892,6 @@
 		ED8834F225033FDC003F163B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				C6CCCBCA25064F8E0000C2C6 /* Videos */,
 				ED8834F325033FDC003F163B /* Common */,
 			);
 			path = Resource;
@@ -1040,7 +1053,8 @@
 		ED88355C25033FDC003F163B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				C654FFFC25177F4800B48975 /* SavePhotoManager */,
+				C693347D251DC7E700253044 /* RealmDatabaseManager */,
+				C693345D251DC73800253044 /* SavePhotoManager */,
 				ED9256A325035416007A5E4F /* CacheManager */,
 				ED88356325033FDC003F163B /* KeyboardManager */,
 				ED88356525033FDC003F163B /* LogManager */,
@@ -1101,7 +1115,7 @@
 		ED8836802503471E003F163B /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				C623D2DB2518E763002A0A4E /* PreviewImageOrVideo */,
+				C693346D251DC74000253044 /* PreviewImageOrVideo */,
 				ED8836842503471E003F163B /* LinkageTable */,
 				ED8836822503471E003F163B /* XHTitleArrowsLabel.swift */,
 				ED8836832503471E003F163B /* XHEmptyTipView.swift */,
@@ -1305,13 +1319,10 @@
 			files = (
 				ED88359125033FDC003F163B /* 03.JPG in Resources */,
 				ED8835BE25033FDC003F163B /* ZGXibTestView.xib in Resources */,
-				C6CCCBD025064F8E0000C2C6 /* video_0.MP4 in Resources */,
 				ED8835BA25033FDC003F163B /* HomePage.storyboard in Resources */,
 				ED88359525033FDC003F163B /* 04.JPG in Resources */,
 				C608CF1024BC066F00C55709 /* LaunchScreen.storyboard in Resources */,
 				ED88359425033FDC003F163B /* 05.JPG in Resources */,
-				C6CCCBCE25064F8E0000C2C6 /* video_2.MP4 in Resources */,
-				C6CCCBCF25064F8E0000C2C6 /* video_1.MP4 in Resources */,
 				ED88359325033FDC003F163B /* 06.JPG in Resources */,
 				C608CF0D24BC066F00C55709 /* Assets.xcassets in Resources */,
 				ED88359225033FDC003F163B /* 02.JPG in Resources */,
@@ -1385,55 +1396,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED8835C025033FDC003F163B /* ZGMessageViewController.swift in Sources */,
+				C69334F8251DC90900253044 /* UILabel+SpeedyExtension.swift in Sources */,
 				ED8835C225033FDC003F163B /* ZGAudioVideoViewController.swift in Sources */,
+				C693350D251DC90900253044 /* Date+SpeedyExtension.swift in Sources */,
 				C6CCCBC625064CBA0000C2C6 /* ZGBrowseImageViewController.swift in Sources */,
-				C654FFF225177EF600B48975 /* SpeedyDevice.swift in Sources */,
-				C654FFE925177EF600B48975 /* SpeedySandbox.swift in Sources */,
 				ED8836C72503471E003F163B /* XHBaseCustomAlert.swift in Sources */,
 				ED8835D825033FDD003F163B /* XHLogManager.swift in Sources */,
 				C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */,
 				C654FF6F25177DE500B48975 /* JXPhotoBrowserDefaultPageIndicator.swift in Sources */,
-				C654FFD325177EF600B48975 /* UIViewController+SpeedyExtension.swift in Sources */,
-				C654FFD825177EF600B48975 /* UIAlertController+SpeedyExtension.swift in Sources */,
-				C654FFD725177EF600B48975 /* UIColor+SpeedyExtension.swift in Sources */,
 				C654FF6725177DE500B48975 /* JXPhotoBrowserNoneAnimator.swift in Sources */,
+				C6933487251DC7E700253044 /* RealmModel.swift in Sources */,
 				ED8836AD2503471E003F163B /* XHCustomLabel.swift in Sources */,
 				ED8835AE25033FDC003F163B /* UIImage+Hue.swift in Sources */,
-				C654FFDC25177EF600B48975 /* SpeedyDisableMultipleClickButton.swift in Sources */,
 				C654FF6D25177DE500B48975 /* JXPhotoBrowserZoomAnimator.swift in Sources */,
 				ED88376225034B59003F163B /* UIImage+Extension.swift in Sources */,
 				ED8836D825034AF5003F163B /* ZGMainTabBarController.swift in Sources */,
-				C654FFF025177EF600B48975 /* SpeedyJumpType.swift in Sources */,
 				ED8835C125033FDC003F163B /* ZGRankViewController.swift in Sources */,
+				C6933506251DC90900253044 /* SpeedyUIPullLoaderHeader.swift in Sources */,
+				C693351D251DC90900253044 /* SpeedyClass.swift in Sources */,
+				C6933518251DC90900253044 /* SpeedyJumpStatus.swift in Sources */,
 				C6DFB2B9250F8C7300671B12 /* XHNetworkRawResultModel.swift in Sources */,
 				ED8835B725033FDC003F163B /* ZGTimerViewController.swift in Sources */,
-				C654FFC525177EF600B48975 /* SpeedyDefine.swift in Sources */,
+				C69334F1251DC90900253044 /* UIImage+Exif.swift in Sources */,
 				ED8835AC25033FDC003F163B /* Reachability.swift in Sources */,
-				C654FFE625177EF600B48975 /* String+SpeedyExtension.swift in Sources */,
-				C654FFCA25177EF600B48975 /* UIImage+Watermark.swift in Sources */,
+				C693351A251DC90900253044 /* SpeedyMemoryCache.swift in Sources */,
 				ED8836D425034AF5003F163B /* XHBaseNavigationController.swift in Sources */,
-				C654FFC625177EF600B48975 /* SpeedyApp.swift in Sources */,
 				ED8835B625033FDC003F163B /* ZGXibTestViewController.swift in Sources */,
 				ED8835BF25033FDC003F163B /* ZGHomePageView.swift in Sources */,
+				C69334EF251DC90900253044 /* SpeedyApp.swift in Sources */,
 				ED8836C32503471E003F163B /* XHTeamDatePickerView.swift in Sources */,
 				ED88376625034B59003F163B /* Double+Extension.swift in Sources */,
-				C654FFE825177EF600B48975 /* SpeedyCore.swift in Sources */,
-				C654FFD025177EF600B48975 /* UITableView+SpeedyExtension.swift in Sources */,
-				C623D2E72518E763002A0A4E /* XHPreviewImageCell.swift in Sources */,
+				C6933479251DC74000253044 /* XHPreviewImageCell.swift in Sources */,
 				C654FF6825177DE500B48975 /* JXPhotoBrowserZoomSupportedCell.swift in Sources */,
-				C654FFE225177EF600B48975 /* NSAttributedString+Extension.swift in Sources */,
-				C654FFF625177EF600B48975 /* SpeedyJSON.swift in Sources */,
 				ED8835BB25033FDC003F163B /* ZGStoryboardFirstViewController.swift in Sources */,
-				C623D2E52518E763002A0A4E /* XHPreviewImageOrVideoViewController.swift in Sources */,
+				C6933477251DC74000253044 /* XHPreviewImageOrVideoViewController.swift in Sources */,
 				ED8835E425033FDD003F163B /* XHTimeManager.swift in Sources */,
 				ED8836AB2503471E003F163B /* XHLinkageBaseTableView.swift in Sources */,
 				ED88376425034B59003F163B /* FileManager+Extension.swift in Sources */,
 				ED8836C22503471E003F163B /* XHInputBoxView.swift in Sources */,
 				C654FF7325177DE500B48975 /* JXPhotoBrowser.swift in Sources */,
 				ED8835D925033FDD003F163B /* XHConsoleLogFormatter.swift in Sources */,
-				C654000625177F4800B48975 /* XHSavePhotoFileModel.swift in Sources */,
-				C654FFDA25177EF600B48975 /* SpeedyUIPullLoader.swift in Sources */,
-				C654FFCD25177EF600B48975 /* UIStoryboard+UIViewController.swift in Sources */,
+				C6933469251DC73800253044 /* XHSavePhotoToAlbumTask.swift in Sources */,
+				C6933488251DC7E700253044 /* RealmSwift+Extension.swift in Sources */,
 				ED88376325034B59003F163B /* Character+Extension.swift in Sources */,
 				ED8836AA2503471E003F163B /* XHLinkageContentView.swift in Sources */,
 				ED9256A225035174007A5E4F /* HintAnimateType.swift in Sources */,
@@ -1441,125 +1445,137 @@
 				ED8836D525034AF5003F163B /* XHBaseViewController.swift in Sources */,
 				ED88376C25034B59003F163B /* Data+Extension.swift in Sources */,
 				ED88376D25034B59003F163B /* DispatchTime.swift in Sources */,
-				C654FFCB25177EF600B48975 /* UIImage+Downsampling.swift in Sources */,
+				C6933467251DC73800253044 /* XHSavePhotoFileModel.swift in Sources */,
 				ED8835C525033FDD003F163B /* APPConfigure.swift in Sources */,
+				C69334FC251DC90900253044 /* UIViewController+SpeedyExtension.swift in Sources */,
 				ED8836B12503471E003F163B /* XHSearchViewController.swift in Sources */,
 				ED88375C25034B59003F163B /* UIColor+Extension.swift in Sources */,
-				C654FFDB25177EF600B48975 /* SpeedyCustomButton.swift in Sources */,
 				ED88359725033FDC003F163B /* Toucan.swift in Sources */,
+				C693351B251DC90900253044 /* SpeedyDevice.swift in Sources */,
 				C6C7465D25050F2F00661E3A /* ZGBreakpointViewController.swift in Sources */,
+				C6933468251DC73800253044 /* XHSavePhotoToAlbumTool.swift in Sources */,
+				C69334FD251DC90900253044 /* UITextField+SpeedyExtension.swift in Sources */,
 				C654FF7D25177E5C00B48975 /* XHImageCacheManager.swift in Sources */,
 				ED9256A125035174007A5E4F /* Hint.swift in Sources */,
 				ED88375F25034B59003F163B /* NSArray+Extension.m in Sources */,
 				ED92569F25035174007A5E4F /* HintProtocols.swift in Sources */,
-				C654FFD625177EF600B48975 /* UINib+UIView.swift in Sources */,
-				C654FFE425177EF600B48975 /* Date+SpeedyExtension.swift in Sources */,
-				C654FFDD25177EF600B48975 /* SpeedyUIPullLoaderHeader.swift in Sources */,
 				ED8835BD25033FDC003F163B /* ZGXibTestView.swift in Sources */,
 				C654FF7025177DE500B48975 /* JXPhotoBrowserImageCell.swift in Sources */,
-				C654000525177F4800B48975 /* XHSavePhotoToAlbumManager+RetrySave.swift in Sources */,
 				C654FF6B25177DE500B48975 /* JXPhotoBrowserCell.swift in Sources */,
 				C6DFB2B8250F8C7300671B12 /* XHIPManager.swift in Sources */,
-				C654FFC825177EF600B48975 /* UIImage+Exif.swift in Sources */,
+				C693350F251DC90900253044 /* String+SpeedyExtension.swift in Sources */,
 				ED8835E625033FDD003F163B /* XHTimeManager+Festival.swift in Sources */,
 				C6DFB2B7250F8C7300671B12 /* XHNetworkRequestTask.swift in Sources */,
-				C654FFEA25177EF600B48975 /* SpeedyClassCopy.swift in Sources */,
-				C654FFC925177EF600B48975 /* UIImage+Blend.swift in Sources */,
-				C654000425177F4800B48975 /* XHSavePhotoToAlbumManager.swift in Sources */,
 				ED88376825034B59003F163B /* UIViewController+Extension.swift in Sources */,
 				ED8835DB25033FDD003F163B /* XHCrashNSExceptionManager.swift in Sources */,
 				C654FF7125177DE500B48975 /* JXPhotoBrowserFadeAnimator.swift in Sources */,
 				ED88376F25034B59003F163B /* String+XHEmojiAddtion.swift in Sources */,
-				C654FFDE25177EF600B48975 /* SpeedyAlertViewController.swift in Sources */,
-				C654000825177F4800B48975 /* XHSavePhotoToAlbumTask.swift in Sources */,
+				C69334FB251DC90900253044 /* UIView+SpeedyExtension.swift in Sources */,
+				C6933514251DC90900253044 /* SpeedyDictionaryCodable.swift in Sources */,
 				ED88376525034B59003F163B /* XHExtension.swift in Sources */,
+				C6933486251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift in Sources */,
+				C6933503251DC90900253044 /* SpeedyUIPullLoader.swift in Sources */,
+				C69334FA251DC90900253044 /* UIImage+SpeedyExtension.swift in Sources */,
 				ED8835B925033FDC003F163B /* ZGKVOTestViewController.swift in Sources */,
-				C654FFD125177EF600B48975 /* UIImage+SpeedyExtension.swift in Sources */,
-				C654FFE725177EF600B48975 /* NSObject+SpeedyExtension.swift in Sources */,
-				C654000925177F4800B48975 /* XHSavePhotoToAlbumManager+Realm.swift in Sources */,
-				C654FFE125177EF600B48975 /* SpeedyModel.swift in Sources */,
 				ED8836B02503471E003F163B /* XHUnreadNumberView.swift in Sources */,
 				ED8836D625034AF5003F163B /* ZGCustomTabBar.swift in Sources */,
-				C654FFE325177EF600B48975 /* Sugger.swift in Sources */,
 				ED8835DC25033FDD003F163B /* XHCrashManager.swift in Sources */,
+				C69334F6251DC90900253044 /* UIStoryboard+UIViewController.swift in Sources */,
 				ED8835FC250340ED003F163B /* XHGlobalConstant.swift in Sources */,
 				ED88376925034B59003F163B /* String+Extension.swift in Sources */,
-				C623D2E42518E763002A0A4E /* XHPreviewImageOrVideoModel.swift in Sources */,
 				ED88376E25034B59003F163B /* CGSize+Extension.swift in Sources */,
 				ED88376125034B59003F163B /* UIView+Extension.swift in Sources */,
-				C654FFEB25177EF600B48975 /* SpeedyDictionaryCodable.swift in Sources */,
+				C6933516251DC90900253044 /* SpeedyFileManager.swift in Sources */,
+				C6933476251DC74000253044 /* XHPreviewImageOrVideoModel.swift in Sources */,
+				C69334F0251DC90900253044 /* SpeedyUI.swift in Sources */,
 				ED8835D725033FDD003F163B /* XHFileLogFormatter.swift in Sources */,
 				ED88376725034B59003F163B /* URL+Extension.swift in Sources */,
+				C6933520251DC90900253044 /* SpeedyKeychain.swift in Sources */,
+				C6933515251DC90900253044 /* SpeedyRuntime.swift in Sources */,
 				ED8835AD25033FDC003F163B /* UIColor+Hue.swift in Sources */,
-				C654FFCC25177EF600B48975 /* UIImageView+SpeedyExtension.swift in Sources */,
+				C6933485251DC7E700253044 /* XHRealmDatabaseManager+RealmDataMigration.swift in Sources */,
 				ED8835B525033FDC003F163B /* ZGDataStructureViewController.swift in Sources */,
+				C69334F2251DC90900253044 /* UIImage+Blend.swift in Sources */,
+				C69334EE251DC90900253044 /* SpeedyDefine.swift in Sources */,
+				C69334F5251DC90900253044 /* UIImageView+SpeedyExtension.swift in Sources */,
 				ED8836B22503471E003F163B /* XHBorderImageView.swift in Sources */,
-				C654FFE525177EF600B48975 /* Array+SpeedyExtension.swift in Sources */,
 				ED8835B825033FDC003F163B /* ZGChartViewController.swift in Sources */,
 				C654FF6A25177DE500B48975 /* JXPhotoBrowserAnimatedTransitioning.swift in Sources */,
-				C654FFD925177EF600B48975 /* SpeedyUIPullLoaderFooter.swift in Sources */,
+				C6933517251DC90900253044 /* SpeedyJump.swift in Sources */,
 				C654FF7225177DE500B48975 /* JXPhotoBrowserLog.swift in Sources */,
+				C6933509251DC90900253044 /* SpeedySignal.swift in Sources */,
+				C693350A251DC90900253044 /* SpeedyModel.swift in Sources */,
 				ED88376B25034B59003F163B /* CGPoint+Extension.swift in Sources */,
 				ED8836D125034AF5003F163B /* XHBasePlainTableViewController.swift in Sources */,
 				C65400102517802600B48975 /* XHCheckAuthorizationTool.swift in Sources */,
+				C6933511251DC90900253044 /* SpeedyCore.swift in Sources */,
+				C693351C251DC90900253044 /* SpeedyTimeCalculateTool.swift in Sources */,
+				C6933501251DC90900253044 /* UIAlertController+SpeedyExtension.swift in Sources */,
 				ED8836A72503471E003F163B /* XHTitleArrowsLabel.swift in Sources */,
-				C654FFD225177EF600B48975 /* UIView+SpeedyExtension.swift in Sources */,
 				C6DFB2C9250F8C7300671B12 /* MultipartDataExtension.swift in Sources */,
-				C654FFED25177EF600B48975 /* SpeedyFileManager.swift in Sources */,
 				ED88375E25034B59003F163B /* Data+Gzip.swift in Sources */,
 				C654FF6925177DE500B48975 /* JXPhotoBrowserSmoothZoomAnimator.swift in Sources */,
-				C654FFD425177EF600B48975 /* UITextField+SpeedyExtension.swift in Sources */,
-				C654FFCF25177EF600B48975 /* UILabel+SpeedyExtension.swift in Sources */,
+				C6933519251DC90900253044 /* SpeedyJumpType.swift in Sources */,
 				ED8836A82503471E003F163B /* XHEmptyTipView.swift in Sources */,
 				ED8835B225033FDC003F163B /* ZGToastViewController.swift in Sources */,
 				ED8836C42503471E003F163B /* XHFakeNavigationBar.swift in Sources */,
+				C693351F251DC90900253044 /* SpeedyJSON.swift in Sources */,
 				ED88376025034B59003F163B /* UITextView+Placeholder.m in Sources */,
 				ED8835AB25033FDC003F163B /* TKImageView.m in Sources */,
+				C693351E251DC90900253044 /* SpeedyQueue.swift in Sources */,
+				C69334F3251DC90900253044 /* UIImage+Watermark.swift in Sources */,
+				C693346A251DC73800253044 /* XHSavePhotoToAlbumManager+Realm.swift in Sources */,
+				C6933505251DC90900253044 /* SpeedyDisableMultipleClickButton.swift in Sources */,
 				C6DFB2BD250F8C7300671B12 /* XHAlamofireDownloader.swift in Sources */,
 				ED8836A92503471E003F163B /* XHSegmentBar.swift in Sources */,
+				C693350E251DC90900253044 /* Array+SpeedyExtension.swift in Sources */,
 				C654FF6E25177DE500B48975 /* JXPhotoBrowserView.swift in Sources */,
+				C69334FF251DC90900253044 /* UINib+UIView.swift in Sources */,
+				C6933513251DC90900253044 /* SpeedyClassCopy.swift in Sources */,
+				C69334FE251DC90900253044 /* UICollectionView+SpeedyExtension.swift in Sources */,
 				C654FF7C25177E5C00B48975 /* XHKTVHTTPCacheManager.swift in Sources */,
-				C623D2E82518E763002A0A4E /* XHVideoCustomControlView.swift in Sources */,
+				C6933502251DC90900253044 /* SpeedyUIPullLoaderFooter.swift in Sources */,
 				C654FF6C25177DE500B48975 /* JXPhotoBrowserNumberPageIndicator.swift in Sources */,
-				C654FFF425177EF600B48975 /* SpeedyClass.swift in Sources */,
-				C654FFCE25177EF600B48975 /* UIButton+SpeedyExtension.swift in Sources */,
-				C654FFEF25177EF600B48975 /* SpeedyJumpStatus.swift in Sources */,
+				C693347A251DC74000253044 /* XHVideoCustomControlView.swift in Sources */,
+				C69334F4251DC90900253044 /* UIImage+Downsampling.swift in Sources */,
+				C6933510251DC90900253044 /* NSObject+SpeedyExtension.swift in Sources */,
+				C6933466251DC73800253044 /* XHSavePhotoToAlbumManager+RetrySave.swift in Sources */,
+				C6933504251DC90900253044 /* SpeedyCustomButton.swift in Sources */,
 				C608CF0424BC066D00C55709 /* AppDelegate.swift in Sources */,
-				C654FFF525177EF600B48975 /* SpeedyQueue.swift in Sources */,
 				ED8836AF2503471E003F163B /* XHLoadingView.swift in Sources */,
 				ED8836AE2503471E003F163B /* XHDatePicker.swift in Sources */,
-				C654FFDF25177EF600B48975 /* SpeedyEvent.swift in Sources */,
-				C654FFE025177EF600B48975 /* SpeedySignal.swift in Sources */,
 				ED8836AC2503471E003F163B /* XHLinkagePageView.swift in Sources */,
 				C6DFB2BC250F8C7300671B12 /* XHNetworkRequestManager.swift in Sources */,
+				C69334F7251DC90900253044 /* UIButton+SpeedyExtension.swift in Sources */,
 				ED88375B25034B59003F163B /* UIFont+Extension.swift in Sources */,
-				C654FFD525177EF600B48975 /* UICollectionView+SpeedyExtension.swift in Sources */,
 				C654FF7E25177E5C00B48975 /* XHDataCacheManager.swift in Sources */,
+				C6933512251DC90900253044 /* SpeedySandbox.swift in Sources */,
 				ED88376A25034B59003F163B /* UIImage+ImagePixel.m in Sources */,
 				ED8835D625033FDD003F163B /* XHKeyboardManager.swift in Sources */,
+				C693350B251DC90900253044 /* NSAttributedString+Extension.swift in Sources */,
+				C6933507251DC90900253044 /* SpeedyAlertViewController.swift in Sources */,
 				ED8835FE25034105003F163B /* XHNotification.swift in Sources */,
-				C623D2E62518E763002A0A4E /* XHPreviewVideoCell.swift in Sources */,
+				C6933478251DC74000253044 /* XHPreviewVideoCell.swift in Sources */,
 				C654FF6625177DE500B48975 /* JXPhotoBrowserPageIndicator.swift in Sources */,
 				ED8835AA25033FDC003F163B /* Toast.swift in Sources */,
-				C654FFEE25177EF600B48975 /* SpeedyJump.swift in Sources */,
 				C654FF7425177DE500B48975 /* JZLocationConverter.m in Sources */,
 				C6DFB2CA250F8C7300671B12 /* DENetManager.swift in Sources */,
+				C69334F9251DC90900253044 /* UITableView+SpeedyExtension.swift in Sources */,
 				ED8836C62503471E003F163B /* XHNetworkErrorTipView.swift in Sources */,
 				C6DFB2C8250F8C7300671B12 /* XHNetworkStatusManager.swift in Sources */,
-				C654000725177F4800B48975 /* XHSavePhotoToAlbumTool.swift in Sources */,
-				C654FFF725177EF600B48975 /* SpeedyKeychain.swift in Sources */,
+				C6933484251DC7E700253044 /* XHRealmDatabaseManager.swift in Sources */,
 				ED8835DD25033FDD003F163B /* XHCrashSignalManager.swift in Sources */,
+				C6933465251DC73800253044 /* XHSavePhotoToAlbumManager.swift in Sources */,
 				ED8835B425033FDC003F163B /* ZGStoryboardSecondViewController.swift in Sources */,
+				C6933508251DC90900253044 /* SpeedyEvent.swift in Sources */,
 				ED8836C52503471E003F163B /* XHNewbieGuideView.swift in Sources */,
 				ED8835BC25033FDC003F163B /* GCDViewController.swift in Sources */,
-				C654FFF125177EF600B48975 /* SpeedyMemoryCache.swift in Sources */,
 				ED8835B025033FDC003F163B /* ZGHomePageViewController.swift in Sources */,
-				C654FFC725177EF600B48975 /* SpeedyUI.swift in Sources */,
-				C654FFF325177EF600B48975 /* SpeedyTimeCalculateTool.swift in Sources */,
+				C693350C251DC90900253044 /* Sugger.swift in Sources */,
 				ED9256A025035174007A5E4F /* HintTextStyle.swift in Sources */,
 				C608CF0624BC066D00C55709 /* SceneDelegate.swift in Sources */,
-				C654FFEC25177EF600B48975 /* SpeedyRuntime.swift in Sources */,
 				ED92569E25035174007A5E4F /* HintImageWithTitleView.swift in Sources */,
+				C6933500251DC90900253044 /* UIColor+SpeedyExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

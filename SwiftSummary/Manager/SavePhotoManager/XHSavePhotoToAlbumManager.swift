@@ -37,7 +37,7 @@ class XHSavePhotoToAlbumManager: NSObject {
     
 //    // MARK: - 保存视频到手机相册
 //    func saveVideoToAlbum(info: VideoInfo, delegate: XHSavePhotoToAlbumManagerDelegate?){
-//        
+//
 //        let videoModel = XHSavePhotoFileModel.buildModel(info: info, delegate: delegate)
 //        // 文件不存在
 //        if videoModel.isFileExists() == false {
@@ -150,7 +150,7 @@ class XHSavePhotoToAlbumManager: NSObject {
 //                } else {
 //                    imagePath = XHImageCacheManager.shared.getFilePath(model.fileName, cacheType: .UserPhotos)
 //                }
-//                
+//
 //                let isSuccess = SpeedyFileManager.removeFile(at: imagePath)
 //                XHLogDebug("[保存照片到相册调试] - XHSavePhotoToAlbumTask - 删除缓存照片:[\(isSuccess)]")
 //            }

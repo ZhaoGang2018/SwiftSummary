@@ -92,7 +92,7 @@ extension UIView {
     ///   - numberOfTapsRequired: 点击次数
     ///   - numberOfTouchesRequired: 手指个数
     /// - Returns: 
-    func addTapGestureRecognizer(target : Any?, action : Selector?, numberOfTapsRequired: Int = 1, numberOfTouchesRequired: Int = 1) -> UITapGestureRecognizer {
+    @discardableResult func addTapGestureRecognizer(target : Any?, action : Selector?, numberOfTapsRequired: Int = 1, numberOfTouchesRequired: Int = 1) -> UITapGestureRecognizer {
         
         let tapGesture = UITapGestureRecognizer.init(target: target, action: action)
         tapGesture.numberOfTapsRequired    = numberOfTapsRequired;
