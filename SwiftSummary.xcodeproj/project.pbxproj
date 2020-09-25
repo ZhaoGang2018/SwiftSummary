@@ -100,6 +100,11 @@
 		C693351E251DC90900253044 /* SpeedyQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334EB251DC90900253044 /* SpeedyQueue.swift */; };
 		C693351F251DC90900253044 /* SpeedyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334EC251DC90900253044 /* SpeedyJSON.swift */; };
 		C6933520251DC90900253044 /* SpeedyKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69334ED251DC90900253044 /* SpeedyKeychain.swift */; };
+		C6933536251DD6ED00253044 /* XHPreviewTeamPhotoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693352F251DD6ED00253044 /* XHPreviewTeamPhotoItem.swift */; };
+		C6933537251DD6ED00253044 /* XHPreviewTeamPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933531251DD6ED00253044 /* XHPreviewTeamPhotoViewController.swift */; };
+		C6933538251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933533251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift */; };
+		C6933539251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933534251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift */; };
+		C693353A251DD6ED00253044 /* XHPreviewTeamVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933535251DD6ED00253044 /* XHPreviewTeamVideoCell.swift */; };
 		C6C7465D25050F2F00661E3A /* ZGBreakpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */; };
 		C6CCCBC625064CBA0000C2C6 /* ZGBrowseImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */; };
 		C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */; };
@@ -340,6 +345,11 @@
 		C69334EB251DC90900253044 /* SpeedyQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyQueue.swift; sourceTree = "<group>"; };
 		C69334EC251DC90900253044 /* SpeedyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyJSON.swift; sourceTree = "<group>"; };
 		C69334ED251DC90900253044 /* SpeedyKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedyKeychain.swift; sourceTree = "<group>"; };
+		C693352F251DD6ED00253044 /* XHPreviewTeamPhotoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamPhotoItem.swift; sourceTree = "<group>"; };
+		C6933531251DD6ED00253044 /* XHPreviewTeamPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamPhotoViewController.swift; sourceTree = "<group>"; };
+		C6933533251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamPhotoNumberPageIndicator.swift; sourceTree = "<group>"; };
+		C6933534251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamPhotoCell.swift; sourceTree = "<group>"; };
+		C6933535251DD6ED00253044 /* XHPreviewTeamVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamVideoCell.swift; sourceTree = "<group>"; };
 		C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGBreakpointViewController.swift; sourceTree = "<group>"; };
 		C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGBrowseImageViewController.swift; sourceTree = "<group>"; };
 		C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHBreakPointDownloader.swift; sourceTree = "<group>"; };
@@ -841,6 +851,42 @@
 			path = SpeedyJump;
 			sourceTree = "<group>";
 		};
+		C693352D251DD6ED00253044 /* PreviewTeamPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				C693352E251DD6ED00253044 /* Models */,
+				C6933530251DD6ED00253044 /* Controllers */,
+				C6933532251DD6ED00253044 /* Views */,
+			);
+			path = PreviewTeamPhoto;
+			sourceTree = "<group>";
+		};
+		C693352E251DD6ED00253044 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C693352F251DD6ED00253044 /* XHPreviewTeamPhotoItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C6933530251DD6ED00253044 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6933531251DD6ED00253044 /* XHPreviewTeamPhotoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C6933532251DD6ED00253044 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C6933533251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift */,
+				C6933534251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift */,
+				C6933535251DD6ED00253044 /* XHPreviewTeamVideoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C6DFB29D250F8C7300671B12 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -1115,6 +1161,7 @@
 		ED8836802503471E003F163B /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C693352D251DD6ED00253044 /* PreviewTeamPhoto */,
 				C693346D251DC74000253044 /* PreviewImageOrVideo */,
 				ED8836842503471E003F163B /* LinkageTable */,
 				ED8836822503471E003F163B /* XHTitleArrowsLabel.swift */,
@@ -1400,6 +1447,7 @@
 				ED8835C225033FDC003F163B /* ZGAudioVideoViewController.swift in Sources */,
 				C693350D251DC90900253044 /* Date+SpeedyExtension.swift in Sources */,
 				C6CCCBC625064CBA0000C2C6 /* ZGBrowseImageViewController.swift in Sources */,
+				C6933537251DD6ED00253044 /* XHPreviewTeamPhotoViewController.swift in Sources */,
 				ED8836C72503471E003F163B /* XHBaseCustomAlert.swift in Sources */,
 				ED8835D825033FDD003F163B /* XHLogManager.swift in Sources */,
 				C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */,
@@ -1422,6 +1470,7 @@
 				C693351A251DC90900253044 /* SpeedyMemoryCache.swift in Sources */,
 				ED8836D425034AF5003F163B /* XHBaseNavigationController.swift in Sources */,
 				ED8835B625033FDC003F163B /* ZGXibTestViewController.swift in Sources */,
+				C6933538251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift in Sources */,
 				ED8835BF25033FDC003F163B /* ZGHomePageView.swift in Sources */,
 				C69334EF251DC90900253044 /* SpeedyApp.swift in Sources */,
 				ED8836C32503471E003F163B /* XHTeamDatePickerView.swift in Sources */,
@@ -1438,6 +1487,7 @@
 				ED8835D925033FDD003F163B /* XHConsoleLogFormatter.swift in Sources */,
 				C6933469251DC73800253044 /* XHSavePhotoToAlbumTask.swift in Sources */,
 				C6933488251DC7E700253044 /* RealmSwift+Extension.swift in Sources */,
+				C6933536251DD6ED00253044 /* XHPreviewTeamPhotoItem.swift in Sources */,
 				ED88376325034B59003F163B /* Character+Extension.swift in Sources */,
 				ED8836AA2503471E003F163B /* XHLinkageContentView.swift in Sources */,
 				ED9256A225035174007A5E4F /* HintAnimateType.swift in Sources */,
@@ -1531,6 +1581,7 @@
 				C693350E251DC90900253044 /* Array+SpeedyExtension.swift in Sources */,
 				C654FF6E25177DE500B48975 /* JXPhotoBrowserView.swift in Sources */,
 				C69334FF251DC90900253044 /* UINib+UIView.swift in Sources */,
+				C693353A251DD6ED00253044 /* XHPreviewTeamVideoCell.swift in Sources */,
 				C6933513251DC90900253044 /* SpeedyClassCopy.swift in Sources */,
 				C69334FE251DC90900253044 /* UICollectionView+SpeedyExtension.swift in Sources */,
 				C654FF7C25177E5C00B48975 /* XHKTVHTTPCacheManager.swift in Sources */,
@@ -1574,6 +1625,7 @@
 				C693350C251DC90900253044 /* Sugger.swift in Sources */,
 				ED9256A025035174007A5E4F /* HintTextStyle.swift in Sources */,
 				C608CF0624BC066D00C55709 /* SceneDelegate.swift in Sources */,
+				C6933539251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift in Sources */,
 				ED92569E25035174007A5E4F /* HintImageWithTitleView.swift in Sources */,
 				C6933500251DC90900253044 /* UIColor+SpeedyExtension.swift in Sources */,
 			);
