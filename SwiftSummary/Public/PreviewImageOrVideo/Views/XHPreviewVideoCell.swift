@@ -168,9 +168,9 @@ class XHPreviewVideoCell: UIView, UIScrollViewDelegate, UIGestureRecognizerDeleg
         switch pan.state {
         case .began:
             // 隐藏控制View
-            if let browser = photoBrowser as? XHPreviewImageOrVideoViewController, let tempControllView = browser.controlView {
-                tempControllView.hideControlView(false)
-            }
+//            if let browser = photoBrowser as? XHPreviewImageOrVideoViewController, let tempControllView = browser.controlView {
+//                tempControllView.hideControlView(false)
+//            }
             
             beganFrame = imageView.frame
             beganTouch = pan.location(in: scrollView)

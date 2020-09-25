@@ -21,10 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if let windowScene = scene as? UIWindowScene {
             
-            let mainTabBarController = ZGMainTabBarController()
+            // let mainTabBarController = ZGMainTabBarController()
+            let rootVC = ZGVideoPlayerViewController()
+            let rootNav = XHBaseNavigationController(rootViewController: rootVC)
             
             self.window = UIWindow(windowScene: windowScene)
-            self.window?.rootViewController = mainTabBarController
+            self.window?.rootViewController = rootNav //mainTabBarController
             self.window?.makeKeyAndVisible()
             UIButton.appearance().isExclusiveTouch = true
         }

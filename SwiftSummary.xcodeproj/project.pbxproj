@@ -105,6 +105,7 @@
 		C6933538251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933533251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift */; };
 		C6933539251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933534251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift */; };
 		C693353A251DD6ED00253044 /* XHPreviewTeamVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933535251DD6ED00253044 /* XHPreviewTeamVideoCell.swift */; };
+		C6933556251DE6BC00253044 /* ZGVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933555251DE6BC00253044 /* ZGVideoPlayerViewController.swift */; };
 		C6C7465D25050F2F00661E3A /* ZGBreakpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */; };
 		C6CCCBC625064CBA0000C2C6 /* ZGBrowseImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */; };
 		C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */; };
@@ -350,6 +351,7 @@
 		C6933533251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamPhotoNumberPageIndicator.swift; sourceTree = "<group>"; };
 		C6933534251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamPhotoCell.swift; sourceTree = "<group>"; };
 		C6933535251DD6ED00253044 /* XHPreviewTeamVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamVideoCell.swift; sourceTree = "<group>"; };
+		C6933555251DE6BC00253044 /* ZGVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGVideoPlayerViewController.swift; sourceTree = "<group>"; };
 		C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGBreakpointViewController.swift; sourceTree = "<group>"; };
 		C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGBrowseImageViewController.swift; sourceTree = "<group>"; };
 		C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHBreakPointDownloader.swift; sourceTree = "<group>"; };
@@ -887,6 +889,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C6933554251DE6A100253044 /* VideoPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C6933555251DE6BC00253044 /* ZGVideoPlayerViewController.swift */,
+			);
+			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
 		C6DFB29D250F8C7300671B12 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -1015,6 +1025,7 @@
 		ED88352E25033FDC003F163B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				C6933554251DE6A100253044 /* VideoPlayer */,
 				C6DFB29D250F8C7300671B12 /* Network */,
 				ED88352F25033FDC003F163B /* HomePage */,
 				ED88354425033FDC003F163B /* Message */,
@@ -1609,6 +1620,7 @@
 				C6933478251DC74000253044 /* XHPreviewVideoCell.swift in Sources */,
 				C654FF6625177DE500B48975 /* JXPhotoBrowserPageIndicator.swift in Sources */,
 				ED8835AA25033FDC003F163B /* Toast.swift in Sources */,
+				C6933556251DE6BC00253044 /* ZGVideoPlayerViewController.swift in Sources */,
 				C654FF7425177DE500B48975 /* JZLocationConverter.m in Sources */,
 				C6DFB2CA250F8C7300671B12 /* DENetManager.swift in Sources */,
 				C69334F9251DC90900253044 /* UITableView+SpeedyExtension.swift in Sources */,
@@ -1812,7 +1824,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xhey.zhaogang.SwiftSummary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xhey.zhaogang.SwiftSummary.Video;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSummary/SwiftSummary-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -1837,7 +1849,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.xhey.zhaogang.SwiftSummary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xhey.zhaogang.SwiftSummary.Video;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SwiftSummary/SwiftSummary-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

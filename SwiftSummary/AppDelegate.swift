@@ -56,10 +56,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func configWindow() {
-        let mainTabBarController = ZGMainTabBarController()
+//        let mainTabBarController = ZGMainTabBarController()
+        
+        let rootVC = ZGVideoPlayerViewController()
+        let rootNav = XHBaseNavigationController(rootViewController: rootVC)
         
         self.window = UIWindow()
-        self.window?.rootViewController = mainTabBarController
+        self.window?.rootViewController = rootNav //mainTabBarController
         self.window?.makeKeyAndVisible()
         
         UIButton.appearance().isExclusiveTouch = true
