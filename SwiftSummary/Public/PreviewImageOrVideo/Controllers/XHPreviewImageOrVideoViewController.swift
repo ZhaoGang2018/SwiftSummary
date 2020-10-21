@@ -4,7 +4,7 @@
 //
 //  Created by jing_mac on 2020/5/26.
 //  Copyright © 2020 xhey. All rights reserved.
-//  二次封装图片浏览器 定制化
+//  二次封装图片浏览器
 
 import UIKit
 
@@ -13,7 +13,7 @@ typealias XHPhotoBrowserAnimationHandler = (Int) -> (UIView?, UIImage?, CGRect)
 class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
     
     var player: ZFPlayerController?
-//    var controlView: XHVideoCustomControlView?
+    var controlView: XHVideoCustomControlView?
     
     // 数据源是一个数组，可以放任何数据，但是需要在设置图片的地方添加兼容方式
     var dataSource: [XHPreviewImageOrVideoModel] = []
@@ -143,6 +143,10 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
     func cellWillAppear(_ cell: JXPhotoBrowserCell, index: Int) {
         
         XHLogDebug("[图片或视频预览调试] - Cell将显示 - index:[\(index)]")
+        if self.dataSource.count == 0 || index >= self.dataSource.count {
+            return
+        }
+        
         if let videoIndex = self.currentPlayIndex, videoIndex == index {
             return
         }
@@ -225,7 +229,6 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         self.stopPlayVideo()
         XHLogDebug("[图片或视频预览调试] - addPlayer - videoUrl:[\(videoUrl)]")
         
-        /*
         controlView = XHVideoCustomControlView()
         controlView?.closeHandler = { [weak self] in
             self?.closeVideoAction()
@@ -239,18 +242,14 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         controlView?.centerPlayHandler = { [weak self] in
             self?.centerPlayButtonAction()
         }
- */
         
-//        let playerManager = ZFAVPlayerManager()
-        
-        // 可以播放任意格式的视频
-        let playerManager = ZFIJKPlayerManager()
+        let playerManager = ZFAVPlayerManager()
         
         /// 播放器相关
         self.player = ZFPlayerController(playerManager: playerManager, containerView: containerView)
         /// AudioSession由外面控制
         self.player?.customAudioSession = true
-        self.player?.controlView = ZFPlayerControlView() //self.controlView!
+        self.player?.controlView = self.controlView!
         /// 设置退到后台继续播放
         self.player?.pauseWhenAppResignActive = true
         
@@ -283,7 +282,7 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         }
         
         playerManager.assetURL = videoUrl
-//        self.controlView?.showTitle(coverURLString: coverURLStr, coverImage: coverImage)
+        self.controlView?.showTitle(coverURLString: coverURLStr, coverImage: coverImage)
         self.currentPlayIndex = playIndex
     }
     

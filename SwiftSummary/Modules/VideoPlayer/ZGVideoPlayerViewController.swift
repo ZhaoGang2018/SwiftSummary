@@ -37,8 +37,18 @@ class ZGVideoPlayerViewController: XHBaseViewController {
             for fileName in array {
                 var isDir: ObjCBool = true
                 let fullPath = "\(folderPath)/\(fileName)"
-                if FileManager.default.fileExists(atPath: fullPath, isDirectory: &isDir) && !isDir.boolValue {
-                    self.videoNames.append(fileName)
+                if FileManager.default.fileExists(atPath: fullPath, isDirectory: &isDir) {
+                    if isDir.boolValue == false {
+                        self.videoNames.append(fileName)
+                    } else {
+                        let array2 = try FileManager.default.contentsOfDirectory(atPath: fullPath)
+                        for fileName2 in array2 {
+                            let subFullPath = "\(fullPath)/\(fileName2)"
+                            if FileManager.default.fileExists(atPath: subFullPath) {
+                                self.videoNames.append("\(fileName)/\(fileName2)")
+                            }
+                        }
+                    }
                 }
             }
         } catch {
@@ -70,6 +80,7 @@ extension ZGVideoPlayerViewController {
             
         } inputHandler: { (textFiled) in
             self.textField = textFiled
+            self.textField?.isSecureTextEntry = true
         }
     }
     
