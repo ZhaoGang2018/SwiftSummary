@@ -99,7 +99,15 @@ class XHBaseViewController: UIViewController{
             make.left.right.top.bottom.equalToSuperview()
         }
         
-//        self.requestCallKey = NSUUID().uuidString
+        // 增加模糊效果
+        let effect = UIBlurEffect(style: .dark)
+        let effectView = UIVisualEffectView(effect: effect)
+        bgImageView?.addSubview(effectView)
+        effectView.snp.makeConstraints { (make) in
+            make.left.right.top.bottom.equalToSuperview()
+        }
+        
+        //        self.requestCallKey = NSUUID().uuidString
         view.backgroundColor = UIColor.fromHex("#EFEFF4")
         buildFakeNavBar()
         
