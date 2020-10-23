@@ -247,7 +247,7 @@ extension XHVideoCustomControlView {
             make.left.equalTo(smallPlayOrPauseBtn.snp.right)
             make.height.equalTo(20)
             make.centerY.equalTo(smallPlayOrPauseBtn.snp.centerY)
-            make.width.equalTo(54)
+            make.width.equalTo(80)
         }
         
         slider = ZFSliderView()
@@ -267,7 +267,7 @@ extension XHVideoCustomControlView {
             make.right.equalTo(-56.0)
             make.centerY.equalTo(smallPlayOrPauseBtn.snp.centerY)
             make.height.equalTo(20)
-            make.width.equalTo(54)
+            make.width.equalTo(80)
         }
         
         // 68x32

@@ -243,12 +243,13 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
             self?.centerPlayButtonAction()
         }
         
-        let playerManager = ZFAVPlayerManager()
+//        let playerManager = ZFAVPlayerManager()
+        let playerManager = ZFIJKPlayerManager()
         
         /// 播放器相关
         self.player = ZFPlayerController(playerManager: playerManager, containerView: containerView)
         /// AudioSession由外面控制
-        self.player?.customAudioSession = true
+//        self.player?.customAudioSession = true
         self.player?.controlView = self.controlView!
         /// 设置退到后台继续播放
         self.player?.pauseWhenAppResignActive = true
