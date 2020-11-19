@@ -101,7 +101,7 @@ extension ZGVideoPlayerViewController {
     private func showInputAlert() {
         UIAlertController.showInputAlert(title: "请输入密码", message: "为了保证用户安全，请您务必输入密码！", buttonTitles: ["取消", "确定"], viewController: self) { (index, _) in
             
-            if index == 0 || (index == 1 && self.textField?.text != "Gang25123") {
+            if index == 0 || (index == 1 && self.textField?.text != "12345678") {
                 self.showInputAlert()
                 return
             }
