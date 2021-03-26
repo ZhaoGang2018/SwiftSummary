@@ -18,13 +18,14 @@ enum ZGFeatureItemType: String {
     case timer = "定时器"
     case Breakpoint = "断点续传"
     case BrowseImage = " 浏览图片"
+    case ResponderChain = "事件的传递和响应机制"
 }
 
 
 class ZGHomePageViewController: XHBaseViewController {
     
     var listView: ZGHomePageView?
-    var items: [ZGFeatureItemType] = [.chart, .xibTest, .toast, .GCD, .dataStructure, .KVO, .timer, .Breakpoint, .BrowseImage]
+    var items: [ZGFeatureItemType] = [.chart, .xibTest, .toast, .GCD, .dataStructure, .KVO, .timer, .Breakpoint, .BrowseImage, .ResponderChain]
     
     var reachability: Reachability?
     let hostNames = [nil, "google.com", "invalidhost"]
@@ -76,6 +77,8 @@ class ZGHomePageViewController: XHBaseViewController {
             
         case .BrowseImage:
             vc = ZGBrowseImageViewController()
+        case .ResponderChain:
+            vc = ZGResponderChainViewController()
         }
         
         if let vc = vc {

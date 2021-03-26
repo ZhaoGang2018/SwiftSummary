@@ -11,7 +11,7 @@ target 'SwiftSummary' do
     # Pods for SwiftSummary
     pod 'SensorsAnalyticsSDK', '2.1.5', :subspecs => ['DISABLE_UIWEBVIEW']
     pod 'IQKeyboardManagerSwift', '6.5.6'
-    pod 'Charts'
+    pod 'Charts', '3.6.0'
     pod 'RxSwift', '5.1.1'
     pod 'RxCocoa', '5.1.1'
     pod 'ReactiveCocoa', '11.0.0'

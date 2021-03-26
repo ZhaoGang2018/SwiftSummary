@@ -14,6 +14,19 @@
 		C608CF1024BC066F00C55709 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C608CF0E24BC066F00C55709 /* LaunchScreen.storyboard */; };
 		C608CF1B24BC066F00C55709 /* SwiftSummaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608CF1A24BC066F00C55709 /* SwiftSummaryTests.swift */; };
 		C608CF2624BC066F00C55709 /* SwiftSummaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608CF2524BC066F00C55709 /* SwiftSummaryUITests.swift */; };
+		C64EB8AC260D878500058E13 /* XHPreviewImageOrVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64EB8A5260D878500058E13 /* XHPreviewImageOrVideoModel.swift */; };
+		C64EB8AD260D878500058E13 /* XHPreviewImageOrVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64EB8A7260D878500058E13 /* XHPreviewImageOrVideoViewController.swift */; };
+		C64EB8AE260D878500058E13 /* XHPreviewVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64EB8A9260D878500058E13 /* XHPreviewVideoCell.swift */; };
+		C64EB8AF260D878500058E13 /* XHPreviewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64EB8AA260D878500058E13 /* XHPreviewImageCell.swift */; };
+		C64EB8B0260D878500058E13 /* XHVideoCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64EB8AB260D878500058E13 /* XHVideoCustomControlView.swift */; };
+		C64EB8E0260DC51D00058E13 /* DIN Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C64EB8DF260DC51D00058E13 /* DIN Condensed.ttf */; };
+		C64EB8EA260DC62100058E13 /* HYQiHeiX2-65W.otf in Resources */ = {isa = PBXBuildFile; fileRef = C64EB8E3260DC62100058E13 /* HYQiHeiX2-65W.otf */; };
+		C64EB8EB260DC62100058E13 /* PTElvis-narrowBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C64EB8E4260DC62100058E13 /* PTElvis-narrowBold.otf */; };
+		C64EB8EC260DC62100058E13 /* BW7tiScientificHalf.otf in Resources */ = {isa = PBXBuildFile; fileRef = C64EB8E5260DC62100058E13 /* BW7tiScientificHalf.otf */; };
+		C64EB8ED260DC62100058E13 /* HYQiHeiX2-85W.otf in Resources */ = {isa = PBXBuildFile; fileRef = C64EB8E6260DC62100058E13 /* HYQiHeiX2-85W.otf */; };
+		C64EB8EE260DC62100058E13 /* jxzkt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C64EB8E7260DC62100058E13 /* jxzkt.ttf */; };
+		C64EB8EF260DC62100058E13 /* Muyao-Softbrush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C64EB8E8260DC62100058E13 /* Muyao-Softbrush.ttf */; };
+		C64EB8F0260DC62100058E13 /* PTElvis-narrow.otf in Resources */ = {isa = PBXBuildFile; fileRef = C64EB8E9260DC62100058E13 /* PTElvis-narrow.otf */; };
 		C65400102517802600B48975 /* XHCheckAuthorizationTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654000F2517802600B48975 /* XHCheckAuthorizationTool.swift */; };
 		C654FF6625177DE500B48975 /* JXPhotoBrowserPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF5525177DE500B48975 /* JXPhotoBrowserPageIndicator.swift */; };
 		C654FF6725177DE500B48975 /* JXPhotoBrowserNoneAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C654FF5625177DE500B48975 /* JXPhotoBrowserNoneAnimator.swift */; };
@@ -39,11 +52,6 @@
 		C6933468251DC73800253044 /* XHSavePhotoToAlbumTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933462251DC73800253044 /* XHSavePhotoToAlbumTool.swift */; };
 		C6933469251DC73800253044 /* XHSavePhotoToAlbumTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933463251DC73800253044 /* XHSavePhotoToAlbumTask.swift */; };
 		C693346A251DC73800253044 /* XHSavePhotoToAlbumManager+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933464251DC73800253044 /* XHSavePhotoToAlbumManager+Realm.swift */; };
-		C6933476251DC74000253044 /* XHPreviewImageOrVideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693346F251DC74000253044 /* XHPreviewImageOrVideoModel.swift */; };
-		C6933477251DC74000253044 /* XHPreviewImageOrVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933471251DC74000253044 /* XHPreviewImageOrVideoViewController.swift */; };
-		C6933478251DC74000253044 /* XHPreviewVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933473251DC74000253044 /* XHPreviewVideoCell.swift */; };
-		C6933479251DC74000253044 /* XHPreviewImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933474251DC74000253044 /* XHPreviewImageCell.swift */; };
-		C693347A251DC74000253044 /* XHVideoCustomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933475251DC74000253044 /* XHVideoCustomControlView.swift */; };
 		C6933484251DC7E700253044 /* XHRealmDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693347E251DC7E700253044 /* XHRealmDatabaseManager.swift */; };
 		C6933485251DC7E700253044 /* XHRealmDatabaseManager+RealmDataMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693347F251DC7E700253044 /* XHRealmDatabaseManager+RealmDataMigration.swift */; };
 		C6933486251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933480251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift */; };
@@ -105,6 +113,7 @@
 		C6933538251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933533251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift */; };
 		C6933539251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933534251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift */; };
 		C693353A251DD6ED00253044 /* XHPreviewTeamVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6933535251DD6ED00253044 /* XHPreviewTeamVideoCell.swift */; };
+		C6B54FB425AD55F20012C6DB /* ZGResponderChainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B54FB325AD55F20012C6DB /* ZGResponderChainViewController.swift */; };
 		C6C7465D25050F2F00661E3A /* ZGBreakpointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */; };
 		C6CCCBC625064CBA0000C2C6 /* ZGBrowseImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */; };
 		C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */; };
@@ -258,6 +267,19 @@
 		C608CF2124BC066F00C55709 /* SwiftSummaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSummaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C608CF2524BC066F00C55709 /* SwiftSummaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSummaryUITests.swift; sourceTree = "<group>"; };
 		C608CF2724BC066F00C55709 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64EB8A5260D878500058E13 /* XHPreviewImageOrVideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageOrVideoModel.swift; sourceTree = "<group>"; };
+		C64EB8A7260D878500058E13 /* XHPreviewImageOrVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageOrVideoViewController.swift; sourceTree = "<group>"; };
+		C64EB8A9260D878500058E13 /* XHPreviewVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewVideoCell.swift; sourceTree = "<group>"; };
+		C64EB8AA260D878500058E13 /* XHPreviewImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageCell.swift; sourceTree = "<group>"; };
+		C64EB8AB260D878500058E13 /* XHVideoCustomControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHVideoCustomControlView.swift; sourceTree = "<group>"; };
+		C64EB8DF260DC51D00058E13 /* DIN Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN Condensed.ttf"; sourceTree = "<group>"; };
+		C64EB8E3260DC62100058E13 /* HYQiHeiX2-65W.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HYQiHeiX2-65W.otf"; sourceTree = "<group>"; };
+		C64EB8E4260DC62100058E13 /* PTElvis-narrowBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTElvis-narrowBold.otf"; sourceTree = "<group>"; };
+		C64EB8E5260DC62100058E13 /* BW7tiScientificHalf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BW7tiScientificHalf.otf; sourceTree = "<group>"; };
+		C64EB8E6260DC62100058E13 /* HYQiHeiX2-85W.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HYQiHeiX2-85W.otf"; sourceTree = "<group>"; };
+		C64EB8E7260DC62100058E13 /* jxzkt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = jxzkt.ttf; sourceTree = "<group>"; };
+		C64EB8E8260DC62100058E13 /* Muyao-Softbrush.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muyao-Softbrush.ttf"; sourceTree = "<group>"; };
+		C64EB8E9260DC62100058E13 /* PTElvis-narrow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTElvis-narrow.otf"; sourceTree = "<group>"; };
 		C654000F2517802600B48975 /* XHCheckAuthorizationTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHCheckAuthorizationTool.swift; sourceTree = "<group>"; };
 		C654FF5525177DE500B48975 /* JXPhotoBrowserPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPhotoBrowserPageIndicator.swift; sourceTree = "<group>"; };
 		C654FF5625177DE500B48975 /* JXPhotoBrowserNoneAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPhotoBrowserNoneAnimator.swift; sourceTree = "<group>"; };
@@ -284,11 +306,6 @@
 		C6933462251DC73800253044 /* XHSavePhotoToAlbumTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoToAlbumTool.swift; sourceTree = "<group>"; };
 		C6933463251DC73800253044 /* XHSavePhotoToAlbumTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHSavePhotoToAlbumTask.swift; sourceTree = "<group>"; };
 		C6933464251DC73800253044 /* XHSavePhotoToAlbumManager+Realm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHSavePhotoToAlbumManager+Realm.swift"; sourceTree = "<group>"; };
-		C693346F251DC74000253044 /* XHPreviewImageOrVideoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageOrVideoModel.swift; sourceTree = "<group>"; };
-		C6933471251DC74000253044 /* XHPreviewImageOrVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageOrVideoViewController.swift; sourceTree = "<group>"; };
-		C6933473251DC74000253044 /* XHPreviewVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewVideoCell.swift; sourceTree = "<group>"; };
-		C6933474251DC74000253044 /* XHPreviewImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewImageCell.swift; sourceTree = "<group>"; };
-		C6933475251DC74000253044 /* XHVideoCustomControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHVideoCustomControlView.swift; sourceTree = "<group>"; };
 		C693347E251DC7E700253044 /* XHRealmDatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHRealmDatabaseManager.swift; sourceTree = "<group>"; };
 		C693347F251DC7E700253044 /* XHRealmDatabaseManager+RealmDataMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHRealmDatabaseManager+RealmDataMigration.swift"; sourceTree = "<group>"; };
 		C6933480251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XHRealmDatabaseManager+ManualDataMigration.swift"; sourceTree = "<group>"; };
@@ -350,6 +367,7 @@
 		C6933533251DD6ED00253044 /* XHPreviewTeamPhotoNumberPageIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamPhotoNumberPageIndicator.swift; sourceTree = "<group>"; };
 		C6933534251DD6ED00253044 /* XHPreviewTeamPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamPhotoCell.swift; sourceTree = "<group>"; };
 		C6933535251DD6ED00253044 /* XHPreviewTeamVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHPreviewTeamVideoCell.swift; sourceTree = "<group>"; };
+		C6B54FB325AD55F20012C6DB /* ZGResponderChainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGResponderChainViewController.swift; sourceTree = "<group>"; };
 		C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGBreakpointViewController.swift; sourceTree = "<group>"; };
 		C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZGBrowseImageViewController.swift; sourceTree = "<group>"; };
 		C6DFB29E250F8C7300671B12 /* XHBreakPointDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XHBreakPointDownloader.swift; sourceTree = "<group>"; };
@@ -566,6 +584,57 @@
 			path = SwiftSummaryUITests;
 			sourceTree = "<group>";
 		};
+		C64EB8A3260D878500058E13 /* PreviewImageOrVideo */ = {
+			isa = PBXGroup;
+			children = (
+				C64EB8A4260D878500058E13 /* Models */,
+				C64EB8A6260D878500058E13 /* Controllers */,
+				C64EB8A8260D878500058E13 /* Views */,
+			);
+			path = PreviewImageOrVideo;
+			sourceTree = "<group>";
+		};
+		C64EB8A4260D878500058E13 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C64EB8A5260D878500058E13 /* XHPreviewImageOrVideoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C64EB8A6260D878500058E13 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C64EB8A7260D878500058E13 /* XHPreviewImageOrVideoViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C64EB8A8260D878500058E13 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C64EB8A9260D878500058E13 /* XHPreviewVideoCell.swift */,
+				C64EB8AA260D878500058E13 /* XHPreviewImageCell.swift */,
+				C64EB8AB260D878500058E13 /* XHVideoCustomControlView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C64EB8D8260DC23D00058E13 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C64EB8E5260DC62100058E13 /* BW7tiScientificHalf.otf */,
+				C64EB8E3260DC62100058E13 /* HYQiHeiX2-65W.otf */,
+				C64EB8E6260DC62100058E13 /* HYQiHeiX2-85W.otf */,
+				C64EB8E7260DC62100058E13 /* jxzkt.ttf */,
+				C64EB8E8260DC62100058E13 /* Muyao-Softbrush.ttf */,
+				C64EB8E9260DC62100058E13 /* PTElvis-narrow.otf */,
+				C64EB8E4260DC62100058E13 /* PTElvis-narrowBold.otf */,
+				C64EB8DF260DC51D00058E13 /* DIN Condensed.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C654000E2517802600B48975 /* CheckAuthorizationTool */ = {
 			isa = PBXGroup;
 			children = (
@@ -623,42 +692,6 @@
 				C6933461251DC73800253044 /* XHSavePhotoFileModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		C693346D251DC74000253044 /* PreviewImageOrVideo */ = {
-			isa = PBXGroup;
-			children = (
-				C693346E251DC74000253044 /* Models */,
-				C6933470251DC74000253044 /* Controllers */,
-				C6933472251DC74000253044 /* Views */,
-			);
-			path = PreviewImageOrVideo;
-			sourceTree = "<group>";
-		};
-		C693346E251DC74000253044 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C693346F251DC74000253044 /* XHPreviewImageOrVideoModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		C6933470251DC74000253044 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				C6933471251DC74000253044 /* XHPreviewImageOrVideoViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		C6933472251DC74000253044 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C6933473251DC74000253044 /* XHPreviewVideoCell.swift */,
-				C6933474251DC74000253044 /* XHPreviewImageCell.swift */,
-				C6933475251DC74000253044 /* XHVideoCustomControlView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		C693347D251DC7E700253044 /* RealmDatabaseManager */ = {
@@ -938,6 +971,7 @@
 		ED8834F225033FDC003F163B /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C64EB8D8260DC23D00058E13 /* Fonts */,
 				ED8834F325033FDC003F163B /* Common */,
 			);
 			path = Resource;
@@ -1058,6 +1092,7 @@
 				ED88353F25033FDC003F163B /* GCDViewController.swift */,
 				C6C7465C25050F2F00661E3A /* ZGBreakpointViewController.swift */,
 				C6CCCBC525064CBA0000C2C6 /* ZGBrowseImageViewController.swift */,
+				C6B54FB325AD55F20012C6DB /* ZGResponderChainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1161,8 +1196,8 @@
 		ED8836802503471E003F163B /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				C64EB8A3260D878500058E13 /* PreviewImageOrVideo */,
 				C693352D251DD6ED00253044 /* PreviewTeamPhoto */,
-				C693346D251DC74000253044 /* PreviewImageOrVideo */,
 				ED8836842503471E003F163B /* LinkageTable */,
 				ED8836822503471E003F163B /* XHTitleArrowsLabel.swift */,
 				ED8836832503471E003F163B /* XHEmptyTipView.swift */,
@@ -1364,17 +1399,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64EB8EB260DC62100058E13 /* PTElvis-narrowBold.otf in Resources */,
 				ED88359125033FDC003F163B /* 03.JPG in Resources */,
 				ED8835BE25033FDC003F163B /* ZGXibTestView.xib in Resources */,
 				ED8835BA25033FDC003F163B /* HomePage.storyboard in Resources */,
 				ED88359525033FDC003F163B /* 04.JPG in Resources */,
+				C64EB8E0260DC51D00058E13 /* DIN Condensed.ttf in Resources */,
 				C608CF1024BC066F00C55709 /* LaunchScreen.storyboard in Resources */,
+				C64EB8EC260DC62100058E13 /* BW7tiScientificHalf.otf in Resources */,
+				C64EB8EE260DC62100058E13 /* jxzkt.ttf in Resources */,
 				ED88359425033FDC003F163B /* 05.JPG in Resources */,
 				ED88359325033FDC003F163B /* 06.JPG in Resources */,
+				C64EB8EA260DC62100058E13 /* HYQiHeiX2-65W.otf in Resources */,
+				C64EB8EF260DC62100058E13 /* Muyao-Softbrush.ttf in Resources */,
 				C608CF0D24BC066F00C55709 /* Assets.xcassets in Resources */,
+				C64EB8F0260DC62100058E13 /* PTElvis-narrow.otf in Resources */,
 				ED88359225033FDC003F163B /* 02.JPG in Resources */,
 				ED8835B325033FDC003F163B /* ZGXibTestViewController.xib in Resources */,
 				ED88359025033FDC003F163B /* 01.JPG in Resources */,
+				C64EB8ED260DC62100058E13 /* HYQiHeiX2-85W.otf in Resources */,
 				C608CF0B24BC066D00C55709 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1445,12 +1488,14 @@
 				ED8835C025033FDC003F163B /* ZGMessageViewController.swift in Sources */,
 				C69334F8251DC90900253044 /* UILabel+SpeedyExtension.swift in Sources */,
 				ED8835C225033FDC003F163B /* ZGAudioVideoViewController.swift in Sources */,
+				C64EB8B0260D878500058E13 /* XHVideoCustomControlView.swift in Sources */,
 				C693350D251DC90900253044 /* Date+SpeedyExtension.swift in Sources */,
 				C6CCCBC625064CBA0000C2C6 /* ZGBrowseImageViewController.swift in Sources */,
 				C6933537251DD6ED00253044 /* XHPreviewTeamPhotoViewController.swift in Sources */,
 				ED8836C72503471E003F163B /* XHBaseCustomAlert.swift in Sources */,
 				ED8835D825033FDD003F163B /* XHLogManager.swift in Sources */,
 				C6DFB2B6250F8C7300671B12 /* XHBreakPointDownloader.swift in Sources */,
+				C64EB8AE260D878500058E13 /* XHPreviewVideoCell.swift in Sources */,
 				C654FF6F25177DE500B48975 /* JXPhotoBrowserDefaultPageIndicator.swift in Sources */,
 				C654FF6725177DE500B48975 /* JXPhotoBrowserNoneAnimator.swift in Sources */,
 				C6933487251DC7E700253044 /* RealmModel.swift in Sources */,
@@ -1475,10 +1520,8 @@
 				C69334EF251DC90900253044 /* SpeedyApp.swift in Sources */,
 				ED8836C32503471E003F163B /* XHTeamDatePickerView.swift in Sources */,
 				ED88376625034B59003F163B /* Double+Extension.swift in Sources */,
-				C6933479251DC74000253044 /* XHPreviewImageCell.swift in Sources */,
 				C654FF6825177DE500B48975 /* JXPhotoBrowserZoomSupportedCell.swift in Sources */,
 				ED8835BB25033FDC003F163B /* ZGStoryboardFirstViewController.swift in Sources */,
-				C6933477251DC74000253044 /* XHPreviewImageOrVideoViewController.swift in Sources */,
 				ED8835E425033FDD003F163B /* XHTimeManager.swift in Sources */,
 				ED8836AB2503471E003F163B /* XHLinkageBaseTableView.swift in Sources */,
 				ED88376425034B59003F163B /* FileManager+Extension.swift in Sources */,
@@ -1520,8 +1563,10 @@
 				ED8835DB25033FDD003F163B /* XHCrashNSExceptionManager.swift in Sources */,
 				C654FF7125177DE500B48975 /* JXPhotoBrowserFadeAnimator.swift in Sources */,
 				ED88376F25034B59003F163B /* String+XHEmojiAddtion.swift in Sources */,
+				C6B54FB425AD55F20012C6DB /* ZGResponderChainViewController.swift in Sources */,
 				C69334FB251DC90900253044 /* UIView+SpeedyExtension.swift in Sources */,
 				C6933514251DC90900253044 /* SpeedyDictionaryCodable.swift in Sources */,
+				C64EB8AF260D878500058E13 /* XHPreviewImageCell.swift in Sources */,
 				ED88376525034B59003F163B /* XHExtension.swift in Sources */,
 				C6933486251DC7E700253044 /* XHRealmDatabaseManager+ManualDataMigration.swift in Sources */,
 				C6933503251DC90900253044 /* SpeedyUIPullLoader.swift in Sources */,
@@ -1536,7 +1581,6 @@
 				ED88376E25034B59003F163B /* CGSize+Extension.swift in Sources */,
 				ED88376125034B59003F163B /* UIView+Extension.swift in Sources */,
 				C6933516251DC90900253044 /* SpeedyFileManager.swift in Sources */,
-				C6933476251DC74000253044 /* XHPreviewImageOrVideoModel.swift in Sources */,
 				C69334F0251DC90900253044 /* SpeedyUI.swift in Sources */,
 				ED8835D725033FDD003F163B /* XHFileLogFormatter.swift in Sources */,
 				ED88376725034B59003F163B /* URL+Extension.swift in Sources */,
@@ -1580,14 +1624,15 @@
 				ED8836A92503471E003F163B /* XHSegmentBar.swift in Sources */,
 				C693350E251DC90900253044 /* Array+SpeedyExtension.swift in Sources */,
 				C654FF6E25177DE500B48975 /* JXPhotoBrowserView.swift in Sources */,
+				C64EB8AD260D878500058E13 /* XHPreviewImageOrVideoViewController.swift in Sources */,
 				C69334FF251DC90900253044 /* UINib+UIView.swift in Sources */,
 				C693353A251DD6ED00253044 /* XHPreviewTeamVideoCell.swift in Sources */,
 				C6933513251DC90900253044 /* SpeedyClassCopy.swift in Sources */,
 				C69334FE251DC90900253044 /* UICollectionView+SpeedyExtension.swift in Sources */,
 				C654FF7C25177E5C00B48975 /* XHKTVHTTPCacheManager.swift in Sources */,
+				C64EB8AC260D878500058E13 /* XHPreviewImageOrVideoModel.swift in Sources */,
 				C6933502251DC90900253044 /* SpeedyUIPullLoaderFooter.swift in Sources */,
 				C654FF6C25177DE500B48975 /* JXPhotoBrowserNumberPageIndicator.swift in Sources */,
-				C693347A251DC74000253044 /* XHVideoCustomControlView.swift in Sources */,
 				C69334F4251DC90900253044 /* UIImage+Downsampling.swift in Sources */,
 				C6933510251DC90900253044 /* NSObject+SpeedyExtension.swift in Sources */,
 				C6933466251DC73800253044 /* XHSavePhotoToAlbumManager+RetrySave.swift in Sources */,
@@ -1606,7 +1651,6 @@
 				C693350B251DC90900253044 /* NSAttributedString+Extension.swift in Sources */,
 				C6933507251DC90900253044 /* SpeedyAlertViewController.swift in Sources */,
 				ED8835FE25034105003F163B /* XHNotification.swift in Sources */,
-				C6933478251DC74000253044 /* XHPreviewVideoCell.swift in Sources */,
 				C654FF6625177DE500B48975 /* JXPhotoBrowserPageIndicator.swift in Sources */,
 				ED8835AA25033FDC003F163B /* Toast.swift in Sources */,
 				C654FF7425177DE500B48975 /* JZLocationConverter.m in Sources */,
@@ -1802,7 +1846,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020090610;
+				CURRENT_PROJECT_VERSION = 2021032611;
 				DEVELOPMENT_TEAM = YL49D2HU6K;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SwiftSummary/Info.plist;
@@ -1827,7 +1871,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2020090610;
+				CURRENT_PROJECT_VERSION = 2021032611;
 				DEVELOPMENT_TEAM = YL49D2HU6K;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SwiftSummary/Info.plist;

@@ -1,8 +1,8 @@
 PODS:
   - Alamofire (5.2.2)
-  - Charts (3.5.0):
-    - Charts/Core (= 3.5.0)
-  - Charts/Core (3.5.0)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - CocoaAsyncSocket (7.6.4)
   - CocoaLumberjack/Core (3.6.2)
   - CocoaLumberjack/Swift (3.6.2):
@@ -58,7 +58,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 5.2.2)
-  - Charts
+  - Charts (= 3.6.0)
   - CocoaLumberjack/Swift (= 3.6.2)
   - CryptoSwift (= 1.2.0)
   - HandyJSON (= 5.0.3-beta)
@@ -121,7 +121,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
-  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   CocoaAsyncSocket: 694058e7c0ed05a9e217d1b3c7ded962f4180845
   CocoaLumberjack: bd155f2dd06c0e0b03f876f7a3ee55693122ec94
   CryptoSwift: 40e374e45291d8dceedcb0d6184da94533eaabdf
@@ -151,6 +151,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZFPlayer: f88787c815f7b0801279c42f131a89e2823e669e
 
-PODFILE CHECKSUM: fdc5dff34b3047d203da6bea633e40ca51e4a6c5
+PODFILE CHECKSUM: fed186d977064372772a70ca68f6e55b8c81020b
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1
