@@ -12,19 +12,27 @@ typealias XHPhotoBrowserAnimationHandler = (Int) -> (UIView?, UIImage?, CGRect)
 
 class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
     
-    var player: ZFPlayerController?
-    var controlView: XHVideoCustomControlView?
-    
-    // 数据源是一个数组，可以放任何数据，但是需要在设置图片的地方添加兼容方式
+    /// 数据源是一个数组，可以放任何数据，但是需要在设置图片的地方添加兼容方式
     var dataSource: [XHPreviewImageOrVideoModel] = []
+    
+    /// 当前播放的index
+    var currentPlayIndex: Int?
+    
+    // V2.9.125版本添加，解决视频播放点击重试没有反应的bug
+    weak var currentContainerView: UIView?
+    var currentVideoUrl: URL?
+    var currentCoverURLStr: String?
+    weak var currentCoverImage: UIImage?
+    
+    /// 展示动画的回调，需要设置才会有动画效果
     var animationHandler: XHPhotoBrowserAnimationHandler?
     
-    // 当前播放的index
-    var currentPlayIndex: Int?
+    open var player: ZFPlayerController?
+    open var controlView: XHVideoCustomControlView?
     
     // 隐藏状态栏
     override var prefersStatusBarHidden: Bool {
-        return false
+        return true
     }
     
     deinit {
@@ -154,11 +162,12 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         let model = self.dataSource[index]
         if let videoCell = cell as? XHPreviewVideoCell {
             if let tempStr = model.videoUrlStr?.urlPercentEncoding,
-                let url = URL(string: tempStr), let proxyURL = XHKTVHTTPCacheManager.getProxyURL(url) {
+               let url = URL(string: tempStr), let proxyURL = XHKTVHTTPCacheManager.getProxyURL(url) {
                 
-                self.addPlayer(videoCell.imageView, videoUrl: proxyURL, coverURLStr: model.placeholderUrlStr ?? "", coverImage: model.placeholderImage, playIndex: index)
+                self.addPlayer(containerView: videoCell.imageView, videoUrl: proxyURL, playIndex: index, coverURLStr: model.placeholderUrlStr, coverImage: model.placeholderImage)
             } else if let filePath = model.videoPath{
-                self.addPlayer(videoCell.imageView, videoUrl: URL(fileURLWithPath: filePath), coverURLStr: model.placeholderUrlStr ?? "", coverImage: model.placeholderImage, playIndex: index)
+                
+                self.addPlayer(containerView: videoCell.imageView, videoUrl: URL(fileURLWithPath: filePath), playIndex: index, coverURLStr: model.placeholderUrlStr, coverImage: model.placeholderImage)
             }
         } else {
             self.stopPlayVideo()
@@ -220,11 +229,20 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
     
     // 重试按钮的点击
     func retryButtonAction() {
-        self.player?.currentPlayerManager.reloadPlayer()
+        // self.player?.currentPlayerManager.reloadPlayer()
+        
+        // V2.9.125版本添加，解决视频播放点击重试没有反应的bug
+        if let containerView = self.currentContainerView, let videoUrl = self.currentVideoUrl, let playIndex = self.currentPlayIndex {
+            
+            XHLogDebug("deinit - [图片或视频预览调试] - 点击重试按钮，开始重试播放")
+            self.addPlayer(containerView: containerView, videoUrl: videoUrl, playIndex: playIndex, coverURLStr: self.currentCoverURLStr, coverImage: self.currentCoverImage)
+        } else {
+            XHLogDebug("deinit - [图片或视频预览调试] - 点击重试按钮，没有找到播放资源，不能播放")
+        }
     }
     
     // 添加播放器
-    func addPlayer(_ containerView: UIView, videoUrl: URL, coverURLStr: String, coverImage: UIImage?, playIndex: Int) {
+    func addPlayer(containerView: UIView, videoUrl: URL, playIndex: Int, coverURLStr: String?, coverImage: UIImage?) {
         
         self.stopPlayVideo()
         XHLogDebug("[图片或视频预览调试] - addPlayer - videoUrl:[\(videoUrl)]")
@@ -233,12 +251,12 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         controlView?.closeHandler = { [weak self] in
             self?.closeVideoAction()
         }
-
+        
         // 重试按钮的点击
         controlView?.retryHandler = { [weak self] in
             self?.retryButtonAction()
         }
-
+        
         controlView?.centerPlayHandler = { [weak self] in
             self?.centerPlayButtonAction()
         }
@@ -283,15 +301,25 @@ class XHPreviewImageOrVideoViewController: JXPhotoBrowser {
         }
         
         playerManager.assetURL = videoUrl
-        self.controlView?.showTitle(coverURLString: coverURLStr, coverImage: coverImage)
+        self.controlView?.showTitle(coverURLString: coverURLStr ?? "", coverImage: coverImage)
         self.currentPlayIndex = playIndex
+        
+        self.currentContainerView = containerView
+        self.currentVideoUrl = videoUrl
+        self.currentCoverURLStr = coverURLStr
+        self.currentCoverImage = coverImage
     }
     
     // 停止播放视频
     func stopPlayVideo() {
-        XHLogDebug("[图片或视频预览调试] - 停止播放视频 - currentPlayIndex:[\(currentPlayIndex ?? -1)]")
+        XHLogDebug("[图片或视频预览调试] - 停止播放视频，清空记录的播放视频的信息 - currentPlayIndex:[\(currentPlayIndex ?? -1)]")
         self.player?.stopCurrentPlayingView()
         self.currentPlayIndex = nil
+        
+        self.currentContainerView = nil
+        self.currentVideoUrl = nil
+        self.currentCoverURLStr = nil
+        self.currentCoverImage = nil
     }
 }
 

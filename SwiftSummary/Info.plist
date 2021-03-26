@@ -55,6 +55,27 @@
 	<string>这样我就能为你编辑视频，保存照片和视频啦！</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>我能把你说的话，自动识别成字幕</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>jxzkt.ttf</string>
+		<string>BW7tiScientificHalf.otf</string>
+		<string>hyjk-subfont.ttf</string>
+		<string>液晶数字字体</string>
+		<string>Muyao-Softbrush</string>
+		<string>PTElvis-narrowBold.otf</string>
+		<string>HYQiHeiX2-85W.otf</string>
+		<string>HYQiHeiX2-65W.otf</string>
+		<string>PTElvis-narrow.otf</string>
+		<string>JOKERMAN.TTF</string>
+		<string>Anderson Torchy The Battery Boy.ttf</string>
+		<string>Khand-SemiBold.ttf</string>
+		<string>站酷快乐体2016修订版.ttf</string>
+		<string>Aa棉花糖_Apple.ttf</string>
+		<string>WWF.ttf</string>
+		<string>Aa元气满满.ttf</string>
+		<string>DIN Condensed.ttf</string>
+		<string>Muyao-Softbrush.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
